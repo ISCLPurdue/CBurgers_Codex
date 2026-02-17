@@ -1,25 +1,38 @@
-cmake_minimum_required(VERSION 3.5.2)
+cmake_minimum_required(VERSION 3.18)
 
-set(CMAKE_CXX_STANDARD 11)
+project(cburgers_sciml LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-project(directory_test)
-set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type")
 
-#Bring the headers, such as *.h into the project - over here you need to paste *your* path to the python environment of choice
-include_directories(/home/rmlans/anaconda3/envs/tf2_env/include/python3.6m)
-include_directories(/home/rmlans/anaconda3/envs/tf2_env/lib/python3.6/site-packages/numpy/core/include)
- 
-#However, the file(GLOB...) allows for wildcard additions:
-file(GLOB SOURCES "*.cpp")
+# Discover Python (interpreter, dev headers/libs, and NumPy) from the active environment.
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development NumPy)
 
-#For the shared library:
-find_library(PYTHONLIB python3.6m HINTS /home/rmlans/anaconda3/envs/tf2_env)
- 
-#Generate the shared library from the sources
-add_executable(app ${SOURCES})
+message(STATUS "Python3 executable: ${Python3_EXECUTABLE}")
+message(STATUS "Python3 include dirs: ${Python3_INCLUDE_DIRS}")
+message(STATUS "Python3 NumPy include dirs: ${Python3_NumPy_INCLUDE_DIRS}")
 
-# Link to final executable
-target_link_libraries(app ${PYTHONLIB})
+add_executable(app app.cpp)
 
+target_include_directories(app PRIVATE
+  ${Python3_INCLUDE_DIRS}
+  ${Python3_NumPy_INCLUDE_DIRS}
+)
 
+target_link_libraries(app PRIVATE Python3::Python)
+
+# Keep runtime Python modules next to the executable so embedded Python can import them.
+set(PYTHON_RUNTIME_FILES
+  ${CMAKE_CURRENT_SOURCE_DIR}/build/python_module.py
+  ${CMAKE_CURRENT_SOURCE_DIR}/build/ml_module.py
+)
+
+foreach(py_file IN LISTS PYTHON_RUNTIME_FILES)
+  if(EXISTS "${py_file}")
+    get_filename_component(py_name "${py_file}" NAME)
+    configure_file("${py_file}" "${CMAKE_CURRENT_BINARY_DIR}/${py_name}" COPYONLY)
+  endif()
+endforeach()
