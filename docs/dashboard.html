@@ -137,7 +137,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>CBurgers_Codex Project Dashboard</h1>
-      <p>Workflow, runtime outcomes, and code changes from the local setup, rebuild, and PyTorch migration session.</p>
+      <p>Workflow, runtime outcomes, and dual-model PyTorch forecasting comparisons from the local setup, rebuild, and modernization session.</p>
       <div class="grid">
         <div class="card">
           <div class="stat">Executable</div>
@@ -146,12 +146,12 @@
         </div>
         <div class="card">
           <div class="stat">Tracked File Edits</div>
-          <div class="num">14</div>
+          <div class="num">20+</div>
           <div><span class="tag">M / D state</span></div>
         </div>
         <div class="card">
           <div class="stat">Plot Outputs</div>
-          <div class="num">7</div>
+          <div class="num">20</div>
           <div><span class="tag">PNG generated in build/</span></div>
         </div>
         <div class="card">
@@ -169,7 +169,8 @@
       <div class="item"><div class="k">Step 3</div><div class="v">CMake config modernized to use discovered Python3/NumPy instead of hardcoded legacy paths.</div></div>
       <div class="item"><div class="k">Step 4</div><div class="v">Executable rebuilt in <code>build_local/</code> and run against Python workflow in <code>build/</code>.</div></div>
       <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging and ML migration completed: TensorFlow pipeline replaced with a Torch stacked-LSTM in <code>build/ml_module.py</code>.</div></div>
-      <div class="item"><div class="k">Step 6</div><div class="v">LSTM tuned for lower rollout error (longer context + scheduler + gradient clipping) and artifacts regenerated.</div></div>
+      <div class="item"><div class="k">Step 6</div><div class="v">LSTM tuned for lower rollout error using pushforward-style autoregressive training, scheduler, and gradient clipping.</div></div>
+      <div class="item"><div class="k">Step 7</div><div class="v">Two deployment variants were trained and compared: one-step input (<code>seq_len=1</code>) and multistep input (<code>seq_len=8</code>), both deployed autoregressively.</div></div>
     </div>
 
     <h2>Results</h2>
@@ -202,6 +203,26 @@
         <img src="./assets/Torch_LSTM_Schematic.png" alt="Torch LSTM architecture schematic">
         <figcaption>Torch stacked-LSTM architecture schematic</figcaption>
       </figure>
+      <figure>
+        <img src="./assets/Mode_0_comparison.png" alt="Mode 0 one-step vs multistep comparison">
+        <figcaption>Mode 0 comparison: one-step vs multistep input models</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/Mode_1_comparison.png" alt="Mode 1 one-step vs multistep comparison">
+        <figcaption>Mode 1 comparison: one-step vs multistep input models</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/Mode_2_comparison.png" alt="Mode 2 one-step vs multistep comparison">
+        <figcaption>Mode 2 comparison: one-step vs multistep input models</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/Training_Loss_onestep.png" alt="Training loss for one-step input model">
+        <figcaption>Training history for one-step input model (<code>seq_len=1</code>)</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/Training_Loss_multistep.png" alt="Training loss for multistep input model">
+        <figcaption>Training history for multistep input model (<code>seq_len=8</code>)</figcaption>
+      </figure>
     </div>
 
     <h2>Changes Made</h2>
@@ -227,7 +248,12 @@
         <tr>
           <td><code>build/ml_module.py</code></td>
           <td><span class="tag">ML Compatibility</span></td>
-          <td>Migrated forecasting from TensorFlow/Keras to PyTorch, added training history plotting, architecture schematic generation, and <code>.pt</code> checkpointing.</td>
+          <td>Migrated forecasting from TensorFlow/Keras to PyTorch, added pushforward rollout loss, and parameterized dual model variants (<code>seq_len=1</code> and <code>seq_len=8</code>) with per-model checkpoints/plots.</td>
+        </tr>
+        <tr>
+          <td><code>build/python_module.py</code></td>
+          <td><span class="tag">Evaluation</span></td>
+          <td>Now trains both model variants, runs autoregressive inference for each, computes per-mode RMSE vectors, and writes comparison figures for modes 0/1/2.</td>
         </tr>
         <tr>
           <td><code>*.png (repo root)</code></td>
@@ -239,13 +265,16 @@
 
     <h2>Artifacts</h2>
     <div class="card links">
-      <p><strong>Latest deployment RMSE per mode:</strong> [1.2383, 1.2496, 0.9702]</p>
-      <p><strong>Mean deployment RMSE:</strong> 1.1527</p>
+      <p><strong>One-step input RMSE per mode (seq\_len=1):</strong> [1.2710, 0.4815, 1.2855]</p>
+      <p><strong>One-step mean deployment RMSE:</strong> 1.0127</p>
+      <p><strong>Multistep input RMSE per mode (seq\_len=8):</strong> [1.2374, 1.2427, 0.9699]</p>
+      <p><strong>Multistep mean deployment RMSE:</strong> 1.1500</p>
       <p><strong>NumPy matmul warnings:</strong> suppressed in latest code path</p>
       <p><a href="./changes_summary.pdf">Change Summary PDF</a></p>
-      <p><a href="https://github.com/ISCLPurdue/CBurgers_Codex/blob/master/build/run.log">Runtime Log</a></p>
-      <p><a href="https://github.com/ISCLPurdue/CBurgers_Codex/blob/master/build_local/app">Built Executable</a></p>
-      <p><a href="https://github.com/ISCLPurdue/CBurgers_Codex/blob/master/build/checkpoints/my_checkpoint.pt">Torch Model Checkpoint</a></p>
+      <p><a href="./assets/run_unbuffered.log">Runtime Log (detailed)</a></p>
+      <p><a href="https://github.com/ISCLPurdue/CBurgers_Codex/blob/main/build_local/app">Built Executable</a></p>
+      <p><a href="./assets/checkpoints/my_checkpoint_onestep.pt">Torch Checkpoint (one-step)</a></p>
+      <p><a href="./assets/checkpoints/my_checkpoint_multistep.pt">Torch Checkpoint (multistep)</a></p>
     </div>
 
     <div class="footer">

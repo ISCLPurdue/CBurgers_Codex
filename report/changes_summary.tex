@@ -96,7 +96,8 @@ which is algebraically equivalent to a Galerkin-like projection onto the retaine
 
 \subsection{LSTM Forecasting Model}
 Let $a_t \in \mathbb{R}^{r}$ be row $t$ of $A$.
-The model uses a lookback window of length $L=5$ and learns
+Two model variants are trained with lookback lengths
+$L \in \{1,8\}$ and learn
 \begin{equation}
 f_\theta:\mathbb{R}^{L\times r}\to\mathbb{R}^{r},
 \qquad
@@ -109,19 +110,24 @@ Training pairs are:
 \mathbf{y}_k = a_{k+L}\in\mathbb{R}^{r}.
 \end{equation}
 
-Data are normalized by a pipeline (standardization then min-max scaling to $[-1,1]$),
-and parameters are learned by minimizing mean-squared error:
+Data are normalized by a pipeline (standardization then min-max scaling to $[-1,1]$).
+Training minimizes a one-step loss plus pushforward closed-loop rollout loss:
 \begin{equation}
 \mathcal{L}(\theta)
 = \frac{1}{N_b}\sum_{k=1}^{N_b}
-\left\|f_\theta(\mathbf{X}_k)-\mathbf{y}_k\right\|_2^2.
+\left(
+\left\|f_\theta(\mathbf{X}_k)-\mathbf{y}_k\right\|_2^2
++ \lambda \frac{1}{K}\sum_{j=1}^{K}\left\|\hat a_{k+L+j}-a_{k+L+j}\right\|_2^2
+\right),
 \end{equation}
-Optimization is performed with Adam ($10^{-3}$ learning rate).
+where $K=5$ pushforward steps and $\lambda=0.7$ in the implementation.
+Optimization is performed with Adam ($10^{-3}$ initial learning rate), plus
+ReduceLROnPlateau scheduling and gradient clipping.
 
 The network is a stacked LSTM:
 \begin{align}
-h^{(1)} &= \mathrm{LSTM}_{50}^{(1)}(\mathbf{X}_k),\\
-h^{(2)} &= \mathrm{LSTM}_{50}^{(2)}(h^{(1)}),\\
+h^{(1)} &= \mathrm{LSTM}_{64}^{(1)}(\mathbf{X}_k),\\
+h^{(2)} &= \mathrm{LSTM}_{64}^{(2)}(h^{(1)}),\\
 \hat a_{k+L} &= W h^{(2)} + b,
 \end{align}
 where the second LSTM returns only the final hidden state,
@@ -220,7 +226,7 @@ These changes were required to keep the pipeline runnable and transparent under 
 \section{Results and Generated Artifacts}
 \subsection{Runtime Outcome}
 The application now builds and runs end-to-end through solver evolution and Python analysis/training/inference.
-The process exits successfully while still reporting a post-analysis shape-warning guard from C++.
+Latest runs complete successfully and generate the updated comparison artifacts.
 
 \subsection{Training and Analysis Log Excerpts}
 Source: \texttt{build/run\_unbuffered.log}
@@ -231,15 +237,18 @@ Improved validation loss from: inf  to: 0.2960874676704407
 Validation R2: 0.38439065
 ...
 Training iteration: 39
-Improved validation loss from: 9.38560865506588e-06  to: 9.1176401838311e-06
-Validation R2: 0.99998105
-Test loss: 2.3358365e-05
-Test R2: 0.9999479
+Improved validation loss from: 3.9862821131464445e-05  to: 3.793928490267717e-05
+Validation R2: 0.9999605
+Test loss: 1.588151e-05
+Test R2: 0.99996436
+Test rollout RMSE: 0.004790624603629112
 Performing inference on testing data
 Model restored successfully!
 Making predictions on testing data
-Deployment RMSE per mode: [1.2382958 1.2495794 0.9701827]
-Deployment RMSE (mean over modes): 1.152686
+One-step input RMSE per mode: [1.2709553 0.4815025 1.2855033]
+Multistep input RMSE per mode: [1.2374445 1.242674 0.9698531]
+[onestep] Deployment RMSE (mean over modes): 1.0126537
+[multistep] Deployment RMSE (mean over modes): 1.1499906
 Called python analyses function successfully
 First mode value: 4.03865e-12
 Second mode value: -3.70185e-12
@@ -254,6 +263,36 @@ In the latest code, this path is explicitly sanitized:
   \item projection executes under a guarded NumPy error-state context.
 \end{itemize}
 As a result, the latest run log does not emit those NumPy \texttt{matmul} warnings.
+
+\subsection{Autoregressive Training Upgrade}
+To reduce deployment drift/flatlining in autoregressive rollout, training now includes
+a pushforward-style multi-step objective in addition to one-step loss. Concretely:
+\begin{itemize}
+  \item training minimizes one-step MSE plus weighted closed-loop rollout loss over future steps,
+  \item model predictions are recursively fed back during training (not only at deployment),
+  \item validation tracks rollout RMSE alongside one-step metrics.
+\end{itemize}
+This better aligns optimization with the true deployment setting and improves long-horizon mode forecasts.
+
+\subsection{One-step vs Multistep Comparison}
+The repository now trains and evaluates two forecasting variants under the same data split:
+\begin{itemize}
+  \item \textbf{One-step input model}: $L=1$, autoregressive one-step deployment.
+  \item \textbf{Multistep input model}: $L=8$, autoregressive one-step deployment.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Mode 0 RMSE} & \textbf{Mode 1 RMSE} & \textbf{Mode 2 RMSE} & \textbf{Mean RMSE} \\
+\midrule
+One-step input ($L=1$) & 1.2709553 & 0.4815025 & 1.2855033 & 1.0126537 \\
+Multistep input ($L=8$) & 1.2374445 & 1.2426740 & 0.9698531 & 1.1499906 \\
+\bottomrule
+\end{tabular}
+\caption{Autoregressive deployment RMSE comparison from \texttt{build/run\_unbuffered.log}.}
+\end{table}
 
 \subsection{Result Images}
 \begin{figure}[H]
@@ -274,6 +313,14 @@ As a result, the latest run log does not emit those NumPy \texttt{matmul} warnin
   \includegraphics[width=0.49\linewidth]{../build/Mode_1_prediction.png}
   \includegraphics[width=0.49\linewidth]{../build/Mode_2_prediction.png}
   \caption{PyTorch LSTM mode prediction plots (three compressed modes).}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\linewidth]{../build/Mode_0_comparison.png}
+  \includegraphics[width=0.49\linewidth]{../build/Mode_1_comparison.png}
+  \includegraphics[width=0.49\linewidth]{../build/Mode_2_comparison.png}
+  \caption{Direct comparison of one-step input vs multistep input autoregressive forecasts for modes 0--2.}
 \end{figure}
 
 \begin{figure}[H]
@@ -317,7 +364,7 @@ Execution artifacts & Legacy checked-in root PNGs & Freshly generated outputs in
 \begin{itemize}
   \item Executable: \texttt{build\_local/app}
   \item Logs: \texttt{build/run.log}, \texttt{build/run\_unbuffered.log}
-  \item Checkpoint: \texttt{build/checkpoints/my\_checkpoint.pt}
+  \item Checkpoints: \texttt{build/checkpoints/my\_checkpoint\_onestep.pt}, \texttt{build/checkpoints/my\_checkpoint\_multistep.pt}
   \item Figures: \texttt{build/*.png}
 \end{itemize}
 

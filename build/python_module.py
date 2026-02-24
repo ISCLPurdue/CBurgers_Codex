@@ -72,10 +72,46 @@ def analyses_func():
 
     from ml_module import standard_lstm
 
-    ml_model = standard_lstm(train_series)
-    ml_model.train_model()
-    print("Performing inference on testing data")
-    ml_model.model_inference(test_series)
+    # Model A: one-timestep input -> one-step forecast.
+    model_onestep = standard_lstm(train_series, seq_num=1, model_tag="onestep")
+    model_onestep.train_model()
+    print("Performing inference on testing data for onestep model")
+    true_onestep, pred_onestep = model_onestep.model_inference(test_series)
+
+    # Model B: multistep input -> one-step forecast.
+    model_multistep = standard_lstm(train_series, seq_num=8, model_tag="multistep")
+    model_multistep.train_model()
+    print("Performing inference on testing data for multistep model")
+    true_multistep, pred_multistep = model_multistep.model_inference(test_series)
+
+    # Create direct comparison plots for modes 0,1,2.
+    mode_rmse_onestep = np.sqrt(np.mean(np.square(pred_onestep - true_onestep), axis=0))
+    mode_rmse_multistep = np.sqrt(np.mean(np.square(pred_multistep - true_multistep), axis=0))
+    print("One-step input RMSE per mode:", mode_rmse_onestep)
+    print("Multistep input RMSE per mode:", mode_rmse_multistep)
+
+    for i in range(3):
+        plt.figure(figsize=(8, 4))
+        plt.title(f"Mode {i} Evolution: One-step vs Multistep Input")
+        plt.plot(true_multistep[:, i], label="True", linewidth=2)
+        plt.plot(pred_onestep[:, i], "--", label=f"Predicted (seq_len=1), RMSE={mode_rmse_onestep[i]:.4f}")
+        plt.plot(pred_multistep[:, i], "-.", label=f"Predicted (seq_len=8), RMSE={mode_rmse_multistep[i]:.4f}")
+        plt.xlabel("Autoregressive rollout step")
+        plt.ylabel(f"Mode {i} coefficient")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(f"Mode_{i}_comparison.png")
+        plt.close()
+
+    # Keep canonical outputs aligned to multistep model for existing report/dashboard references.
+    for i in range(3):
+        plt.figure()
+        plt.title("Mode " + str(i))
+        plt.plot(pred_multistep[:, i], label="Predicted")
+        plt.plot(true_multistep[:, i], label="True")
+        plt.legend()
+        plt.savefig("Mode_" + str(i) + "_prediction.png")
+        plt.close()
 
     # Return basis as (num_modes, num_dofs) to match C++ inspection logic.
     return_data = v[0:3, :]
