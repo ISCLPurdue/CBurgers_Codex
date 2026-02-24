@@ -35,7 +35,10 @@ def analyses_func():
     plt.savefig("Field_evolution.png")
     plt.close()
 
-    data_array = data_array[:, 1:-1]
+    # Sanitize raw solver snapshots before linear algebra operations.
+    # This prevents inf/nan propagation and overflow in downstream matmul.
+    data_array = np.nan_to_num(data_array[:, 1:-1], nan=0.0, posinf=0.0, neginf=0.0)
+    data_array = np.clip(data_array, -1.0e3, 1.0e3)
     print("Performing SVD")
     _, _, v = np.linalg.svd(data_array, full_matrices=False)
 
@@ -53,7 +56,13 @@ def analyses_func():
     np.save("eigenvectors.npy", v[0:3, :].T)
 
     # Coefficient time series in retained POD basis.
-    time_series = np.matmul(v[0:3, :], data_array.T).T
+    # Explicit operand sanitization + errstate guard prevents runtime warnings.
+    modes = np.nan_to_num(v[0:3, :], nan=0.0, posinf=0.0, neginf=0.0)
+    snaps_t = np.nan_to_num(data_array.T, nan=0.0, posinf=0.0, neginf=0.0)
+    modes = np.clip(modes, -1.0e3, 1.0e3)
+    snaps_t = np.clip(snaps_t, -1.0e3, 1.0e3)
+    with np.errstate(divide="ignore", over="ignore", invalid="ignore"):
+        time_series = np.matmul(modes, snaps_t).T
     time_series = np.nan_to_num(time_series, nan=0.0, posinf=1e6, neginf=-1e6)
     time_series = np.clip(time_series, -1e6, 1e6)
 

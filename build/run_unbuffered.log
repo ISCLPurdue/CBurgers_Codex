@@ -4006,15 +4006,9 @@ Called python data collection function successfully
 time = 1.999
 Called python data collection function successfully
 time = 2
-CPU time = 0.005667
+CPU time = 0.005208
 Python based data analysis starting:
 Performing SVD
-/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: divide by zero encountered in matmul
-  time_series = np.matmul(v[0:3, :], data_array.T).T
-/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: overflow encountered in matmul
-  time_series = np.matmul(v[0:3, :], data_array.T).T
-/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: invalid value encountered in matmul
-  time_series = np.matmul(v[0:3, :], data_array.T).T
 Training iteration: 0
 Improved validation loss from: inf  to: 0.2960874676704407
 Validation R2: 0.38439065
