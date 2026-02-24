@@ -11,8 +11,9 @@ For project context, see the original paper link in the repo history: [10.1063/5
 
 ## Session Deliverables
 
-- Dashboard: [`report/dashboard.html`](report/dashboard.html)
-- Detailed technical report (PDF): [`report/changes_summary.pdf`](report/changes_summary.pdf)
+- Browser-renderable dashboard: [`docs/dashboard.html`](docs/dashboard.html)
+- Browser-renderable report (PDF): [`docs/changes_summary.pdf`](docs/changes_summary.pdf)
+- GitHub Pages entry point (after enabling Pages): `https://isclpurdue.github.io/CBurgers_Codex/`
 
 ## Current Build and Run Instructions
 
