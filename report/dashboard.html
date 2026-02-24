@@ -137,7 +137,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>CBurgers_Codex Project Dashboard</h1>
-      <p>Workflow, runtime outcomes, and code changes from the local setup, rebuild, and debug session.</p>
+      <p>Workflow, runtime outcomes, and code changes from the local setup, rebuild, and PyTorch migration session.</p>
       <div class="grid">
         <div class="card">
           <div class="stat">Executable</div>
@@ -151,7 +151,7 @@
         </div>
         <div class="card">
           <div class="stat">Plot Outputs</div>
-          <div class="num">5</div>
+          <div class="num">7</div>
           <div><span class="tag">PNG generated in build/</span></div>
         </div>
         <div class="card">
@@ -165,10 +165,10 @@
     <h2>Workflow</h2>
     <div class="timeline">
       <div class="item"><div class="k">Step 1</div><div class="v">Repository cloned and local Python virtual environment created.</div></div>
-      <div class="item"><div class="k">Step 2</div><div class="v">Baseline packages installed: NumPy, SciPy, Matplotlib, Jupyter; then CMake, TensorFlow, scikit-learn.</div></div>
+      <div class="item"><div class="k">Step 2</div><div class="v">Baseline packages installed: NumPy, SciPy, Matplotlib, Jupyter; then CMake, PyTorch, scikit-learn.</div></div>
       <div class="item"><div class="k">Step 3</div><div class="v">CMake config modernized to use discovered Python3/NumPy instead of hardcoded legacy paths.</div></div>
       <div class="item"><div class="k">Step 4</div><div class="v">Executable rebuilt in <code>build_local/</code> and run against Python workflow in <code>build/</code>.</div></div>
-      <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging completed: Python error handling in C++, Keras 3 compatibility fixes in <code>build/ml_module.py</code>.</div></div>
+      <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging and ML migration completed: TensorFlow pipeline replaced with a Torch stacked-LSTM in <code>build/ml_module.py</code>.</div></div>
       <div class="item"><div class="k">Step 6</div><div class="v">Artifacts regenerated and LaTeX PDF change report produced in <code>report/</code>.</div></div>
     </div>
 
@@ -189,6 +189,18 @@
       <figure>
         <img src="../build/Mode_1_prediction.png" alt="Mode 1 prediction plot">
         <figcaption>Mode 1 prediction (updated Feb 23, 2026 22:24:51)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/Mode_2_prediction.png" alt="Mode 2 prediction plot">
+        <figcaption>Mode 2 prediction (updated Feb 23, 2026 22:24:51)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/Training_Loss.png" alt="Training loss plot">
+        <figcaption>Torch training and validation loss (log-scale)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/Torch_LSTM_Schematic.png" alt="Torch LSTM architecture schematic">
+        <figcaption>Torch stacked-LSTM architecture schematic</figcaption>
       </figure>
     </div>
 
@@ -215,7 +227,7 @@
         <tr>
           <td><code>build/ml_module.py</code></td>
           <td><span class="tag">ML Compatibility</span></td>
-          <td>Updated TensorFlow/Keras integration: removed manual tape watch, switched checkpoint suffix to <code>.weights.h5</code>, and added explicit model build call.</td>
+          <td>Migrated forecasting from TensorFlow/Keras to PyTorch, added training history plotting, architecture schematic generation, and <code>.pt</code> checkpointing.</td>
         </tr>
         <tr>
           <td><code>*.png (repo root)</code></td>
@@ -230,7 +242,7 @@
       <p><a href="./changes_summary.pdf">Change Summary PDF</a></p>
       <p><a href="../build/run.log">Runtime Log</a></p>
       <p><a href="../build_local/app">Built Executable</a></p>
-      <p><a href="../build/checkpoints/my_checkpoint.weights.h5">Keras Weights Checkpoint</a></p>
+      <p><a href="../build/checkpoints/my_checkpoint.pt">Torch Model Checkpoint</a></p>
     </div>
 
     <div class="footer">

@@ -4,7 +4,7 @@ This mini-application demonstrates a C++ and Python scientific machine learning 
 
 1. C++ solves a 1D viscous Burgers equation and streams snapshots in situ.
 2. Python performs SVD-based modal compression.
-3. An LSTM model is trained on modal coefficients and used for forecasting.
+3. A PyTorch LSTM model is trained on modal coefficients and used for forecasting.
 4. Result figures are generated directly from the workflow.
 
 For project context, see the original paper link in the repo history: [10.1063/5.0019884](https://doi.org/10.1063/5.0019884).
@@ -29,7 +29,7 @@ source .venv/bin/activate
 ### 2. Install Python dependencies
 
 ```bash
-pip install numpy scipy matplotlib jupyter cmake tensorflow scikit-learn
+pip install numpy scipy matplotlib jupyter cmake torch scikit-learn
 ```
 
 ### 3. Configure and build C++
@@ -59,8 +59,10 @@ Generated outputs are in `build/`:
 - `build/Mode_0_prediction.png`
 - `build/Mode_1_prediction.png`
 - `build/Mode_2_prediction.png`
+- `build/Training_Loss.png`
+- `build/Torch_LSTM_Schematic.png`
 - `build/eigenvectors.npy`
-- `build/checkpoints/my_checkpoint.weights.h5`
+- `build/checkpoints/my_checkpoint.pt`
 
 ## Result Preview
 
@@ -74,3 +76,9 @@ Generated outputs are in `build/`:
 ![Forecasting Mode 0](build/Mode_0_prediction.png "Mode 0 prediction")
 ![Forecasting Mode 1](build/Mode_1_prediction.png "Mode 1 prediction")
 ![Forecasting Mode 2](build/Mode_2_prediction.png "Mode 2 prediction")
+
+### Training loss history (PyTorch LSTM)
+![Training Loss](build/Training_Loss.png "PyTorch training and validation loss")
+
+### Torch LSTM architecture schematic
+![Torch LSTM Schematic](build/Torch_LSTM_Schematic.png "Torch LSTM architecture")

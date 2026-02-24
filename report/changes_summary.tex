@@ -43,8 +43,8 @@ The overall intended workflow is:
 \end{enumerate}
 
 The repository's README indicates this as a demonstration of practical C++/Python interop for
-scientific machine learning, originally developed around an older environment
-(Python 3.6 / TensorFlow 2.2 era assumptions).
+scientific machine learning, originally developed around an older environment.
+In this update, the forecasting stack was migrated to PyTorch.
 
 \section{Mathematical Model for Forecasting}
 \subsection{Governing PDE and Spatial-Temporal Discretization}
@@ -163,7 +163,7 @@ The scope of this session included:
   \item Cloned repository to \texttt{/Users/rmaulik/Desktop/Codex\_Stuff/CBurgers\_Codex}.
   \item Created virtual environment at \texttt{.venv/}.
   \item Installed baseline packages: \texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}, \texttt{jupyter}.
-  \item Installed missing build/runtime dependencies: \texttt{cmake}, \texttt{tensorflow}, \texttt{scikit-learn}.
+  \item Installed missing build/runtime dependencies: \texttt{cmake}, \texttt{torch}, \texttt{scikit-learn}.
 \end{itemize}
 
 \subsection{Build Recovery}
@@ -180,7 +180,7 @@ A clean local build directory (\texttt{build\_local/}) was created and used succ
 \midrule
 \texttt{CMakeLists.txt} & Replaced hardcoded Python 3.6 Conda include/library paths with portable detection via \texttt{find\_package(Python3 REQUIRED COMPONENTS Interpreter Development NumPy)} and target-based include/link settings. \\
 \texttt{app.cpp} & Added defensive Python embedding checks: module import failure handling, callable checks, exception printing on callback failures, null-safe decref, and analysis output shape guard before array indexing. \\
-\texttt{build/ml\_module.py} & Applied TensorFlow/Keras compatibility fixes for modern stack: removed explicit \texttt{tape.watch(self.trainable\_variables)}, changed checkpoint filename to \texttt{.weights.h5}, and ensured model build before saving weights via a warm-up call. \\
+\texttt{build/ml\_module.py} & Replaced TensorFlow/Keras training and inference code with a PyTorch stacked-LSTM pipeline, Adam optimization, model checkpointing (\texttt{.pt}), plus automated training-loss and architecture-schematic plotting. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -191,7 +191,7 @@ A clean local build directory (\texttt{build\_local/}) was created and used succ
   \texttt{Field\_evolution.png}, \texttt{SVD\_Eigenvectors.png}, \texttt{Mode\_0\_prediction.png},
   \texttt{Mode\_1\_prediction.png}, \texttt{Mode\_2\_prediction.png}.
   \item Regenerated result images under \texttt{build/} with fresh timestamps.
-  \item Added new checkpoint output: \texttt{build/checkpoints/my\_checkpoint.weights.h5}.
+  \item Added new checkpoint output: \texttt{build/checkpoints/my\_checkpoint.pt}.
 \end{itemize}
 
 \section{Justification for Fixes}
@@ -203,18 +203,19 @@ including this session's \texttt{.venv}.
 
 \subsection{Why C++ runtime checks were necessary}
 The executable was dereferencing Python objects without validating imports/callability.
-When Python imports failed (for example, missing TensorFlow), failures were masked and led to
+When Python imports failed (for example, missing ML framework dependencies), failures were masked and led to
 abrupt termination. The added checks produce explicit Python tracebacks and controlled exits.
 
 \subsection{Why ML compatibility edits were necessary}
-The repository code targeted older TF/Keras behavior.
-With current TensorFlow/Keras in the local environment:
+The repository code targeted an older TensorFlow/Keras stack.
+The forecasting component was migrated to PyTorch to simplify portability and modernize training behavior:
 \begin{itemize}
-  \item Manual \texttt{GradientTape.watch()} on trainable vars caused a type validation failure.
-  \item Weight saving now enforces a \texttt{.weights.h5} suffix.
-  \item Subclassed model weights must exist before save; forcing model build prevents runtime save errors.
+  \item Replaced Keras model definitions with \texttt{torch.nn.LSTM} + \texttt{torch.nn.Linear}.
+  \item Replaced GradientTape logic with explicit autograd backward pass and optimizer steps.
+  \item Replaced Keras weight format with PyTorch checkpointing (\texttt{state\_dict} in \texttt{.pt} file).
+  \item Added explicit training-history plotting and a Torch architecture schematic for documentation.
 \end{itemize}
-These changes were required to complete training/inference under the installed toolchain.
+These changes were required to keep the pipeline runnable and transparent under the current toolchain.
 
 \section{Results and Generated Artifacts}
 \subsection{Runtime Outcome}
@@ -230,15 +231,16 @@ Improved validation loss from: 999999.0  to: 1.9493028
 Validation R2: 0.7909084230642178
 ...
 Training iteration: 9
-Improved validation loss from: 0.009479656  to: 0.008223273
-Validation R2: 0.9991378839346071
-Test loss: 0.0003802304
-Test R2: 0.999240932816212
+Improved validation loss from: 0.0010974433665978723  to: 0.0008915976170101203
+Validation R2: 0.9982076
+Test loss: 0.0008534239
+Test R2: 0.99810106
 Performing inference on testing data
 Model restored successfully!
 Making predictions on testing data
 Called python analyses function successfully
-Unexpected output array shape from analyses_func
+First mode value: 4.03865e-12
+Second mode value: -3.70185e-12
 \end{lstlisting}
 
 \subsection{Warnings Observed (Numerics/Modeling)}
@@ -268,7 +270,19 @@ These warnings indicate numerical instability in the ML input construction path
   \includegraphics[width=0.49\linewidth]{../build/Mode_0_prediction.png}
   \includegraphics[width=0.49\linewidth]{../build/Mode_1_prediction.png}
   \includegraphics[width=0.49\linewidth]{../build/Mode_2_prediction.png}
-  \caption{LSTM mode prediction plots (three compressed modes).}
+  \caption{PyTorch LSTM mode prediction plots (three compressed modes).}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.78\linewidth]{../build/Training_Loss.png}
+  \caption{Training and validation loss reduction over epochs (log-scale MSE).}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{../build/Torch_LSTM_Schematic.png}
+  \caption{Schematic of the deployed Torch stacked-LSTM forecasting architecture.}
 \end{figure}
 
 \section{Modernized Project State (Before vs After)}
@@ -280,7 +294,7 @@ These warnings indicate numerical instability in the ML input construction path
 \midrule
 Build config & Hardcoded Python 3.6-specific absolute paths & Portable Python/NumPy discovery via CMake target-based linking \\
 Runtime safety & Minimal Python object validation & Explicit import/call checks, traceback printing, null-safe handling \\
-ML compatibility & Assumed older Keras behavior & Updated for modern save/load requirements and gradient flow behavior \\
+ML stack & TensorFlow/Keras-centric implementation & PyTorch stacked-LSTM with explicit autograd training and \texttt{.pt} checkpointing \\
 Execution artifacts & Legacy checked-in root PNGs & Freshly generated outputs in \texttt{build/} + checkpoint/log artifacts \\
 \bottomrule
 \end{tabular}
@@ -300,7 +314,7 @@ Execution artifacts & Legacy checked-in root PNGs & Freshly generated outputs in
 \begin{itemize}
   \item Executable: \texttt{build\_local/app}
   \item Logs: \texttt{build/run.log}, \texttt{build/run\_unbuffered.log}
-  \item Checkpoint: \texttt{build/checkpoints/my\_checkpoint.weights.h5}
+  \item Checkpoint: \texttt{build/checkpoints/my\_checkpoint.pt}
   \item Figures: \texttt{build/*.png}
 \end{itemize}
 

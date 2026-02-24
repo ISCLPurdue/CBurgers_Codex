@@ -1,8 +1,6 @@
 Initializing numpy library
 Loading python module
 From python: Within python module
-/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
-  warnings.warn(
 Loaded python module
 Loading functions from module
 Loaded functions
@@ -4008,51 +4006,68 @@ Called python data collection function successfully
 time = 1.999
 Called python data collection function successfully
 time = 2
-CPU time = 0.00698
+CPU time = 0.005667
 Python based data analysis starting:
 Performing SVD
 /Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: divide by zero encountered in matmul
-  time_series = np.matmul(v[0:3,:],data_array.T).T
+  time_series = np.matmul(v[0:3, :], data_array.T).T
 /Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: overflow encountered in matmul
-  time_series = np.matmul(v[0:3,:],data_array.T).T
+  time_series = np.matmul(v[0:3, :], data_array.T).T
 /Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: invalid value encountered in matmul
-  time_series = np.matmul(v[0:3,:],data_array.T).T
-/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/.venv/lib/python3.9/site-packages/keras/src/layers/rnn/rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-  super().__init__(**kwargs)
+  time_series = np.matmul(v[0:3, :], data_array.T).T
 Training iteration: 0
-Improved validation loss from: 999999.0  to: 1.9493028
-Validation R2: 0.7909084230642178
+Improved validation loss from: inf  to: 0.2960874676704407
+Validation R2: 0.38439065
 Training iteration: 1
-Improved validation loss from: 1.9493028  to: 0.30272794
-Validation R2: 0.9675080366273077
+Improved validation loss from: 0.2960874676704407  to: 0.042486316757276654
+Validation R2: 0.9147824
 Training iteration: 2
-Improved validation loss from: 0.30272794  to: 0.103279956
-Validation R2: 0.9887898565882246
+Improved validation loss from: 0.042486316757276654  to: 0.017124662175774574
+Validation R2: 0.9651563
 Training iteration: 3
-Improved validation loss from: 0.103279956  to: 0.050800182
-Validation R2: 0.9945438399454858
+Improved validation loss from: 0.017124662175774574  to: 0.009013791265897454
+Validation R2: 0.9819093
 Training iteration: 4
-Improved validation loss from: 0.050800182  to: 0.03002232
-Validation R2: 0.9966953416809406
+Improved validation loss from: 0.009013791265897454  to: 0.004868935293052346
+Validation R2: 0.99019516
 Training iteration: 5
-Improved validation loss from: 0.03002232  to: 0.020202404
-Validation R2: 0.9978487535620303
+Improved validation loss from: 0.004868935293052346  to: 0.002838236279785633
+Validation R2: 0.9943058
 Training iteration: 6
-Improved validation loss from: 0.020202404  to: 0.01425508
-Validation R2: 0.9984964868757101
+Improved validation loss from: 0.002838236279785633  to: 0.0018777725199470297
+Validation R2: 0.99623966
 Training iteration: 7
-Improved validation loss from: 0.01425508  to: 0.011229501
-Validation R2: 0.9988201012456484
+Improved validation loss from: 0.0018777725199470297  to: 0.0013827448099618777
+Validation R2: 0.9972311
 Training iteration: 8
-Improved validation loss from: 0.011229501  to: 0.009479656
-Validation R2: 0.9990055854660371
+Improved validation loss from: 0.0013827448099618777  to: 0.0010974433665978723
+Validation R2: 0.9978001
 Training iteration: 9
-Improved validation loss from: 0.009479656  to: 0.008223273
-Validation R2: 0.9991378839346071
-Test loss: 0.0003802304
-Test R2: 0.999240932816212
+Improved validation loss from: 0.0010974433665978723  to: 0.0008915976170101203
+Validation R2: 0.9982076
+Test loss: 0.0008534239
+Test R2: 0.99810106
 Performing inference on testing data
 Model restored successfully!
 Making predictions on testing data
 Called python analyses function successfully
-Unexpected output array shape from analyses_func
+First mode value: 4.03865e-12
+First mode value: -0.00128764
+First mode value: -0.00257505
+First mode value: -0.003862
+First mode value: -0.00514827
+First mode value: -0.00643361
+First mode value: -0.00771781
+First mode value: -0.00900063
+First mode value: -0.0102818
+First mode value: -0.0115612
+Second mode value: -3.70185e-12
+Second mode value: 0.00160629
+Second mode value: 0.00321149
+Second mode value: 0.00481448
+Second mode value: 0.00641416
+Second mode value: 0.00800944
+Second mode value: 0.00959921
+Second mode value: 0.0111824
+Second mode value: 0.0127578
+Second mode value: 0.0143244
