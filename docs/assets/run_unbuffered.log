@@ -4006,269 +4006,522 @@ Called python data collection function successfully
 time = 1.999
 Called python data collection function successfully
 time = 2
-CPU time = 0.005682
+CPU time = 0.005483
 Python based data analysis starting:
 Performing SVD
 [onestep] Training iteration: 0
-[onestep] Improved validation loss from: inf  to: 0.722996324300766
-[onestep] Validation R2: 0.1266784
-[onestep] Validation rollout RMSE: 0.6627505421638489
+[onestep] Rollout steps=9, teacher_forcing_prob=0.980
+[onestep] Improved validation rollout RMSE from: inf  to: 0.1433444321155548
+[onestep] Validation R2: 0.9999839
+[onestep] Validation rollout RMSE: 0.1433444321155548
 [onestep] Training iteration: 1
-[onestep] Improved validation loss from: 0.722996324300766  to: 0.5604442521929741
-[onestep] Validation R2: 0.37034708
-[onestep] Validation rollout RMSE: 0.6062354445457458
+[onestep] Rollout steps=10, teacher_forcing_prob=0.970
+[onestep] Improved validation rollout RMSE from: 0.1433444321155548  to: 0.053460363298654556
+[onestep] Validation R2: 0.9999923
+[onestep] Validation rollout RMSE: 0.053460363298654556
 [onestep] Training iteration: 2
-[onestep] Improved validation loss from: 0.5604442521929741  to: 0.3630591996014118
-[onestep] Validation R2: 0.6861198
-[onestep] Validation rollout RMSE: 0.5405111908912659
+[onestep] Rollout steps=11, teacher_forcing_prob=0.960
+[onestep] Improved validation rollout RMSE from: 0.053460363298654556  to: 0.03883565962314606
+[onestep] Validation R2: 0.9999949
+[onestep] Validation rollout RMSE: 0.03883565962314606
 [onestep] Training iteration: 3
-[onestep] Improved validation loss from: 0.3630591996014118  to: 0.102496203687042
-[onestep] Validation R2: 0.913519
-[onestep] Validation rollout RMSE: 0.28634750843048096
+[onestep] Rollout steps=12, teacher_forcing_prob=0.951
+[onestep] Validation rollout RMSE (no improvement): 0.04463237151503563
+[onestep] Validation R2: 0.9999958
 [onestep] Training iteration: 4
-[onestep] Improved validation loss from: 0.102496203687042  to: 0.05353005481883884
-[onestep] Validation R2: 0.9543271
-[onestep] Validation rollout RMSE: 0.20848476886749268
+[onestep] Rollout steps=13, teacher_forcing_prob=0.941
+[onestep] Improved validation rollout RMSE from: 0.03883565962314606  to: 0.03750801831483841
+[onestep] Validation R2: 0.9999966
+[onestep] Validation rollout RMSE: 0.03750801831483841
 [onestep] Training iteration: 5
-[onestep] Improved validation loss from: 0.05353005481883884  to: 0.03303371667861939
-[onestep] Validation R2: 0.96622556
-[onestep] Validation rollout RMSE: 0.15100695192813873
+[onestep] Rollout steps=14, teacher_forcing_prob=0.931
+[onestep] Validation rollout RMSE (no improvement): 0.04105289280414581
+[onestep] Validation R2: 0.999997
 [onestep] Training iteration: 6
-[onestep] Improved validation loss from: 0.03303371667861939  to: 0.028964558243751527
-[onestep] Validation R2: 0.9708583
-[onestep] Validation rollout RMSE: 0.1427123248577118
+[onestep] Rollout steps=15, teacher_forcing_prob=0.921
+[onestep] Improved validation rollout RMSE from: 0.03750801831483841  to: 0.034925833344459534
+[onestep] Validation R2: 0.99999756
+[onestep] Validation rollout RMSE: 0.034925833344459534
 [onestep] Training iteration: 7
-[onestep] Improved validation loss from: 0.028964558243751527  to: 0.025504620093852282
-[onestep] Validation R2: 0.97512865
-[onestep] Validation rollout RMSE: 0.13591180741786957
+[onestep] Rollout steps=16, teacher_forcing_prob=0.911
+[onestep] Validation rollout RMSE (no improvement): 0.036173559725284576
+[onestep] Validation R2: 0.99999774
 [onestep] Training iteration: 8
-[onestep] Improved validation loss from: 0.025504620093852282  to: 0.02206399734131992
-[onestep] Validation R2: 0.9791829
-[onestep] Validation rollout RMSE: 0.12814459204673767
+[onestep] Rollout steps=17, teacher_forcing_prob=0.902
+[onestep] Improved validation rollout RMSE from: 0.034925833344459534  to: 0.034912172704935074
+[onestep] Validation R2: 0.99999785
+[onestep] Validation rollout RMSE: 0.034912172704935074
 [onestep] Training iteration: 9
-[onestep] Improved validation loss from: 0.02206399734131992  to: 0.018556046253070235
-[onestep] Validation R2: 0.98320526
-[onestep] Validation rollout RMSE: 0.11938778311014175
+[onestep] Rollout steps=18, teacher_forcing_prob=0.892
+[onestep] Improved validation rollout RMSE from: 0.034912172704935074  to: 0.03362622484564781
+[onestep] Validation R2: 0.9999979
+[onestep] Validation rollout RMSE: 0.03362622484564781
 [onestep] Training iteration: 10
-[onestep] Improved validation loss from: 0.018556046253070235  to: 0.015119459992274643
-[onestep] Validation R2: 0.98693836
-[onestep] Validation rollout RMSE: 0.10953937470912933
+[onestep] Rollout steps=19, teacher_forcing_prob=0.882
+[onestep] Validation rollout RMSE (no improvement): 0.0341535285115242
+[onestep] Validation R2: 0.999998
 [onestep] Training iteration: 11
-[onestep] Improved validation loss from: 0.015119459992274643  to: 0.012064405810087919
-[onestep] Validation R2: 0.9899389
-[onestep] Validation rollout RMSE: 0.09895181655883789
+[onestep] Rollout steps=20, teacher_forcing_prob=0.872
+[onestep] Improved validation rollout RMSE from: 0.03362622484564781  to: 0.032771896570920944
+[onestep] Validation R2: 0.9999981
+[onestep] Validation rollout RMSE: 0.032771896570920944
 [onestep] Training iteration: 12
-[onestep] Improved validation loss from: 0.012064405810087919  to: 0.009687154600396753
-[onestep] Validation R2: 0.99194884
-[onestep] Validation rollout RMSE: 0.08869462460279465
+[onestep] Rollout steps=21, teacher_forcing_prob=0.862
+[onestep] Validation rollout RMSE (no improvement): 0.03401995822787285
+[onestep] Validation R2: 0.9999981
 [onestep] Training iteration: 13
-[onestep] Improved validation loss from: 0.009687154600396753  to: 0.008012320008128881
-[onestep] Validation R2: 0.99312764
-[onestep] Validation rollout RMSE: 0.07975244522094727
+[onestep] Rollout steps=22, teacher_forcing_prob=0.853
+[onestep] Improved validation rollout RMSE from: 0.032771896570920944  to: 0.03263036906719208
+[onestep] Validation R2: 0.99999815
+[onestep] Validation rollout RMSE: 0.03263036906719208
 [onestep] Training iteration: 14
-[onestep] Improved validation loss from: 0.008012320008128881  to: 0.0068292832933366295
-[onestep] Validation R2: 0.99388057
-[onestep] Validation rollout RMSE: 0.0724257081747055
+[onestep] Rollout steps=23, teacher_forcing_prob=0.843
+[onestep] Improved validation rollout RMSE from: 0.03263036906719208  to: 0.03211520239710808
+[onestep] Validation R2: 0.99999815
+[onestep] Validation rollout RMSE: 0.03211520239710808
 [onestep] Training iteration: 15
-[onestep] Improved validation loss from: 0.0068292832933366295  to: 0.005939726263750345
-[onestep] Validation R2: 0.9944786
-[onestep] Validation rollout RMSE: 0.06654192507266998
+[onestep] Rollout steps=24, teacher_forcing_prob=0.833
+[onestep] Improved validation rollout RMSE from: 0.03211520239710808  to: 0.03206370770931244
+[onestep] Validation R2: 0.9999982
+[onestep] Validation rollout RMSE: 0.03206370770931244
 [onestep] Training iteration: 16
-[onestep] Improved validation loss from: 0.005939726263750345  to: 0.005246164440177381
-[onestep] Validation R2: 0.99500245
-[onestep] Validation rollout RMSE: 0.061883386224508286
+[onestep] Rollout steps=25, teacher_forcing_prob=0.823
+[onestep] Improved validation rollout RMSE from: 0.03206370770931244  to: 0.03197720646858215
+[onestep] Validation R2: 0.9999982
+[onestep] Validation rollout RMSE: 0.03197720646858215
 [onestep] Training iteration: 17
-[onestep] Improved validation loss from: 0.005246164440177381  to: 0.004694223578553647
-[onestep] Validation R2: 0.99546903
-[onestep] Validation rollout RMSE: 0.0582071989774704
+[onestep] Rollout steps=26, teacher_forcing_prob=0.813
+[onestep] Improved validation rollout RMSE from: 0.03197720646858215  to: 0.03175150975584984
+[onestep] Validation R2: 0.9999982
+[onestep] Validation rollout RMSE: 0.03175150975584984
 [onestep] Training iteration: 18
-[onestep] Improved validation loss from: 0.004694223578553647  to: 0.004239210818195715
-[onestep] Validation R2: 0.9958898
-[onestep] Validation rollout RMSE: 0.05521317198872566
+[onestep] Rollout steps=27, teacher_forcing_prob=0.804
+[onestep] Improved validation rollout RMSE from: 0.03175150975584984  to: 0.031503498554229736
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.031503498554229736
 [onestep] Training iteration: 19
-[onestep] Improved validation loss from: 0.004239210818195715  to: 0.0038532717560883613
-[onestep] Validation R2: 0.9962735
-[onestep] Validation rollout RMSE: 0.05269939824938774
+[onestep] Rollout steps=28, teacher_forcing_prob=0.794
+[onestep] Improved validation rollout RMSE from: 0.031503498554229736  to: 0.031320780515670776
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.031320780515670776
 [onestep] Training iteration: 20
-[onestep] Improved validation loss from: 0.0038532717560883613  to: 0.00352447162149474
-[onestep] Validation R2: 0.99662447
-[onestep] Validation rollout RMSE: 0.05061284080147743
+[onestep] Rollout steps=29, teacher_forcing_prob=0.784
+[onestep] Improved validation rollout RMSE from: 0.031320780515670776  to: 0.031099097803235054
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.031099097803235054
 [onestep] Training iteration: 21
-[onestep] Improved validation loss from: 0.00352447162149474  to: 0.0032384436344727874
-[onestep] Validation R2: 0.99694645
-[onestep] Validation rollout RMSE: 0.048847462981939316
+[onestep] Rollout steps=30, teacher_forcing_prob=0.774
+[onestep] Improved validation rollout RMSE from: 0.031099097803235054  to: 0.031072041019797325
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.031072041019797325
 [onestep] Training iteration: 22
-[onestep] Improved validation loss from: 0.0032384436344727874  to: 0.0029817089380230755
-[onestep] Validation R2: 0.99724257
-[onestep] Validation rollout RMSE: 0.04726476967334747
+[onestep] Rollout steps=31, teacher_forcing_prob=0.764
+[onestep] Improved validation rollout RMSE from: 0.031072041019797325  to: 0.030969856306910515
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.030969856306910515
 [onestep] Training iteration: 23
-[onestep] Improved validation loss from: 0.0029817089380230755  to: 0.002749049378326163
-[onestep] Validation R2: 0.99751365
-[onestep] Validation rollout RMSE: 0.04580505192279816
+[onestep] Rollout steps=32, teacher_forcing_prob=0.755
+[onestep] Improved validation rollout RMSE from: 0.030969856306910515  to: 0.030765961855649948
+[onestep] Validation R2: 0.9999983
+[onestep] Validation rollout RMSE: 0.030765961855649948
 [onestep] Training iteration: 24
-[onestep] Improved validation loss from: 0.002749049378326163  to: 0.0025383836531545968
-[onestep] Validation R2: 0.9977596
-[onestep] Validation rollout RMSE: 0.044450096786022186
+[onestep] Rollout steps=34, teacher_forcing_prob=0.745
+[onestep] Improved validation rollout RMSE from: 0.030765961855649948  to: 0.030535772442817688
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.030535772442817688
 [onestep] Training iteration: 25
-[onestep] Improved validation loss from: 0.0025383836531545968  to: 0.0023486081103328616
-[onestep] Validation R2: 0.9979804
-[onestep] Validation rollout RMSE: 0.04319516941905022
+[onestep] Rollout steps=35, teacher_forcing_prob=0.735
+[onestep] Improved validation rollout RMSE from: 0.030535772442817688  to: 0.030390236526727676
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.030390236526727676
 [onestep] Training iteration: 26
-[onestep] Improved validation loss from: 0.0023486081103328616  to: 0.0021792485902551563
-[onestep] Validation R2: 0.9981761
-[onestep] Validation rollout RMSE: 0.04204380884766579
+[onestep] Rollout steps=36, teacher_forcing_prob=0.725
+[onestep] Improved validation rollout RMSE from: 0.030390236526727676  to: 0.03027275949716568
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.03027275949716568
 [onestep] Training iteration: 27
-[onestep] Improved validation loss from: 0.0021792485902551563  to: 0.002029652119381353
-[onestep] Validation R2: 0.99834734
-[onestep] Validation rollout RMSE: 0.04099981114268303
+[onestep] Rollout steps=37, teacher_forcing_prob=0.716
+[onestep] Improved validation rollout RMSE from: 0.03027275949716568  to: 0.030228547751903534
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.030228547751903534
 [onestep] Training iteration: 28
-[onestep] Improved validation loss from: 0.002029652119381353  to: 0.0018984553520567716
-[onestep] Validation R2: 0.99849564
-[onestep] Validation rollout RMSE: 0.04005928337574005
+[onestep] Rollout steps=38, teacher_forcing_prob=0.706
+[onestep] Improved validation rollout RMSE from: 0.030228547751903534  to: 0.030143607407808304
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.030143607407808304
 [onestep] Training iteration: 29
-[onestep] Improved validation loss from: 0.0018984553520567716  to: 0.00178284976282157
-[onestep] Validation R2: 0.9986239
-[onestep] Validation rollout RMSE: 0.03919992968440056
-[onestep] Test loss: 0.00064058613
-[onestep] Test R2: 0.99857926
-[onestep] Test rollout RMSE: 0.038415465503931046
+[onestep] Rollout steps=39, teacher_forcing_prob=0.696
+[onestep] Improved validation rollout RMSE from: 0.030143607407808304  to: 0.029974402859807014
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029974402859807014
+[onestep] Training iteration: 30
+[onestep] Rollout steps=40, teacher_forcing_prob=0.686
+[onestep] Improved validation rollout RMSE from: 0.029974402859807014  to: 0.029867636039853096
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029867636039853096
+[onestep] Training iteration: 31
+[onestep] Rollout steps=41, teacher_forcing_prob=0.676
+[onestep] Improved validation rollout RMSE from: 0.029867636039853096  to: 0.029779165983200073
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029779165983200073
+[onestep] Training iteration: 32
+[onestep] Rollout steps=42, teacher_forcing_prob=0.667
+[onestep] Improved validation rollout RMSE from: 0.029779165983200073  to: 0.02969125658273697
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.02969125658273697
+[onestep] Training iteration: 33
+[onestep] Rollout steps=43, teacher_forcing_prob=0.657
+[onestep] Improved validation rollout RMSE from: 0.02969125658273697  to: 0.029645996168255806
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029645996168255806
+[onestep] Training iteration: 34
+[onestep] Rollout steps=44, teacher_forcing_prob=0.647
+[onestep] Improved validation rollout RMSE from: 0.029645996168255806  to: 0.029570726677775383
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029570726677775383
+[onestep] Training iteration: 35
+[onestep] Rollout steps=45, teacher_forcing_prob=0.637
+[onestep] Improved validation rollout RMSE from: 0.029570726677775383  to: 0.029512552544474602
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029512552544474602
+[onestep] Training iteration: 36
+[onestep] Rollout steps=46, teacher_forcing_prob=0.627
+[onestep] Improved validation rollout RMSE from: 0.029512552544474602  to: 0.029464617371559143
+[onestep] Validation R2: 0.99999833
+[onestep] Validation rollout RMSE: 0.029464617371559143
+[onestep] Training iteration: 37
+[onestep] Rollout steps=47, teacher_forcing_prob=0.618
+[onestep] Improved validation rollout RMSE from: 0.029464617371559143  to: 0.029356958344578743
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.029356958344578743
+[onestep] Training iteration: 38
+[onestep] Rollout steps=48, teacher_forcing_prob=0.608
+[onestep] Improved validation rollout RMSE from: 0.029356958344578743  to: 0.029275724664330482
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.029275724664330482
+[onestep] Training iteration: 39
+[onestep] Rollout steps=49, teacher_forcing_prob=0.598
+[onestep] Improved validation rollout RMSE from: 0.029275724664330482  to: 0.029207952320575714
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.029207952320575714
+[onestep] Training iteration: 40
+[onestep] Rollout steps=50, teacher_forcing_prob=0.588
+[onestep] Improved validation rollout RMSE from: 0.029207952320575714  to: 0.02914448268711567
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.02914448268711567
+[onestep] Training iteration: 41
+[onestep] Rollout steps=51, teacher_forcing_prob=0.578
+[onestep] Improved validation rollout RMSE from: 0.02914448268711567  to: 0.02903003804385662
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.02903003804385662
+[onestep] Training iteration: 42
+[onestep] Rollout steps=52, teacher_forcing_prob=0.569
+[onestep] Improved validation rollout RMSE from: 0.02903003804385662  to: 0.028920037671923637
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028920037671923637
+[onestep] Training iteration: 43
+[onestep] Rollout steps=53, teacher_forcing_prob=0.559
+[onestep] Improved validation rollout RMSE from: 0.028920037671923637  to: 0.028874296694993973
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028874296694993973
+[onestep] Training iteration: 44
+[onestep] Rollout steps=54, teacher_forcing_prob=0.549
+[onestep] Improved validation rollout RMSE from: 0.028874296694993973  to: 0.028826195746660233
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028826195746660233
+[onestep] Training iteration: 45
+[onestep] Rollout steps=55, teacher_forcing_prob=0.539
+[onestep] Improved validation rollout RMSE from: 0.028826195746660233  to: 0.028792737051844597
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028792737051844597
+[onestep] Training iteration: 46
+[onestep] Rollout steps=56, teacher_forcing_prob=0.529
+[onestep] Improved validation rollout RMSE from: 0.028792737051844597  to: 0.028699412941932678
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028699412941932678
+[onestep] Training iteration: 47
+[onestep] Rollout steps=57, teacher_forcing_prob=0.520
+[onestep] Improved validation rollout RMSE from: 0.028699412941932678  to: 0.028604529798030853
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028604529798030853
+[onestep] Training iteration: 48
+[onestep] Rollout steps=58, teacher_forcing_prob=0.510
+[onestep] Improved validation rollout RMSE from: 0.028604529798030853  to: 0.028562312945723534
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028562312945723534
+[onestep] Training iteration: 49
+[onestep] Rollout steps=60, teacher_forcing_prob=0.500
+[onestep] Improved validation rollout RMSE from: 0.028562312945723534  to: 0.028470026329159737
+[onestep] Validation R2: 0.9999984
+[onestep] Validation rollout RMSE: 0.028470026329159737
+[onestep] Test loss: 4.3395735e-06
+[onestep] Test R2: 0.9999961
+[onestep] Test rollout RMSE: 0.05742176994681358
 Performing inference on testing data for onestep model
 [onestep] Model restored successfully!
 [onestep] Making predictions on testing data
-[onestep] Deployment RMSE per mode: [1.2709553 0.4815025 1.2855033]
-[onestep] Deployment MAE per mode: [1.0550057  0.44729033 1.2393517 ]
-[onestep] Deployment RMSE (mean over modes): 1.0126537
+[onestep] Deployment RMSE per mode: [0.30303818 2.0267787  0.9323823 ]
+[onestep] Deployment MAE per mode: [0.26420173 1.5185819  0.86775976]
+[onestep] Deployment RMSE (mean over modes): 1.0873997
 [multistep] Training iteration: 0
-[multistep] Improved validation loss from: inf  to: 0.27517396248877046
-[multistep] Validation R2: 0.6823404
-[multistep] Validation rollout RMSE: 0.42041829228401184
+[multistep] Rollout steps=9, teacher_forcing_prob=0.980
+[multistep] Improved validation rollout RMSE from: inf  to: 0.14552158117294312
+[multistep] Validation R2: 0.9999828
+[multistep] Validation rollout RMSE: 0.14552158117294312
 [multistep] Training iteration: 1
-[multistep] Improved validation loss from: 0.27517396248877046  to: 0.04840293517336249
-[multistep] Validation R2: 0.9461756
-[multistep] Validation rollout RMSE: 0.17847678065299988
+[multistep] Rollout steps=10, teacher_forcing_prob=0.970
+[multistep] Improved validation rollout RMSE from: 0.14552158117294312  to: 0.0572621151804924
+[multistep] Validation R2: 0.9999965
+[multistep] Validation rollout RMSE: 0.0572621151804924
 [multistep] Training iteration: 2
-[multistep] Improved validation loss from: 0.04840293517336249  to: 0.019290724582970143
-[multistep] Validation R2: 0.9787893
-[multistep] Validation rollout RMSE: 0.11065584421157837
+[multistep] Rollout steps=11, teacher_forcing_prob=0.960
+[multistep] Improved validation rollout RMSE from: 0.0572621151804924  to: 0.04252508655190468
+[multistep] Validation R2: 0.99999803
+[multistep] Validation rollout RMSE: 0.04252508655190468
 [multistep] Training iteration: 3
-[multistep] Improved validation loss from: 0.019290724582970143  to: 0.008638555277138948
-[multistep] Validation R2: 0.99039394
-[multistep] Validation rollout RMSE: 0.07375577837228775
+[multistep] Rollout steps=12, teacher_forcing_prob=0.951
+[multistep] Validation rollout RMSE (no improvement): 0.047090452164411545
+[multistep] Validation R2: 0.9999981
 [multistep] Training iteration: 4
-[multistep] Improved validation loss from: 0.008638555277138948  to: 0.004517678960110061
-[multistep] Validation R2: 0.994991
-[multistep] Validation rollout RMSE: 0.05258768051862717
+[multistep] Rollout steps=13, teacher_forcing_prob=0.941
+[multistep] Improved validation rollout RMSE from: 0.04252508655190468  to: 0.040199439972639084
+[multistep] Validation R2: 0.9999983
+[multistep] Validation rollout RMSE: 0.040199439972639084
 [multistep] Training iteration: 5
-[multistep] Improved validation loss from: 0.004517678960110061  to: 0.0032066202926216646
-[multistep] Validation R2: 0.99650085
-[multistep] Validation rollout RMSE: 0.04463251307606697
+[multistep] Rollout steps=14, teacher_forcing_prob=0.931
+[multistep] Validation rollout RMSE (no improvement): 0.042565006762742996
+[multistep] Validation R2: 0.9999982
 [multistep] Training iteration: 6
-[multistep] Improved validation loss from: 0.0032066202926216646  to: 0.0021131415880518032
-[multistep] Validation R2: 0.997645
-[multistep] Validation rollout RMSE: 0.03633913770318031
+[multistep] Rollout steps=15, teacher_forcing_prob=0.921
+[multistep] Improved validation rollout RMSE from: 0.040199439972639084  to: 0.03694118931889534
+[multistep] Validation R2: 0.9999984
+[multistep] Validation rollout RMSE: 0.03694118931889534
 [multistep] Training iteration: 7
-[multistep] Improved validation loss from: 0.0021131415880518032  to: 0.001447870908305049
-[multistep] Validation R2: 0.9983909
-[multistep] Validation rollout RMSE: 0.030159346759319305
+[multistep] Rollout steps=16, teacher_forcing_prob=0.911
+[multistep] Improved validation rollout RMSE from: 0.03694118931889534  to: 0.03644588962197304
+[multistep] Validation R2: 0.99999845
+[multistep] Validation rollout RMSE: 0.03644588962197304
 [multistep] Training iteration: 8
-[multistep] Improved validation loss from: 0.001447870908305049  to: 0.0009972397194360383
-[multistep] Validation R2: 0.9988893
-[multistep] Validation rollout RMSE: 0.025112703442573547
+[multistep] Rollout steps=17, teacher_forcing_prob=0.902
+[multistep] Improved validation rollout RMSE from: 0.03644588962197304  to: 0.0363655649125576
+[multistep] Validation R2: 0.99999845
+[multistep] Validation rollout RMSE: 0.0363655649125576
 [multistep] Training iteration: 9
-[multistep] Improved validation loss from: 0.0009972397194360383  to: 0.0007072598586091772
-[multistep] Validation R2: 0.99920785
-[multistep] Validation rollout RMSE: 0.021274549886584282
+[multistep] Rollout steps=18, teacher_forcing_prob=0.892
+[multistep] Improved validation rollout RMSE from: 0.0363655649125576  to: 0.034101277589797974
+[multistep] Validation R2: 0.9999985
+[multistep] Validation rollout RMSE: 0.034101277589797974
 [multistep] Training iteration: 10
-[multistep] Improved validation loss from: 0.0007072598586091772  to: 0.0004847866039199289
-[multistep] Validation R2: 0.99945706
-[multistep] Validation rollout RMSE: 0.017675071954727173
+[multistep] Rollout steps=19, teacher_forcing_prob=0.882
+[multistep] Validation rollout RMSE (no improvement): 0.03502010926604271
+[multistep] Validation R2: 0.9999985
 [multistep] Training iteration: 11
-[multistep] Improved validation loss from: 0.0004847866039199289  to: 0.0003338563685247209
-[multistep] Validation R2: 0.99962586
-[multistep] Validation rollout RMSE: 0.014729957096278667
+[multistep] Rollout steps=20, teacher_forcing_prob=0.872
+[multistep] Improved validation rollout RMSE from: 0.034101277589797974  to: 0.03345170244574547
+[multistep] Validation R2: 0.99999857
+[multistep] Validation rollout RMSE: 0.03345170244574547
 [multistep] Training iteration: 12
-[multistep] Improved validation loss from: 0.0003338563685247209  to: 0.00023801985917089042
-[multistep] Validation R2: 0.99973345
-[multistep] Validation rollout RMSE: 0.012520291842520237
+[multistep] Rollout steps=21, teacher_forcing_prob=0.862
+[multistep] Validation rollout RMSE (no improvement): 0.03425516188144684
+[multistep] Validation R2: 0.99999857
 [multistep] Training iteration: 13
-[multistep] Improved validation loss from: 0.00023801985917089042  to: 0.0001805437965231249
-[multistep] Validation R2: 0.99979824
-[multistep] Validation rollout RMSE: 0.010995659045875072
+[multistep] Rollout steps=22, teacher_forcing_prob=0.853
+[multistep] Improved validation rollout RMSE from: 0.03345170244574547  to: 0.033246543258428574
+[multistep] Validation R2: 0.9999986
+[multistep] Validation rollout RMSE: 0.033246543258428574
 [multistep] Training iteration: 14
-[multistep] Improved validation loss from: 0.0001805437965231249  to: 0.00014443419331655605
-[multistep] Validation R2: 0.9998394
-[multistep] Validation rollout RMSE: 0.009901524521410465
+[multistep] Rollout steps=23, teacher_forcing_prob=0.843
+[multistep] Improved validation rollout RMSE from: 0.033246543258428574  to: 0.032452620565891266
+[multistep] Validation R2: 0.9999986
+[multistep] Validation rollout RMSE: 0.032452620565891266
 [multistep] Training iteration: 15
-[multistep] Improved validation loss from: 0.00014443419331655605  to: 0.00011965613703068811
-[multistep] Validation R2: 0.9998684
-[multistep] Validation rollout RMSE: 0.009052076376974583
+[multistep] Rollout steps=24, teacher_forcing_prob=0.833
+[multistep] Improved validation rollout RMSE from: 0.032452620565891266  to: 0.032439906150102615
+[multistep] Validation R2: 0.9999986
+[multistep] Validation rollout RMSE: 0.032439906150102615
 [multistep] Training iteration: 16
-[multistep] Improved validation loss from: 0.00011965613703068811  to: 0.00010135768206964713
-[multistep] Validation R2: 0.9998904
-[multistep] Validation rollout RMSE: 0.008347894065082073
+[multistep] Rollout steps=25, teacher_forcing_prob=0.823
+[multistep] Improved validation rollout RMSE from: 0.032439906150102615  to: 0.032221343368291855
+[multistep] Validation R2: 0.9999986
+[multistep] Validation rollout RMSE: 0.032221343368291855
 [multistep] Training iteration: 17
-[multistep] Improved validation loss from: 0.00010135768206964713  to: 8.964386197476414e-05
-[multistep] Validation R2: 0.9999049
-[multistep] Validation rollout RMSE: 0.007850639522075653
+[multistep] Rollout steps=26, teacher_forcing_prob=0.813
+[multistep] Improved validation rollout RMSE from: 0.032221343368291855  to: 0.03203350678086281
+[multistep] Validation R2: 0.9999986
+[multistep] Validation rollout RMSE: 0.03203350678086281
 [multistep] Training iteration: 18
-[multistep] Improved validation loss from: 8.964386197476414e-05  to: 8.300957724713954e-05
-[multistep] Validation R2: 0.99991333
-[multistep] Validation rollout RMSE: 0.007548468187451363
+[multistep] Rollout steps=27, teacher_forcing_prob=0.804
+[multistep] Improved validation rollout RMSE from: 0.03203350678086281  to: 0.03172992542386055
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.03172992542386055
 [multistep] Training iteration: 19
-[multistep] Improved validation loss from: 8.300957724713954e-05  to: 7.811594787199283e-05
-[multistep] Validation R2: 0.9999192
-[multistep] Validation rollout RMSE: 0.007320010103285313
+[multistep] Rollout steps=28, teacher_forcing_prob=0.794
+[multistep] Improved validation rollout RMSE from: 0.03172992542386055  to: 0.03150239214301109
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.03150239214301109
 [multistep] Training iteration: 20
-[multistep] Improved validation loss from: 7.811594787199283e-05  to: 7.28889302990865e-05
-[multistep] Validation R2: 0.9999248
-[multistep] Validation rollout RMSE: 0.007074851542711258
+[multistep] Rollout steps=29, teacher_forcing_prob=0.784
+[multistep] Improved validation rollout RMSE from: 0.03150239214301109  to: 0.031239930540323257
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.031239930540323257
 [multistep] Training iteration: 21
-[multistep] Improved validation loss from: 7.28889302990865e-05  to: 6.771587322873529e-05
-[multistep] Validation R2: 0.99993014
-[multistep] Validation rollout RMSE: 0.006826902274042368
+[multistep] Rollout steps=30, teacher_forcing_prob=0.774
+[multistep] Improved validation rollout RMSE from: 0.031239930540323257  to: 0.031199712306261063
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.031199712306261063
 [multistep] Training iteration: 22
-[multistep] Improved validation loss from: 6.771587322873529e-05  to: 6.302174879238009e-05
-[multistep] Validation R2: 0.999935
-[multistep] Validation rollout RMSE: 0.006593582686036825
+[multistep] Rollout steps=31, teacher_forcing_prob=0.764
+[multistep] Improved validation rollout RMSE from: 0.031199712306261063  to: 0.031078452244400978
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.031078452244400978
 [multistep] Training iteration: 23
-[multistep] Improved validation loss from: 6.302174879238009e-05  to: 5.8528196768747874e-05
-[multistep] Validation R2: 0.99993956
-[multistep] Validation rollout RMSE: 0.0063615646213293076
+[multistep] Rollout steps=32, teacher_forcing_prob=0.755
+[multistep] Improved validation rollout RMSE from: 0.031078452244400978  to: 0.030850937590003014
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.030850937590003014
 [multistep] Training iteration: 24
-[multistep] Improved validation loss from: 5.8528196768747874e-05  to: 5.405879128375091e-05
-[multistep] Validation R2: 0.99994415
-[multistep] Validation rollout RMSE: 0.006123332306742668
+[multistep] Rollout steps=34, teacher_forcing_prob=0.745
+[multistep] Improved validation rollout RMSE from: 0.030850937590003014  to: 0.03060203231871128
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.03060203231871128
 [multistep] Training iteration: 25
-[multistep] Improved validation loss from: 5.405879128375091e-05  to: 4.972921788066742e-05
-[multistep] Validation R2: 0.99994856
-[multistep] Validation rollout RMSE: 0.005885560996830463
+[multistep] Rollout steps=35, teacher_forcing_prob=0.735
+[multistep] Improved validation rollout RMSE from: 0.03060203231871128  to: 0.030437298119068146
+[multistep] Validation R2: 0.9999987
+[multistep] Validation rollout RMSE: 0.030437298119068146
 [multistep] Training iteration: 26
-[multistep] Improved validation loss from: 4.972921788066742e-05  to: 4.57777816336602e-05
-[multistep] Validation R2: 0.99995255
-[multistep] Validation rollout RMSE: 0.005662731826305389
+[multistep] Rollout steps=36, teacher_forcing_prob=0.725
+[multistep] Improved validation rollout RMSE from: 0.030437298119068146  to: 0.030294768512248993
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.030294768512248993
 [multistep] Training iteration: 27
-[multistep] Improved validation loss from: 4.57777816336602e-05  to: 4.2448033582331846e-05
-[multistep] Validation R2: 0.9999559
-[multistep] Validation rollout RMSE: 0.005471478682011366
+[multistep] Rollout steps=37, teacher_forcing_prob=0.716
+[multistep] Improved validation rollout RMSE from: 0.030294768512248993  to: 0.030238322913646698
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.030238322913646698
 [multistep] Training iteration: 28
-[multistep] Improved validation loss from: 4.2448033582331846e-05  to: 3.9862821131464445e-05
-[multistep] Validation R2: 0.9999585
-[multistep] Validation rollout RMSE: 0.005321659613400698
+[multistep] Rollout steps=38, teacher_forcing_prob=0.706
+[multistep] Improved validation rollout RMSE from: 0.030238322913646698  to: 0.03014313615858555
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.03014313615858555
 [multistep] Training iteration: 29
-[multistep] Improved validation loss from: 3.9862821131464445e-05  to: 3.793928490267717e-05
-[multistep] Validation R2: 0.9999605
-[multistep] Validation rollout RMSE: 0.005209275986999273
-[multistep] Test loss: 1.588151e-05
-[multistep] Test R2: 0.99996436
-[multistep] Test rollout RMSE: 0.004790624603629112
+[multistep] Rollout steps=39, teacher_forcing_prob=0.696
+[multistep] Improved validation rollout RMSE from: 0.03014313615858555  to: 0.02996033988893032
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02996033988893032
+[multistep] Training iteration: 30
+[multistep] Rollout steps=40, teacher_forcing_prob=0.686
+[multistep] Improved validation rollout RMSE from: 0.02996033988893032  to: 0.029841000214219093
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029841000214219093
+[multistep] Training iteration: 31
+[multistep] Rollout steps=41, teacher_forcing_prob=0.676
+[multistep] Improved validation rollout RMSE from: 0.029841000214219093  to: 0.029741331934928894
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029741331934928894
+[multistep] Training iteration: 32
+[multistep] Rollout steps=42, teacher_forcing_prob=0.667
+[multistep] Improved validation rollout RMSE from: 0.029741331934928894  to: 0.029644083231687546
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029644083231687546
+[multistep] Training iteration: 33
+[multistep] Rollout steps=43, teacher_forcing_prob=0.657
+[multistep] Improved validation rollout RMSE from: 0.029644083231687546  to: 0.02959306910634041
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02959306910634041
+[multistep] Training iteration: 34
+[multistep] Rollout steps=44, teacher_forcing_prob=0.647
+[multistep] Improved validation rollout RMSE from: 0.02959306910634041  to: 0.029510702937841415
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029510702937841415
+[multistep] Training iteration: 35
+[multistep] Rollout steps=45, teacher_forcing_prob=0.637
+[multistep] Improved validation rollout RMSE from: 0.029510702937841415  to: 0.02944759838283062
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02944759838283062
+[multistep] Training iteration: 36
+[multistep] Rollout steps=46, teacher_forcing_prob=0.627
+[multistep] Improved validation rollout RMSE from: 0.02944759838283062  to: 0.029393399134278297
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029393399134278297
+[multistep] Training iteration: 37
+[multistep] Rollout steps=47, teacher_forcing_prob=0.618
+[multistep] Improved validation rollout RMSE from: 0.029393399134278297  to: 0.029276350513100624
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029276350513100624
+[multistep] Training iteration: 38
+[multistep] Rollout steps=48, teacher_forcing_prob=0.608
+[multistep] Improved validation rollout RMSE from: 0.029276350513100624  to: 0.029188066720962524
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029188066720962524
+[multistep] Training iteration: 39
+[multistep] Rollout steps=49, teacher_forcing_prob=0.598
+[multistep] Improved validation rollout RMSE from: 0.029188066720962524  to: 0.02911493368446827
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02911493368446827
+[multistep] Training iteration: 40
+[multistep] Rollout steps=50, teacher_forcing_prob=0.588
+[multistep] Improved validation rollout RMSE from: 0.02911493368446827  to: 0.029045214876532555
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.029045214876532555
+[multistep] Training iteration: 41
+[multistep] Rollout steps=51, teacher_forcing_prob=0.578
+[multistep] Improved validation rollout RMSE from: 0.029045214876532555  to: 0.02891988679766655
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02891988679766655
+[multistep] Training iteration: 42
+[multistep] Rollout steps=52, teacher_forcing_prob=0.569
+[multistep] Improved validation rollout RMSE from: 0.02891988679766655  to: 0.02880135364830494
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.02880135364830494
+[multistep] Training iteration: 43
+[multistep] Rollout steps=53, teacher_forcing_prob=0.559
+[multistep] Improved validation rollout RMSE from: 0.02880135364830494  to: 0.028750883415341377
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028750883415341377
+[multistep] Training iteration: 44
+[multistep] Rollout steps=54, teacher_forcing_prob=0.549
+[multistep] Improved validation rollout RMSE from: 0.028750883415341377  to: 0.028698749840259552
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028698749840259552
+[multistep] Training iteration: 45
+[multistep] Rollout steps=55, teacher_forcing_prob=0.539
+[multistep] Improved validation rollout RMSE from: 0.028698749840259552  to: 0.028659949079155922
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028659949079155922
+[multistep] Training iteration: 46
+[multistep] Rollout steps=56, teacher_forcing_prob=0.529
+[multistep] Improved validation rollout RMSE from: 0.028659949079155922  to: 0.028560584411025047
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028560584411025047
+[multistep] Training iteration: 47
+[multistep] Rollout steps=57, teacher_forcing_prob=0.520
+[multistep] Improved validation rollout RMSE from: 0.028560584411025047  to: 0.028459781780838966
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028459781780838966
+[multistep] Training iteration: 48
+[multistep] Rollout steps=58, teacher_forcing_prob=0.510
+[multistep] Improved validation rollout RMSE from: 0.028459781780838966  to: 0.028413157910108566
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028413157910108566
+[multistep] Training iteration: 49
+[multistep] Rollout steps=60, teacher_forcing_prob=0.500
+[multistep] Improved validation rollout RMSE from: 0.028413157910108566  to: 0.028315046802163124
+[multistep] Validation R2: 0.99999875
+[multistep] Validation rollout RMSE: 0.028315046802163124
+[multistep] Test loss: 3.7480193e-06
+[multistep] Test R2: 0.99999666
+[multistep] Test rollout RMSE: 0.0574009008705616
 Performing inference on testing data for multistep model
 [multistep] Model restored successfully!
 [multistep] Making predictions on testing data
-[multistep] Deployment RMSE per mode: [1.2374445 1.242674  0.9698531]
-[multistep] Deployment MAE per mode: [1.0165014  1.1656381  0.91384435]
-[multistep] Deployment RMSE (mean over modes): 1.1499906
-One-step input RMSE per mode: [1.2709553 0.4815025 1.2855033]
-Multistep input RMSE per mode: [1.2374445 1.242674  0.9698531]
+[multistep] Deployment RMSE per mode: [0.13273121 2.5560596  0.7657794 ]
+[multistep] Deployment MAE per mode: [0.11356779 1.9512669  0.6834387 ]
+[multistep] Deployment RMSE (mean over modes): 1.1515235
+One-step input RMSE per mode: [0.30303818 2.0267787  0.9323823 ]
+Multistep input RMSE per mode: [0.13273121 2.5560596  0.7657794 ]
+One-step mean deployment RMSE: 1.0873997
+Multistep mean deployment RMSE: 1.1515235
 Called python analyses function successfully
 First mode value: 4.03865e-12
 First mode value: -0.00128764

@@ -2,6 +2,7 @@ print("From python: Within python module")
 
 import os
 import sys
+import shutil
 
 HERE = os.getcwd()
 sys.path.insert(0, HERE)
@@ -89,6 +90,8 @@ def analyses_func():
     mode_rmse_multistep = np.sqrt(np.mean(np.square(pred_multistep - true_multistep), axis=0))
     print("One-step input RMSE per mode:", mode_rmse_onestep)
     print("Multistep input RMSE per mode:", mode_rmse_multistep)
+    print("One-step mean deployment RMSE:", np.mean(mode_rmse_onestep))
+    print("Multistep mean deployment RMSE:", np.mean(mode_rmse_multistep))
 
     for i in range(3):
         plt.figure(figsize=(8, 4))
@@ -112,6 +115,10 @@ def analyses_func():
         plt.legend()
         plt.savefig("Mode_" + str(i) + "_prediction.png")
         plt.close()
+
+    # Keep canonical training artifacts aligned to the multistep model outputs.
+    shutil.copyfile("Training_Loss_multistep.png", "Training_Loss.png")
+    shutil.copyfile("Torch_LSTM_Schematic_multistep.png", "Torch_LSTM_Schematic.png")
 
     # Return basis as (num_modes, num_dofs) to match C++ inspection logic.
     return_data = v[0:3, :]

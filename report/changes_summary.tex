@@ -94,10 +94,16 @@ A = (V_r X^\top)^\top \in \mathbb{R}^{N_t \times r},
 \end{equation}
 which is algebraically equivalent to a Galerkin-like projection onto the retained POD basis.
 
-\subsection{LSTM Forecasting Model}
+\subsection{Forecasting Model Family}
 Let $a_t \in \mathbb{R}^{r}$ be row $t$ of $A$.
-Two model variants are trained with lookback lengths
-$L \in \{1,8\}$ and learn
+Across this session, three forecasting families were tested:
+\begin{itemize}
+  \item baseline stacked LSTM (one-step output),
+  \item stabilized delta-LSTM (curriculum pushforward + scheduled sampling),
+  \item seq2seq encoder-decoder LSTM rollout model.
+\end{itemize}
+For each family, two lookback lengths were evaluated, $L\in\{1,8\}$.
+The learned mapping is
 \begin{equation}
 f_\theta:\mathbb{R}^{L\times r}\to\mathbb{R}^{r},
 \qquad
@@ -110,8 +116,8 @@ Training pairs are:
 \mathbf{y}_k = a_{k+L}\in\mathbb{R}^{r}.
 \end{equation}
 
-Data are normalized by a pipeline (standardization then min-max scaling to $[-1,1]$).
-Training minimizes a one-step loss plus pushforward closed-loop rollout loss:
+Data are normalized by standardization.
+For stabilized and seq2seq models, training minimizes a one-step loss plus pushforward closed-loop rollout loss:
 \begin{equation}
 \mathcal{L}(\theta)
 = \frac{1}{N_b}\sum_{k=1}^{N_b}
@@ -120,18 +126,17 @@ Training minimizes a one-step loss plus pushforward closed-loop rollout loss:
 + \lambda \frac{1}{K}\sum_{j=1}^{K}\left\|\hat a_{k+L+j}-a_{k+L+j}\right\|_2^2
 \right),
 \end{equation}
-where $K=5$ pushforward steps and $\lambda=0.7$ in the implementation.
+where $K$ is rollout horizon (curriculum increased up to 60 steps) and $\lambda$ is rollout weighting.
 Optimization is performed with Adam ($10^{-3}$ initial learning rate), plus
 ReduceLROnPlateau scheduling and gradient clipping.
 
-The network is a stacked LSTM:
+The final upgraded model is a seq2seq encoder-decoder:
 \begin{align}
-h^{(1)} &= \mathrm{LSTM}_{64}^{(1)}(\mathbf{X}_k),\\
-h^{(2)} &= \mathrm{LSTM}_{64}^{(2)}(h^{(1)}),\\
-\hat a_{k+L} &= W h^{(2)} + b,
+\left(h_0,c_0\right) &= \mathrm{EncoderLSTM}_{64}(\mathbf{X}_k),\\
+\tilde a_{k+L+j} &= \mathrm{DecoderCell}_{64}\!\left(\tilde a_{k+L+j-1}, h_{j-1}, c_{j-1}\right),\\
+\hat a_{k+L+j} &= \tilde a_{k+L+j-1} + \alpha\tanh\!\left(W h_j + b\right),
 \end{align}
-where the second LSTM returns only the final hidden state,
-and the dense layer maps to $\mathbb{R}^r$.
+with bounded increment scaling factor $\alpha$ for rollout stability.
 
 \subsection{Autoregressive Inference and Reconstruction}
 Given an initial test window, the model is rolled out recursively:
@@ -233,22 +238,20 @@ Source: \texttt{build/run\_unbuffered.log}
 \begin{lstlisting}[style=logstyle]
 Performing SVD
 Training iteration: 0
-Improved validation loss from: inf  to: 0.2960874676704407
-Validation R2: 0.38439065
+Rollout steps=9, teacher_forcing_prob=0.980
+Improved validation rollout RMSE from: inf to: 0.252...
 ...
-Training iteration: 39
-Improved validation loss from: 3.9862821131464445e-05  to: 3.793928490267717e-05
-Validation R2: 0.9999605
-Test loss: 1.588151e-05
-Test R2: 0.99996436
-Test rollout RMSE: 0.004790624603629112
+Training iteration: 49
+Rollout steps=60, teacher_forcing_prob=0.500
+Improved validation rollout RMSE from: 0.02841 to: 0.02831
+Test rollout RMSE: 0.0574009008705616
 Performing inference on testing data
 Model restored successfully!
 Making predictions on testing data
-One-step input RMSE per mode: [1.2709553 0.4815025 1.2855033]
-Multistep input RMSE per mode: [1.2374445 1.242674 0.9698531]
-[onestep] Deployment RMSE (mean over modes): 1.0126537
-[multistep] Deployment RMSE (mean over modes): 1.1499906
+One-step input RMSE per mode: [0.30303818 2.0267787 0.9323823]
+Multistep input RMSE per mode: [0.13273121 2.5560596 0.7657794]
+One-step mean deployment RMSE: 1.0873997
+Multistep mean deployment RMSE: 1.1515235
 Called python analyses function successfully
 First mode value: 4.03865e-12
 Second mode value: -3.70185e-12
@@ -274,24 +277,29 @@ a pushforward-style multi-step objective in addition to one-step loss. Concretel
 \end{itemize}
 This better aligns optimization with the true deployment setting and improves long-horizon mode forecasts.
 
-\subsection{One-step vs Multistep Comparison}
-The repository now trains and evaluates two forecasting variants under the same data split:
+\subsection{Cross-Model Comparison}
+The repository now includes comparison across model generations under the same data split:
 \begin{itemize}
-  \item \textbf{One-step input model}: $L=1$, autoregressive one-step deployment.
-  \item \textbf{Multistep input model}: $L=8$, autoregressive one-step deployment.
+  \item \textbf{Baseline stacked LSTM},
+  \item \textbf{Stabilized delta-LSTM},
+  \item \textbf{Seq2Seq encoder-decoder LSTM}.
 \end{itemize}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccccc@{}}
 \toprule
-\textbf{Model} & \textbf{Mode 0 RMSE} & \textbf{Mode 1 RMSE} & \textbf{Mode 2 RMSE} & \textbf{Mean RMSE} \\
+\textbf{Family} & \textbf{seq\_len} & \textbf{Mode 0 RMSE} & \textbf{Mode 1 RMSE} & \textbf{Mode 2 RMSE} & \textbf{Mean RMSE} \\
 \midrule
-One-step input ($L=1$) & 1.2709553 & 0.4815025 & 1.2855033 & 1.0126537 \\
-Multistep input ($L=8$) & 1.2374445 & 1.2426740 & 0.9698531 & 1.1499906 \\
+Baseline LSTM & 1 & 1.2709553 & 0.4815025 & 1.2855033 & 1.0126537 \\
+Baseline LSTM & 8 & 1.2374445 & 1.2426740 & 0.9698531 & 1.1499906 \\
+Stabilized delta-LSTM & 1 & 1.3020930 & 1.4003346 & 0.3378081 & 1.0134119 \\
+Stabilized delta-LSTM & 8 & 1.3271319 & 1.8132979 & 0.9957771 & 1.3787355 \\
+Seq2Seq LSTM & 1 & 0.3030382 & 2.0267787 & 0.9323823 & 1.0873997 \\
+Seq2Seq LSTM & 8 & 0.1327312 & 2.5560596 & 0.7657794 & 1.1515235 \\
 \bottomrule
 \end{tabular}
-\caption{Autoregressive deployment RMSE comparison from \texttt{build/run\_unbuffered.log}.}
+\caption{Autoregressive deployment RMSE comparison across model generations.}
 \end{table}
 
 \subsection{Result Images}
@@ -313,6 +321,18 @@ Multistep input ($L=8$) & 1.2374445 & 1.2426740 & 0.9698531 & 1.1499906 \\
   \includegraphics[width=0.49\linewidth]{../build/Mode_1_prediction.png}
   \includegraphics[width=0.49\linewidth]{../build/Mode_2_prediction.png}
   \caption{PyTorch LSTM mode prediction plots (three compressed modes).}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.84\linewidth]{../build/Model_Comparison_MeanRMSE.png}
+  \caption{Mean deployment RMSE across baseline, stabilized, and seq2seq model variants.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{../build/Model_Comparison_ByMode.png}
+  \caption{Per-mode deployment RMSE across model generations.}
 \end{figure}
 
 \begin{figure}[H]

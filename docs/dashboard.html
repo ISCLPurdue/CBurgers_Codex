@@ -137,7 +137,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>CBurgers_Codex Project Dashboard</h1>
-      <p>Workflow, runtime outcomes, and dual-model PyTorch forecasting comparisons from the local setup, rebuild, and modernization session.</p>
+      <p>Workflow, runtime outcomes, and cross-generation forecasting comparisons (baseline LSTM, stabilized LSTM, and seq2seq LSTM).</p>
       <div class="grid">
         <div class="card">
           <div class="stat">Executable</div>
@@ -171,6 +171,8 @@
       <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging and ML migration completed: TensorFlow pipeline replaced with a Torch stacked-LSTM in <code>build/ml_module.py</code>.</div></div>
       <div class="item"><div class="k">Step 6</div><div class="v">LSTM tuned for lower rollout error using pushforward-style autoregressive training, scheduler, and gradient clipping.</div></div>
       <div class="item"><div class="k">Step 7</div><div class="v">Two deployment variants were trained and compared: one-step input (<code>seq_len=1</code>) and multistep input (<code>seq_len=8</code>), both deployed autoregressively.</div></div>
+      <div class="item"><div class="k">Step 8</div><div class="v">Forecasting upgraded to a seq2seq encoder-decoder LSTM with curriculum rollout and scheduled sampling to better match autoregressive deployment.</div></div>
+      <div class="item"><div class="k">Step 9</div><div class="v">Comparison plots were added across model generations: baseline LSTM, stabilized delta-LSTM, and seq2seq LSTM.</div></div>
     </div>
 
     <h2>Results</h2>
@@ -223,6 +225,14 @@
         <img src="./assets/Training_Loss_multistep.png" alt="Training loss for multistep input model">
         <figcaption>Training history for multistep input model (<code>seq_len=8</code>)</figcaption>
       </figure>
+      <figure>
+        <img src="./assets/Model_Comparison_MeanRMSE.png" alt="Mean RMSE comparison across model generations">
+        <figcaption>Mean deployment RMSE across baseline, stabilized, and seq2seq model variants</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/Model_Comparison_ByMode.png" alt="Per-mode RMSE comparison across model generations">
+        <figcaption>Per-mode deployment RMSE across model generations</figcaption>
+      </figure>
     </div>
 
     <h2>Changes Made</h2>
@@ -248,7 +258,7 @@
         <tr>
           <td><code>build/ml_module.py</code></td>
           <td><span class="tag">ML Compatibility</span></td>
-          <td>Migrated forecasting from TensorFlow/Keras to PyTorch, added pushforward rollout loss, and parameterized dual model variants (<code>seq_len=1</code> and <code>seq_len=8</code>) with per-model checkpoints/plots.</td>
+          <td>Migrated forecasting from TensorFlow/Keras to PyTorch, then upgraded from stacked LSTM to seq2seq encoder-decoder with delta updates, curriculum rollout, and scheduled sampling.</td>
         </tr>
         <tr>
           <td><code>build/python_module.py</code></td>
@@ -265,10 +275,9 @@
 
     <h2>Artifacts</h2>
     <div class="card links">
-      <p><strong>One-step input RMSE per mode (seq\_len=1):</strong> [1.2710, 0.4815, 1.2855]</p>
-      <p><strong>One-step mean deployment RMSE:</strong> 1.0127</p>
-      <p><strong>Multistep input RMSE per mode (seq\_len=8):</strong> [1.2374, 1.2427, 0.9699]</p>
-      <p><strong>Multistep mean deployment RMSE:</strong> 1.1500</p>
+      <p><strong>Current seq2seq RMSE per mode (seq\_len=1):</strong> [0.3030, 2.0268, 0.9324]</p>
+      <p><strong>Current seq2seq RMSE per mode (seq\_len=8):</strong> [0.1327, 2.5561, 0.7658]</p>
+      <p><strong>Best mean RMSE observed across all variants:</strong> 1.0127 (baseline LSTM, seq\_len=1)</p>
       <p><strong>NumPy matmul warnings:</strong> suppressed in latest code path</p>
       <p><a href="./changes_summary.pdf">Change Summary PDF</a></p>
       <p><a href="./assets/run_unbuffered.log">Runtime Log (detailed)</a></p>
