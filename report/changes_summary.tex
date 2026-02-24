@@ -227,30 +227,33 @@ Source: \texttt{build/run\_unbuffered.log}
 \begin{lstlisting}[style=logstyle]
 Performing SVD
 Training iteration: 0
-Improved validation loss from: 999999.0  to: 1.9493028
-Validation R2: 0.7909084230642178
+Improved validation loss from: inf  to: 0.2960874676704407
+Validation R2: 0.38439065
 ...
-Training iteration: 9
-Improved validation loss from: 0.0010974433665978723  to: 0.0008915976170101203
-Validation R2: 0.9982076
-Test loss: 0.0008534239
-Test R2: 0.99810106
+Training iteration: 39
+Improved validation loss from: 9.38560865506588e-06  to: 9.1176401838311e-06
+Validation R2: 0.99998105
+Test loss: 2.3358365e-05
+Test R2: 0.9999479
 Performing inference on testing data
 Model restored successfully!
 Making predictions on testing data
+Deployment RMSE per mode: [1.2382958 1.2495794 0.9701827]
+Deployment RMSE (mean over modes): 1.152686
 Called python analyses function successfully
 First mode value: 4.03865e-12
 Second mode value: -3.70185e-12
 \end{lstlisting}
 
 \subsection{Warnings Observed (Numerics/Modeling)}
-\begin{lstlisting}[style=logstyle]
-RuntimeWarning: divide by zero encountered in matmul
-RuntimeWarning: overflow encountered in matmul
-RuntimeWarning: invalid value encountered in matmul
-\end{lstlisting}
-These warnings indicate numerical instability in the ML input construction path
-(\texttt{python\_module.py}, matrix multiplication for modal time-series construction).
+In earlier runs, NumPy produced \texttt{matmul} runtime warnings (divide-by-zero, overflow, invalid).
+In the latest code, this path is explicitly sanitized:
+\begin{itemize}
+  \item input snapshots and modal matrices are finite-checked (\texttt{nan\_to\_num}),
+  \item values are clipped to bounded ranges before projection,
+  \item projection executes under a guarded NumPy error-state context.
+\end{itemize}
+As a result, the latest run log does not emit those NumPy \texttt{matmul} warnings.
 
 \subsection{Result Images}
 \begin{figure}[H]

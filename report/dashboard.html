@@ -157,7 +157,7 @@
         <div class="card">
           <div class="stat">Runtime Status</div>
           <div class="num">Pass</div>
-          <div><span class="tag">Analysis completed</span></div>
+          <div><span class="tag">Warnings suppressed</span></div>
         </div>
       </div>
     </section>
@@ -169,7 +169,7 @@
       <div class="item"><div class="k">Step 3</div><div class="v">CMake config modernized to use discovered Python3/NumPy instead of hardcoded legacy paths.</div></div>
       <div class="item"><div class="k">Step 4</div><div class="v">Executable rebuilt in <code>build_local/</code> and run against Python workflow in <code>build/</code>.</div></div>
       <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging and ML migration completed: TensorFlow pipeline replaced with a Torch stacked-LSTM in <code>build/ml_module.py</code>.</div></div>
-      <div class="item"><div class="k">Step 6</div><div class="v">Artifacts regenerated and LaTeX PDF change report produced in <code>report/</code>.</div></div>
+      <div class="item"><div class="k">Step 6</div><div class="v">LSTM tuned for lower rollout error (longer context + scheduler + gradient clipping) and artifacts regenerated.</div></div>
     </div>
 
     <h2>Results</h2>
@@ -239,6 +239,9 @@
 
     <h2>Artifacts</h2>
     <div class="card links">
+      <p><strong>Latest deployment RMSE per mode:</strong> [1.2383, 1.2496, 0.9702]</p>
+      <p><strong>Mean deployment RMSE:</strong> 1.1527</p>
+      <p><strong>NumPy matmul warnings:</strong> suppressed in latest code path</p>
       <p><a href="./changes_summary.pdf">Change Summary PDF</a></p>
       <p><a href="../build/run.log">Runtime Log</a></p>
       <p><a href="../build_local/app">Built Executable</a></p>

@@ -16,7 +16,7 @@ def coeff_determination(y_pred, y_true):
 
 
 class TorchLSTMNet(nn.Module):
-    def __init__(self, state_len, hidden_size=50):
+    def __init__(self, state_len, hidden_size=64):
         super().__init__()
         self.l1 = nn.LSTM(input_size=state_len, hidden_size=hidden_size, batch_first=True)
         self.l2 = nn.LSTM(input_size=hidden_size, hidden_size=hidden_size, batch_first=True)
@@ -45,7 +45,8 @@ class standard_lstm:
         )
         self.data = self.preproc_pipeline.fit_transform(data)
 
-        self.seq_num = 5
+        # Longer lookback improves autoregressive stability during deployment.
+        self.seq_num = 8
         self.total_size = np.shape(data)[0] - int(self.seq_num)
 
         input_seq = np.zeros((self.total_size, self.seq_num, self.state_len), dtype=np.float32)
@@ -74,9 +75,12 @@ class standard_lstm:
         self.input_seq_valid = input_seq[self.ntrain :]
         self.output_seq_valid = output_seq[self.ntrain :]
 
-        self.model = TorchLSTMNet(state_len=self.state_len).to(self.device)
+        self.model = TorchLSTMNet(state_len=self.state_len, hidden_size=64).to(self.device)
         self.criterion = nn.MSELoss()
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001, weight_decay=1.0e-6)
+        self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+            self.optimizer, mode="min", factor=0.5, patience=4, min_lr=1.0e-5
+        )
 
         self.train_loss_hist = []
         self.valid_loss_hist = []
@@ -89,14 +93,15 @@ class standard_lstm:
 
     def train_model(self):
         stop_iter = 0
-        patience = 10
+        patience = 12
         best_valid_loss = float("inf")
 
         self.num_batches = 20
         self.train_batch_size = max(1, int(self.ntrain / self.num_batches))
         self.valid_batch_size = max(1, int(self.nvalid / self.num_batches))
 
-        for i in range(10):
+        max_epochs = 30
+        for i in range(max_epochs):
             print("Training iteration:", i)
             self.model.train()
 
@@ -114,6 +119,7 @@ class standard_lstm:
                 pred = self.model(xb)
                 loss = self.criterion(pred, yb)
                 loss.backward()
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
                 self.optimizer.step()
 
                 train_loss_accum += float(loss.item())
@@ -142,6 +148,7 @@ class standard_lstm:
             valid_r2 = coeff_determination(full_valid_pred, self.output_seq_valid)
             self.train_loss_hist.append(train_epoch_loss)
             self.valid_loss_hist.append(valid_loss)
+            self.scheduler.step(valid_loss)
 
             if valid_loss < best_valid_loss:
                 print("Improved validation loss from:", best_valid_loss, " to:", valid_loss)
@@ -206,6 +213,12 @@ class standard_lstm:
             plt.savefig("Mode_" + str(i) + "_prediction.png")
             plt.close()
 
+        rollout_rmse = np.sqrt(np.mean(np.square(rec_pred - rec_output_seq), axis=0))
+        rollout_mae = np.mean(np.abs(rec_pred - rec_output_seq), axis=0)
+        print("Deployment RMSE per mode:", rollout_rmse)
+        print("Deployment MAE per mode:", rollout_mae)
+        print("Deployment RMSE (mean over modes):", np.mean(rollout_rmse))
+
         return rec_output_seq, rec_pred
 
     def _plot_training_history(self):
@@ -227,9 +240,9 @@ class standard_lstm:
         ax.axis("off")
 
         boxes = [
-            (0.03, 0.35, 0.18, 0.3, "Input Sequence\n(L=5, r=3)"),
-            (0.27, 0.35, 0.18, 0.3, "LSTM Layer 1\n(hidden=50)"),
-            (0.51, 0.35, 0.18, 0.3, "LSTM Layer 2\n(hidden=50)"),
+            (0.03, 0.35, 0.18, 0.3, "Input Sequence\n(L=8, r=3)"),
+            (0.27, 0.35, 0.18, 0.3, "LSTM Layer 1\n(hidden=64)"),
+            (0.51, 0.35, 0.18, 0.3, "LSTM Layer 2\n(hidden=64)"),
             (0.75, 0.35, 0.18, 0.3, "Linear Head\n(output=r)")
         ]
 
