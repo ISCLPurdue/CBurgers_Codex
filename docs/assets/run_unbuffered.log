@@ -4006,7 +4006,7 @@ Called python data collection function successfully
 time = 1.999
 Called python data collection function successfully
 time = 2
-CPU time = 0.005483
+CPU time = 0.00544
 Python based data analysis starting:
 Performing SVD
 [onestep] Training iteration: 0
@@ -4518,10 +4518,129 @@ Performing inference on testing data for multistep model
 [multistep] Deployment RMSE per mode: [0.13273121 2.5560596  0.7657794 ]
 [multistep] Deployment MAE per mode: [0.11356779 1.9512669  0.6834387 ]
 [multistep] Deployment RMSE (mean over modes): 1.1515235
+[koopman] Training iteration: 0
+[koopman] Rollout steps=9, teacher_forcing_prob=0.980
+[koopman] Improved validation rollout RMSE from: inf  to: 1.211867332458496
+[koopman] Validation R2: -0.22312403
+[koopman] Training iteration: 1
+[koopman] Rollout steps=10, teacher_forcing_prob=0.968
+[koopman] Validation rollout RMSE (no improvement): 1.723240613937378
+[koopman] Validation R2: 0.7461428
+[koopman] Training iteration: 2
+[koopman] Rollout steps=11, teacher_forcing_prob=0.956
+[koopman] Improved validation rollout RMSE from: 1.211867332458496  to: 0.4515567123889923
+[koopman] Validation R2: 0.869501
+[koopman] Training iteration: 3
+[koopman] Rollout steps=12, teacher_forcing_prob=0.944
+[koopman] Validation rollout RMSE (no improvement): 0.48333385586738586
+[koopman] Validation R2: 0.89490855
+[koopman] Training iteration: 4
+[koopman] Rollout steps=13, teacher_forcing_prob=0.933
+[koopman] Validation rollout RMSE (no improvement): 0.5830103754997253
+[koopman] Validation R2: 0.83443767
+[koopman] Training iteration: 5
+[koopman] Rollout steps=14, teacher_forcing_prob=0.921
+[koopman] Validation rollout RMSE (no improvement): 0.4793567359447479
+[koopman] Validation R2: 0.8940362
+[koopman] Training iteration: 6
+[koopman] Rollout steps=15, teacher_forcing_prob=0.909
+[koopman] Validation rollout RMSE (no improvement): 0.7080053091049194
+[koopman] Validation R2: 0.8140859
+[koopman] Training iteration: 7
+[koopman] Rollout steps=16, teacher_forcing_prob=0.897
+[koopman] Improved validation rollout RMSE from: 0.4515567123889923  to: 0.39150744676589966
+[koopman] Validation R2: 0.9035195
+[koopman] Training iteration: 8
+[koopman] Rollout steps=17, teacher_forcing_prob=0.885
+[koopman] Validation rollout RMSE (no improvement): 1.11403489112854
+[koopman] Validation R2: 0.72055626
+[koopman] Training iteration: 9
+[koopman] Rollout steps=18, teacher_forcing_prob=0.873
+[koopman] Improved validation rollout RMSE from: 0.39150744676589966  to: 0.32844382524490356
+[koopman] Validation R2: 0.9181922
+[koopman] Training iteration: 10
+[koopman] Rollout steps=19, teacher_forcing_prob=0.862
+[koopman] Validation rollout RMSE (no improvement): 1.1053024530410767
+[koopman] Validation R2: 0.6681255
+[koopman] Training iteration: 11
+[koopman] Rollout steps=20, teacher_forcing_prob=0.850
+[koopman] Improved validation rollout RMSE from: 0.32844382524490356  to: 0.32182562351226807
+[koopman] Validation R2: 0.92029285
+[koopman] Training iteration: 12
+[koopman] Rollout steps=21, teacher_forcing_prob=0.838
+[koopman] Validation rollout RMSE (no improvement): 1.098608374595642
+[koopman] Validation R2: 0.65581423
+[koopman] Training iteration: 13
+[koopman] Rollout steps=22, teacher_forcing_prob=0.826
+[koopman] Validation rollout RMSE (no improvement): 0.34190577268600464
+[koopman] Validation R2: 0.91021866
+[koopman] Training iteration: 14
+[koopman] Rollout steps=23, teacher_forcing_prob=0.814
+[koopman] Validation rollout RMSE (no improvement): 1.0781327486038208
+[koopman] Validation R2: 0.6924908
+[koopman] Training iteration: 15
+[koopman] Rollout steps=24, teacher_forcing_prob=0.802
+[koopman] Validation rollout RMSE (no improvement): 0.32872843742370605
+[koopman] Validation R2: 0.92678654
+[koopman] Training iteration: 16
+[koopman] Rollout steps=25, teacher_forcing_prob=0.791
+[koopman] Validation rollout RMSE (no improvement): 1.0510609149932861
+[koopman] Validation R2: 0.6999154
+[koopman] Training iteration: 17
+[koopman] Rollout steps=26, teacher_forcing_prob=0.779
+[koopman] Validation rollout RMSE (no improvement): 0.3758879005908966
+[koopman] Validation R2: 0.8933955
+[koopman] Training iteration: 18
+[koopman] Rollout steps=27, teacher_forcing_prob=0.767
+[koopman] Validation rollout RMSE (no improvement): 1.0308469533920288
+[koopman] Validation R2: 0.73857033
+[koopman] Training iteration: 19
+[koopman] Rollout steps=28, teacher_forcing_prob=0.755
+[koopman] Validation rollout RMSE (no improvement): 0.3227115869522095
+[koopman] Validation R2: 0.9290447
+[koopman] Training iteration: 20
+[koopman] Rollout steps=29, teacher_forcing_prob=0.743
+[koopman] Validation rollout RMSE (no improvement): 1.0253348350524902
+[koopman] Validation R2: 0.7041898
+[koopman] Training iteration: 21
+[koopman] Rollout steps=30, teacher_forcing_prob=0.731
+[koopman] Validation rollout RMSE (no improvement): 0.4047437906265259
+[koopman] Validation R2: 0.88913816
+[koopman] Training iteration: 22
+[koopman] Rollout steps=31, teacher_forcing_prob=0.720
+[koopman] Validation rollout RMSE (no improvement): 1.0300302505493164
+[koopman] Validation R2: 0.7610328
+[koopman] Training iteration: 23
+[koopman] Rollout steps=32, teacher_forcing_prob=0.708
+[koopman] Validation rollout RMSE (no improvement): 0.369697242975235
+[koopman] Validation R2: 0.9197629
+[koopman] Training iteration: 24
+[koopman] Rollout steps=34, teacher_forcing_prob=0.696
+[koopman] Validation rollout RMSE (no improvement): 1.008744716644287
+[koopman] Validation R2: 0.73056006
+[koopman] Training iteration: 25
+[koopman] Rollout steps=35, teacher_forcing_prob=0.684
+[koopman] Validation rollout RMSE (no improvement): 0.4434049427509308
+[koopman] Validation R2: 0.8888917
+[koopman] Training iteration: 26
+[koopman] Rollout steps=36, teacher_forcing_prob=0.672
+[koopman] Validation rollout RMSE (no improvement): 0.5471518039703369
+[koopman] Validation R2: 0.89097023
+[koopman] Test loss: 0.36776924
+[koopman] Test R2: 0.67366576
+[koopman] Test rollout RMSE: 0.8235381245613098
+Performing inference on testing data for koopman model
+[koopman] Model restored successfully!
+[koopman] Making predictions on testing data
+[koopman] Deployment RMSE per mode: [1.3247128 3.3770502 1.2958331]
+[koopman] Deployment MAE per mode: [1.12045   3.3473237 1.2524155]
+[koopman] Deployment RMSE (mean over modes): 1.9991988
 One-step input RMSE per mode: [0.30303818 2.0267787  0.9323823 ]
 Multistep input RMSE per mode: [0.13273121 2.5560596  0.7657794 ]
+Koopman SSM RMSE per mode: [1.3247128 3.3770502 1.2958331]
 One-step mean deployment RMSE: 1.0873997
 Multistep mean deployment RMSE: 1.1515235
+Koopman SSM mean deployment RMSE: 1.9991988
 Called python analyses function successfully
 First mode value: 4.03865e-12
 First mode value: -0.00128764

@@ -250,8 +250,10 @@ Model restored successfully!
 Making predictions on testing data
 One-step input RMSE per mode: [0.30303818 2.0267787 0.9323823]
 Multistep input RMSE per mode: [0.13273121 2.5560596 0.7657794]
+Koopman SSM RMSE per mode: [1.3247128 3.3770502 1.2958331]
 One-step mean deployment RMSE: 1.0873997
 Multistep mean deployment RMSE: 1.1515235
+Koopman SSM mean deployment RMSE: 1.9991988
 Called python analyses function successfully
 First mode value: 4.03865e-12
 Second mode value: -3.70185e-12
@@ -280,9 +282,8 @@ This better aligns optimization with the true deployment setting and improves lo
 \subsection{Cross-Model Comparison}
 The repository now includes comparison across model generations under the same data split:
 \begin{itemize}
-  \item \textbf{Baseline stacked LSTM},
-  \item \textbf{Stabilized delta-LSTM},
   \item \textbf{Seq2Seq encoder-decoder LSTM}.
+  \item \textbf{Koopman-style neural state-space model}.
 \end{itemize}
 
 \begin{table}[H]
@@ -291,15 +292,12 @@ The repository now includes comparison across model generations under the same d
 \toprule
 \textbf{Family} & \textbf{seq\_len} & \textbf{Mode 0 RMSE} & \textbf{Mode 1 RMSE} & \textbf{Mode 2 RMSE} & \textbf{Mean RMSE} \\
 \midrule
-Baseline LSTM & 1 & 1.2709553 & 0.4815025 & 1.2855033 & 1.0126537 \\
-Baseline LSTM & 8 & 1.2374445 & 1.2426740 & 0.9698531 & 1.1499906 \\
-Stabilized delta-LSTM & 1 & 1.3020930 & 1.4003346 & 0.3378081 & 1.0134119 \\
-Stabilized delta-LSTM & 8 & 1.3271319 & 1.8132979 & 0.9957771 & 1.3787355 \\
 Seq2Seq LSTM & 1 & 0.3030382 & 2.0267787 & 0.9323823 & 1.0873997 \\
 Seq2Seq LSTM & 8 & 0.1327312 & 2.5560596 & 0.7657794 & 1.1515235 \\
+Koopman SSM & 8 & 1.3247128 & 3.3770502 & 1.2958331 & 1.9991988 \\
 \bottomrule
 \end{tabular}
-\caption{Autoregressive deployment RMSE comparison across model generations.}
+\caption{Autoregressive deployment RMSE comparison for current seq2seq and Koopman models.}
 \end{table}
 
 \subsection{Result Images}
@@ -326,13 +324,13 @@ Seq2Seq LSTM & 8 & 0.1327312 & 2.5560596 & 0.7657794 & 1.1515235 \\
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.84\linewidth]{../build/Model_Comparison_MeanRMSE.png}
-  \caption{Mean deployment RMSE across baseline, stabilized, and seq2seq model variants.}
+  \caption{Mean deployment RMSE across current seq2seq and Koopman model variants.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.88\linewidth]{../build/Model_Comparison_ByMode.png}
-  \caption{Per-mode deployment RMSE across model generations.}
+  \caption{Per-mode deployment RMSE across current seq2seq and Koopman model variants.}
 \end{figure}
 
 \begin{figure}[H]
@@ -353,6 +351,12 @@ Seq2Seq LSTM & 8 & 0.1327312 & 2.5560596 & 0.7657794 & 1.1515235 \\
   \centering
   \includegraphics[width=0.88\linewidth]{../build/Torch_LSTM_Schematic.png}
   \caption{Schematic of the deployed Torch stacked-LSTM forecasting architecture.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{../build/Torch_LSTM_Schematic_koopman.png}
+  \caption{Schematic of the Koopman-style neural state-space forecasting architecture.}
 \end{figure}
 
 \section{Modernized Project State (Before vs After)}
@@ -384,7 +388,7 @@ Execution artifacts & Legacy checked-in root PNGs & Freshly generated outputs in
 \begin{itemize}
   \item Executable: \texttt{build\_local/app}
   \item Logs: \texttt{build/run.log}, \texttt{build/run\_unbuffered.log}
-  \item Checkpoints: \texttt{build/checkpoints/my\_checkpoint\_onestep.pt}, \texttt{build/checkpoints/my\_checkpoint\_multistep.pt}
+  \item Checkpoints: \texttt{build/checkpoints/my\_checkpoint\_onestep.pt}, \texttt{build/checkpoints/my\_checkpoint\_multistep.pt}, \texttt{build/checkpoints/my\_checkpoint\_koopman.pt}
   \item Figures: \texttt{build/*.png}
 \end{itemize}
 

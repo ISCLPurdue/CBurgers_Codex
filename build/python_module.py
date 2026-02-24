@@ -71,7 +71,7 @@ def analyses_func():
     train_series = time_series[: num_timesteps // 2]
     test_series = time_series[num_timesteps // 2 :]
 
-    from ml_module import standard_lstm
+    from ml_module import standard_lstm, koopman_ssm
 
     # Model A: one-timestep input -> one-step forecast.
     model_onestep = standard_lstm(train_series, seq_num=1, model_tag="onestep")
@@ -85,13 +85,22 @@ def analyses_func():
     print("Performing inference on testing data for multistep model")
     true_multistep, pred_multistep = model_multistep.model_inference(test_series)
 
+    # Model C: Koopman-style neural state-space model.
+    model_koopman = koopman_ssm(train_series, seq_num=8, model_tag="koopman")
+    model_koopman.train_model()
+    print("Performing inference on testing data for koopman model")
+    true_koopman, pred_koopman = model_koopman.model_inference(test_series)
+
     # Create direct comparison plots for modes 0,1,2.
     mode_rmse_onestep = np.sqrt(np.mean(np.square(pred_onestep - true_onestep), axis=0))
     mode_rmse_multistep = np.sqrt(np.mean(np.square(pred_multistep - true_multistep), axis=0))
+    mode_rmse_koopman = np.sqrt(np.mean(np.square(pred_koopman - true_koopman), axis=0))
     print("One-step input RMSE per mode:", mode_rmse_onestep)
     print("Multistep input RMSE per mode:", mode_rmse_multistep)
+    print("Koopman SSM RMSE per mode:", mode_rmse_koopman)
     print("One-step mean deployment RMSE:", np.mean(mode_rmse_onestep))
     print("Multistep mean deployment RMSE:", np.mean(mode_rmse_multistep))
+    print("Koopman SSM mean deployment RMSE:", np.mean(mode_rmse_koopman))
 
     for i in range(3):
         plt.figure(figsize=(8, 4))
@@ -99,6 +108,7 @@ def analyses_func():
         plt.plot(true_multistep[:, i], label="True", linewidth=2)
         plt.plot(pred_onestep[:, i], "--", label=f"Predicted (seq_len=1), RMSE={mode_rmse_onestep[i]:.4f}")
         plt.plot(pred_multistep[:, i], "-.", label=f"Predicted (seq_len=8), RMSE={mode_rmse_multistep[i]:.4f}")
+        plt.plot(pred_koopman[:, i], ":", linewidth=2, label=f"Predicted (Koopman), RMSE={mode_rmse_koopman[i]:.4f}")
         plt.xlabel("Autoregressive rollout step")
         plt.ylabel(f"Mode {i} coefficient")
         plt.legend()
