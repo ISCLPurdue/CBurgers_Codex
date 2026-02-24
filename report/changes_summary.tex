@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setlist{nosep}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\lstdefinestyle{logstyle}{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{black!25},
+  backgroundcolor=\color{black!2}
+}
+
+\title{CBurgers\_Codex Project Report\\\large Workflow, Results, and Codebase Modernization}
+\author{Local Experiment Session Summary}
+\date{February 24, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Project Overview}
+CBurgers\_Codex is a hybrid scientific-ML mini-application that couples a C++ PDE solver
+(1D viscous Burgers equation) with in-situ Python analysis and learning.
+The overall intended workflow is:
+\begin{enumerate}
+  \item Evolve the physical field in C++ across timesteps.
+  \item Transfer snapshots directly to Python without disk-based handoff.
+  \item Perform SVD (POD-like compression) on accumulated snapshots.
+  \item Train an LSTM surrogate on modal coefficients.
+  \item Generate diagnostic figures for field evolution, modal basis, and forecasting.
+\end{enumerate}
+
+The repository's README indicates this as a demonstration of practical C++/Python interop for
+scientific machine learning, originally developed around an older environment
+(Python 3.6 / TensorFlow 2.2 era assumptions).
+
+\section{Mathematical Model for Forecasting}
+\subsection{Governing PDE and Spatial-Temporal Discretization}
+The solved system is the 1D viscous Burgers equation on a periodic domain
+$x \in [0,2\pi)$:
+\begin{equation}
+\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x}
+= \nu \frac{\partial^2 u}{\partial x^2},
+\qquad
+u(0,t)=u(2\pi,t),
+\end{equation}
+with viscosity $\nu = 0.01$ in the code.
+
+Let $x_i = (i-1)\Delta x$ for $i=1,\dots,N_x$ with
+$\Delta x = 2\pi/N_x$, and ghost cells at $i=0,N_x+1$ enforcing periodicity:
+$u_0^n=u_{N_x}^n$ and $u_{N_x+1}^n=u_1^n$.
+Time is discretized as $t^n = n\Delta t$ with $\Delta t=10^{-3}$.
+
+The implemented explicit update (central advection and central diffusion) is:
+\begin{equation}
+u_i^{n+1}
+= u_i^n
+ + \nu \frac{\Delta t}{\Delta x^2}\left(u_{i+1}^n - 2u_i^n + u_{i-1}^n\right)
+ - \frac{\Delta t}{2\Delta x}\left(u_{i+1}^n-u_{i-1}^n\right)u_i^n,
+\quad i=1,\dots,N_x.
+\end{equation}
+
+\subsection{Snapshot Matrix and POD/SVD Compression}
+At each timestep, the full state (including ghosts) is transferred to Python and stored.
+After removing ghost cells, define the snapshot matrix
+\begin{equation}
+X \in \mathbb{R}^{N_t \times N_x},
+\end{equation}
+where row $n$ is the field at time $t^n$.
+The code computes
+\begin{equation}
+X = U\Sigma V^\top,
+\end{equation}
+using full SVD with $U\in\mathbb{R}^{N_t\times N_t}$,
+$\Sigma\in\mathbb{R}^{N_t\times N_x}$ (rectangular diagonal),
+and $V\in\mathbb{R}^{N_x\times N_x}$.
+The first $r=3$ spatial right-singular vectors are retained.
+If $V_r \in \mathbb{R}^{r\times N_x}$ denotes those mode rows
+(as represented in the Python implementation), then reduced coordinates are
+\begin{equation}
+A = (V_r X^\top)^\top \in \mathbb{R}^{N_t \times r},
+\end{equation}
+which is algebraically equivalent to a Galerkin-like projection onto the retained POD basis.
+
+\subsection{LSTM Forecasting Model}
+Let $a_t \in \mathbb{R}^{r}$ be row $t$ of $A$.
+The model uses a lookback window of length $L=5$ and learns
+\begin{equation}
+f_\theta:\mathbb{R}^{L\times r}\to\mathbb{R}^{r},
+\qquad
+\hat a_{t+1}=f_\theta(a_{t-L+1},\dots,a_t).
+\end{equation}
+Training pairs are:
+\begin{equation}
+\mathbf{X}_k = [a_k,\dots,a_{k+L-1}] \in \mathbb{R}^{L\times r},
+\qquad
+\mathbf{y}_k = a_{k+L}\in\mathbb{R}^{r}.
+\end{equation}
+
+Data are normalized by a pipeline (standardization then min-max scaling to $[-1,1]$),
+and parameters are learned by minimizing mean-squared error:
+\begin{equation}
+\mathcal{L}(\theta)
+= \frac{1}{N_b}\sum_{k=1}^{N_b}
+\left\|f_\theta(\mathbf{X}_k)-\mathbf{y}_k\right\|_2^2.
+\end{equation}
+Optimization is performed with Adam ($10^{-3}$ learning rate).
+
+The network is a stacked LSTM:
+\begin{align}
+h^{(1)} &= \mathrm{LSTM}_{50}^{(1)}(\mathbf{X}_k),\\
+h^{(2)} &= \mathrm{LSTM}_{50}^{(2)}(h^{(1)}),\\
+\hat a_{k+L} &= W h^{(2)} + b,
+\end{align}
+where the second LSTM returns only the final hidden state,
+and the dense layer maps to $\mathbb{R}^r$.
+
+\subsection{Autoregressive Inference and Reconstruction}
+Given an initial test window, the model is rolled out recursively:
+\begin{equation}
+\hat a_{t+1}=f_\theta(\hat a_{t-L+1},\dots,\hat a_t),
+\end{equation}
+with predicted coefficients fed back as future inputs.
+The reported mode prediction plots correspond to these recursively generated $\hat a_t$ trajectories.
+
+If full-field reconstruction is desired from retained modes, one can map back via
+\begin{equation}
+\hat X \approx \hat A V_r,
+\end{equation}
+with optional reinsertion of ghost cells for consistency with the solver layout.
+
+\subsection{Implementation-Model Consistency Note}
+The C++ analysis consumer currently expects a 2D array with at least two rows and ten columns,
+while the Python side returns a transposed modal matrix of shape $(N_x, r)$.
+This is mathematically valid for POD basis output, but the interface contract should be made explicit
+to avoid downstream shape mismatch checks.
+
+\section{Session Objectives and Scope}
+The scope of this session included:
+\begin{itemize}
+  \item Cloning and preparing a local experiment environment.
+  \item Rebuilding the executable on the current machine.
+  \item Debugging runtime failures in embedded Python integration.
+  \item Regenerating expected project outputs (plots/checkpoints).
+  \item Documenting all changes and outcomes.
+\end{itemize}
+
+\section{Workflow Executed}
+\subsection{Environment and Build Setup}
+\begin{itemize}
+  \item Cloned repository to \texttt{/Users/rmaulik/Desktop/Codex\_Stuff/CBurgers\_Codex}.
+  \item Created virtual environment at \texttt{.venv/}.
+  \item Installed baseline packages: \texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}, \texttt{jupyter}.
+  \item Installed missing build/runtime dependencies: \texttt{cmake}, \texttt{tensorflow}, \texttt{scikit-learn}.
+\end{itemize}
+
+\subsection{Build Recovery}
+The pre-existing \texttt{build/} cache could not be reused due to source/build path mismatch from a different host.
+A clean local build directory (\texttt{build\_local/}) was created and used successfully.
+
+\section{Code and Configuration Changes}
+\subsection{Tracked Source Files Modified}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}p{0.23\linewidth}p{0.72\linewidth}@{}}
+\toprule
+\textbf{File} & \textbf{Change Summary} \\
+\midrule
+\texttt{CMakeLists.txt} & Replaced hardcoded Python 3.6 Conda include/library paths with portable detection via \texttt{find\_package(Python3 REQUIRED COMPONENTS Interpreter Development NumPy)} and target-based include/link settings. \\
+\texttt{app.cpp} & Added defensive Python embedding checks: module import failure handling, callable checks, exception printing on callback failures, null-safe decref, and analysis output shape guard before array indexing. \\
+\texttt{build/ml\_module.py} & Applied TensorFlow/Keras compatibility fixes for modern stack: removed explicit \texttt{tape.watch(self.trainable\_variables)}, changed checkpoint filename to \texttt{.weights.h5}, and ensured model build before saving weights via a warm-up call. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{File Lifecycle Changes}
+\begin{itemize}
+  \item Deleted root-level tracked result images (per request):
+  \texttt{Field\_evolution.png}, \texttt{SVD\_Eigenvectors.png}, \texttt{Mode\_0\_prediction.png},
+  \texttt{Mode\_1\_prediction.png}, \texttt{Mode\_2\_prediction.png}.
+  \item Regenerated result images under \texttt{build/} with fresh timestamps.
+  \item Added new checkpoint output: \texttt{build/checkpoints/my\_checkpoint.weights.h5}.
+\end{itemize}
+
+\section{Justification for Fixes}
+\subsection{Why the build-system fix was necessary}
+Original CMake used absolute Linux paths tied to a specific Conda env and Python 3.6 ABI
+(\texttt{python3.6m}), which is non-portable and failed on this machine.
+Using \texttt{find\_package(Python3 ...)} makes the project portable across local environments,
+including this session's \texttt{.venv}.
+
+\subsection{Why C++ runtime checks were necessary}
+The executable was dereferencing Python objects without validating imports/callability.
+When Python imports failed (for example, missing TensorFlow), failures were masked and led to
+abrupt termination. The added checks produce explicit Python tracebacks and controlled exits.
+
+\subsection{Why ML compatibility edits were necessary}
+The repository code targeted older TF/Keras behavior.
+With current TensorFlow/Keras in the local environment:
+\begin{itemize}
+  \item Manual \texttt{GradientTape.watch()} on trainable vars caused a type validation failure.
+  \item Weight saving now enforces a \texttt{.weights.h5} suffix.
+  \item Subclassed model weights must exist before save; forcing model build prevents runtime save errors.
+\end{itemize}
+These changes were required to complete training/inference under the installed toolchain.
+
+\section{Results and Generated Artifacts}
+\subsection{Runtime Outcome}
+The application now builds and runs end-to-end through solver evolution and Python analysis/training/inference.
+The process exits successfully while still reporting a post-analysis shape-warning guard from C++.
+
+\subsection{Training and Analysis Log Excerpts}
+Source: \texttt{build/run\_unbuffered.log}
+\begin{lstlisting}[style=logstyle]
+Performing SVD
+Training iteration: 0
+Improved validation loss from: 999999.0  to: 1.9493028
+Validation R2: 0.7909084230642178
+...
+Training iteration: 9
+Improved validation loss from: 0.009479656  to: 0.008223273
+Validation R2: 0.9991378839346071
+Test loss: 0.0003802304
+Test R2: 0.999240932816212
+Performing inference on testing data
+Model restored successfully!
+Making predictions on testing data
+Called python analyses function successfully
+Unexpected output array shape from analyses_func
+\end{lstlisting}
+
+\subsection{Warnings Observed (Numerics/Modeling)}
+\begin{lstlisting}[style=logstyle]
+RuntimeWarning: divide by zero encountered in matmul
+RuntimeWarning: overflow encountered in matmul
+RuntimeWarning: invalid value encountered in matmul
+\end{lstlisting}
+These warnings indicate numerical instability in the ML input construction path
+(\texttt{python\_module.py}, matrix multiplication for modal time-series construction).
+
+\subsection{Result Images}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{../build/Field_evolution.png}
+  \caption{Field evolution generated from in-situ snapshot collection.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\linewidth]{../build/SVD_Eigenvectors.png}
+  \caption{First SVD modes used for reduced-order representation.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.49\linewidth]{../build/Mode_0_prediction.png}
+  \includegraphics[width=0.49\linewidth]{../build/Mode_1_prediction.png}
+  \includegraphics[width=0.49\linewidth]{../build/Mode_2_prediction.png}
+  \caption{LSTM mode prediction plots (three compressed modes).}
+\end{figure}
+
+\section{Modernized Project State (Before vs After)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}p{0.25\linewidth}p{0.3\linewidth}p{0.4\linewidth}@{}}
+\toprule
+\textbf{Area} & \textbf{Before} & \textbf{After} \\
+\midrule
+Build config & Hardcoded Python 3.6-specific absolute paths & Portable Python/NumPy discovery via CMake target-based linking \\
+Runtime safety & Minimal Python object validation & Explicit import/call checks, traceback printing, null-safe handling \\
+ML compatibility & Assumed older Keras behavior & Updated for modern save/load requirements and gradient flow behavior \\
+Execution artifacts & Legacy checked-in root PNGs & Freshly generated outputs in \texttt{build/} + checkpoint/log artifacts \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Recommended Next Steps}
+\begin{enumerate}
+  \item Stabilize numerics in \texttt{python\_module.py}: guard/clip \texttt{time\_series} values before LSTM training and add NaN/Inf checks.
+  \item Resolve return-contract mismatch: ensure \texttt{analyses\_func()} always returns the shape expected by \texttt{app.cpp} or update C++ expectations.
+  \item Move Python modules out of \texttt{build/} into a source package directory and import explicitly to separate source from generated artifacts.
+  \item Add reproducible setup files (e.g., \texttt{requirements.txt} and/or pinned environment file) to lock dependency versions.
+  \item Add a lightweight CI workflow to build and run a short smoke test that validates Python module import and one analysis pass.
+  \item Optionally refactor ML training hyperparameters and logging for deterministic benchmarking across runs.
+\end{enumerate}
+
+\section{Reference Paths}
+\begin{itemize}
+  \item Executable: \texttt{build\_local/app}
+  \item Logs: \texttt{build/run.log}, \texttt{build/run\_unbuffered.log}
+  \item Checkpoint: \texttt{build/checkpoints/my\_checkpoint.weights.h5}
+  \item Figures: \texttt{build/*.png}
+\end{itemize}
+
+\end{document}

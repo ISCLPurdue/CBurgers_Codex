@@ -69,6 +69,8 @@ class standard_lstm(Model):
         self.l2=tf.keras.layers.LSTM(50,return_sequences=False)
         self.out = tf.keras.layers.Dense(self.state_len)
         self.train_op = tf.keras.optimizers.Adam(learning_rate=0.001)
+        # Build variables eagerly for Keras 3 before save_weights is called.
+        _ = self(tf.zeros((1, self.seq_num, self.state_len), dtype=tf.float32))
     
     # Running the model
     def call(self,X):
@@ -85,7 +87,6 @@ class standard_lstm(Model):
     # get gradients - regular
     def get_grad(self,X,Y):
         with tf.GradientTape() as tape:
-            tape.watch(self.trainable_variables)
             L = self.get_loss(X,Y)
             g = tape.gradient(L, self.trainable_variables)
         return g
@@ -138,7 +139,7 @@ class standard_lstm(Model):
                 
                 best_valid_loss = valid_loss
 
-                self.save_weights('./checkpoints/my_checkpoint')
+                self.save_weights('./checkpoints/my_checkpoint.weights.h5')
                 
                 stop_iter = 0
             else:
@@ -158,7 +159,7 @@ class standard_lstm(Model):
 
     # Load weights
     def restore_model(self):
-        self.load_weights('./checkpoints/my_checkpoint') # Load pretrained model
+        self.load_weights('./checkpoints/my_checkpoint.weights.h5') # Load pretrained model
         print('Model restored successfully!')
 
     # Do some testing

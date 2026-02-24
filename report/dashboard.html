@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBurgers Codex Dashboard</title>
+  <style>
+    :root {
+      --bg: #f3f5f0;
+      --ink: #1f2a24;
+      --muted: #5c6a62;
+      --panel: #ffffff;
+      --line: #d8ddd8;
+      --brand: #1f7a59;
+      --brand-soft: #d7efe5;
+      --accent: #e9a93f;
+      --ok: #1e8f5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, #d9e9e0 0%, transparent 30%),
+        radial-gradient(circle at 90% 20%, #f6e8cc 0%, transparent 28%),
+        linear-gradient(180deg, #f5f7f2 0%, #edf1ea 100%);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      line-height: 1.4;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+    .hero {
+      background: linear-gradient(120deg, #163c30 0%, #245947 55%, #2e6e57 100%);
+      color: #f4fff9;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 20px rgba(18, 35, 28, 0.2);
+    }
+    .hero h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: 0.2px; }
+    .hero p { margin: 0; color: #d8f6ea; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .stat {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+    .num { font-size: 28px; font-weight: 700; margin-top: 4px; }
+    h2 { margin: 24px 0 10px; font-size: 22px; }
+    .timeline .item {
+      border-left: 4px solid var(--brand);
+      background: var(--panel);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 10px 0;
+    }
+    .item .k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; }
+    .item .v { font-weight: 600; }
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    figure {
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #eef3ee;
+    }
+    figcaption {
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    .changes {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .changes th, .changes td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .changes th { background: #f5faf6; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--brand-soft);
+      color: #14563f;
+    }
+    .links a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .links a:hover { text-decoration: underline; }
+    .footer { color: var(--muted); font-size: 13px; margin-top: 16px; }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .results { grid-template-columns: 1fr; }
+      figure img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>CBurgers_Codex Project Dashboard</h1>
+      <p>Workflow, runtime outcomes, and code changes from the local setup, rebuild, and debug session.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="stat">Executable</div>
+          <div class="num">Built</div>
+          <div><span class="tag">build_local/app</span></div>
+        </div>
+        <div class="card">
+          <div class="stat">Tracked File Edits</div>
+          <div class="num">14</div>
+          <div><span class="tag">M / D state</span></div>
+        </div>
+        <div class="card">
+          <div class="stat">Plot Outputs</div>
+          <div class="num">5</div>
+          <div><span class="tag">PNG generated in build/</span></div>
+        </div>
+        <div class="card">
+          <div class="stat">Runtime Status</div>
+          <div class="num">Pass</div>
+          <div><span class="tag">Analysis completed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <h2>Workflow</h2>
+    <div class="timeline">
+      <div class="item"><div class="k">Step 1</div><div class="v">Repository cloned and local Python virtual environment created.</div></div>
+      <div class="item"><div class="k">Step 2</div><div class="v">Baseline packages installed: NumPy, SciPy, Matplotlib, Jupyter; then CMake, TensorFlow, scikit-learn.</div></div>
+      <div class="item"><div class="k">Step 3</div><div class="v">CMake config modernized to use discovered Python3/NumPy instead of hardcoded legacy paths.</div></div>
+      <div class="item"><div class="k">Step 4</div><div class="v">Executable rebuilt in <code>build_local/</code> and run against Python workflow in <code>build/</code>.</div></div>
+      <div class="item"><div class="k">Step 5</div><div class="v">Runtime debugging completed: Python error handling in C++, Keras 3 compatibility fixes in <code>build/ml_module.py</code>.</div></div>
+      <div class="item"><div class="k">Step 6</div><div class="v">Artifacts regenerated and LaTeX PDF change report produced in <code>report/</code>.</div></div>
+    </div>
+
+    <h2>Results</h2>
+    <div class="results">
+      <figure>
+        <img src="../build/Field_evolution.png" alt="Field evolution plot">
+        <figcaption>Field evolution (updated Feb 23, 2026 22:24:38)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/SVD_Eigenvectors.png" alt="SVD eigenvectors plot">
+        <figcaption>SVD modes (updated Feb 23, 2026 22:24:38)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/Mode_0_prediction.png" alt="Mode 0 prediction plot">
+        <figcaption>Mode 0 prediction (updated Feb 23, 2026 22:24:51)</figcaption>
+      </figure>
+      <figure>
+        <img src="../build/Mode_1_prediction.png" alt="Mode 1 prediction plot">
+        <figcaption>Mode 1 prediction (updated Feb 23, 2026 22:24:51)</figcaption>
+      </figure>
+    </div>
+
+    <h2>Changes Made</h2>
+    <table class="changes">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Category</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>CMakeLists.txt</code></td>
+          <td><span class="tag">Build System</span></td>
+          <td>Removed hardcoded Python 3.6 paths; now uses <code>find_package(Python3 ... NumPy)</code> and links against <code>Python3::Python</code>.</td>
+        </tr>
+        <tr>
+          <td><code>app.cpp</code></td>
+          <td><span class="tag">Runtime Safety</span></td>
+          <td>Added Python import/callability checks, exception printing, null-safe decref, and output shape guards for analysis return values.</td>
+        </tr>
+        <tr>
+          <td><code>build/ml_module.py</code></td>
+          <td><span class="tag">ML Compatibility</span></td>
+          <td>Updated TensorFlow/Keras integration: removed manual tape watch, switched checkpoint suffix to <code>.weights.h5</code>, and added explicit model build call.</td>
+        </tr>
+        <tr>
+          <td><code>*.png (repo root)</code></td>
+          <td><span class="tag">Cleanup</span></td>
+          <td>Deleted five root-level PNG files per request; regenerated visual outputs in <code>build/</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Artifacts</h2>
+    <div class="card links">
+      <p><a href="./changes_summary.pdf">Change Summary PDF</a></p>
+      <p><a href="../build/run.log">Runtime Log</a></p>
+      <p><a href="../build_local/app">Built Executable</a></p>
+      <p><a href="../build/checkpoints/my_checkpoint.weights.h5">Keras Weights Checkpoint</a></p>
+    </div>
+
+    <div class="footer">
+      Generated for local repository state on Feb 24, 2026.
+    </div>
+  </div>
+</body>
+</html>

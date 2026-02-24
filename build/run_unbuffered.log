@@ -1,0 +1,4058 @@
+Initializing numpy library
+Loading python module
+From python: Within python module
+/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Loaded python module
+Loading functions from module
+Loaded functions
+Called python data collection function successfully
+time = 0
+Called python data collection function successfully
+time = 0.001
+Called python data collection function successfully
+time = 0.002
+Called python data collection function successfully
+time = 0.003
+Called python data collection function successfully
+time = 0.004
+Called python data collection function successfully
+time = 0.005
+Called python data collection function successfully
+time = 0.006
+Called python data collection function successfully
+time = 0.007
+Called python data collection function successfully
+time = 0.008
+Called python data collection function successfully
+time = 0.009
+Called python data collection function successfully
+time = 0.01
+Called python data collection function successfully
+time = 0.011
+Called python data collection function successfully
+time = 0.012
+Called python data collection function successfully
+time = 0.013
+Called python data collection function successfully
+time = 0.014
+Called python data collection function successfully
+time = 0.015
+Called python data collection function successfully
+time = 0.016
+Called python data collection function successfully
+time = 0.017
+Called python data collection function successfully
+time = 0.018
+Called python data collection function successfully
+time = 0.019
+Called python data collection function successfully
+time = 0.02
+Called python data collection function successfully
+time = 0.021
+Called python data collection function successfully
+time = 0.022
+Called python data collection function successfully
+time = 0.023
+Called python data collection function successfully
+time = 0.024
+Called python data collection function successfully
+time = 0.025
+Called python data collection function successfully
+time = 0.026
+Called python data collection function successfully
+time = 0.027
+Called python data collection function successfully
+time = 0.028
+Called python data collection function successfully
+time = 0.029
+Called python data collection function successfully
+time = 0.03
+Called python data collection function successfully
+time = 0.031
+Called python data collection function successfully
+time = 0.032
+Called python data collection function successfully
+time = 0.033
+Called python data collection function successfully
+time = 0.034
+Called python data collection function successfully
+time = 0.035
+Called python data collection function successfully
+time = 0.036
+Called python data collection function successfully
+time = 0.037
+Called python data collection function successfully
+time = 0.038
+Called python data collection function successfully
+time = 0.039
+Called python data collection function successfully
+time = 0.04
+Called python data collection function successfully
+time = 0.041
+Called python data collection function successfully
+time = 0.042
+Called python data collection function successfully
+time = 0.043
+Called python data collection function successfully
+time = 0.044
+Called python data collection function successfully
+time = 0.045
+Called python data collection function successfully
+time = 0.046
+Called python data collection function successfully
+time = 0.047
+Called python data collection function successfully
+time = 0.048
+Called python data collection function successfully
+time = 0.049
+Called python data collection function successfully
+time = 0.05
+Called python data collection function successfully
+time = 0.051
+Called python data collection function successfully
+time = 0.052
+Called python data collection function successfully
+time = 0.053
+Called python data collection function successfully
+time = 0.054
+Called python data collection function successfully
+time = 0.055
+Called python data collection function successfully
+time = 0.056
+Called python data collection function successfully
+time = 0.057
+Called python data collection function successfully
+time = 0.058
+Called python data collection function successfully
+time = 0.059
+Called python data collection function successfully
+time = 0.06
+Called python data collection function successfully
+time = 0.061
+Called python data collection function successfully
+time = 0.062
+Called python data collection function successfully
+time = 0.063
+Called python data collection function successfully
+time = 0.064
+Called python data collection function successfully
+time = 0.065
+Called python data collection function successfully
+time = 0.066
+Called python data collection function successfully
+time = 0.067
+Called python data collection function successfully
+time = 0.068
+Called python data collection function successfully
+time = 0.069
+Called python data collection function successfully
+time = 0.07
+Called python data collection function successfully
+time = 0.071
+Called python data collection function successfully
+time = 0.072
+Called python data collection function successfully
+time = 0.073
+Called python data collection function successfully
+time = 0.074
+Called python data collection function successfully
+time = 0.075
+Called python data collection function successfully
+time = 0.076
+Called python data collection function successfully
+time = 0.077
+Called python data collection function successfully
+time = 0.078
+Called python data collection function successfully
+time = 0.079
+Called python data collection function successfully
+time = 0.08
+Called python data collection function successfully
+time = 0.081
+Called python data collection function successfully
+time = 0.082
+Called python data collection function successfully
+time = 0.083
+Called python data collection function successfully
+time = 0.084
+Called python data collection function successfully
+time = 0.085
+Called python data collection function successfully
+time = 0.086
+Called python data collection function successfully
+time = 0.087
+Called python data collection function successfully
+time = 0.088
+Called python data collection function successfully
+time = 0.089
+Called python data collection function successfully
+time = 0.09
+Called python data collection function successfully
+time = 0.091
+Called python data collection function successfully
+time = 0.092
+Called python data collection function successfully
+time = 0.093
+Called python data collection function successfully
+time = 0.094
+Called python data collection function successfully
+time = 0.095
+Called python data collection function successfully
+time = 0.096
+Called python data collection function successfully
+time = 0.097
+Called python data collection function successfully
+time = 0.098
+Called python data collection function successfully
+time = 0.099
+Called python data collection function successfully
+time = 0.1
+Called python data collection function successfully
+time = 0.101
+Called python data collection function successfully
+time = 0.102
+Called python data collection function successfully
+time = 0.103
+Called python data collection function successfully
+time = 0.104
+Called python data collection function successfully
+time = 0.105
+Called python data collection function successfully
+time = 0.106
+Called python data collection function successfully
+time = 0.107
+Called python data collection function successfully
+time = 0.108
+Called python data collection function successfully
+time = 0.109
+Called python data collection function successfully
+time = 0.11
+Called python data collection function successfully
+time = 0.111
+Called python data collection function successfully
+time = 0.112
+Called python data collection function successfully
+time = 0.113
+Called python data collection function successfully
+time = 0.114
+Called python data collection function successfully
+time = 0.115
+Called python data collection function successfully
+time = 0.116
+Called python data collection function successfully
+time = 0.117
+Called python data collection function successfully
+time = 0.118
+Called python data collection function successfully
+time = 0.119
+Called python data collection function successfully
+time = 0.12
+Called python data collection function successfully
+time = 0.121
+Called python data collection function successfully
+time = 0.122
+Called python data collection function successfully
+time = 0.123
+Called python data collection function successfully
+time = 0.124
+Called python data collection function successfully
+time = 0.125
+Called python data collection function successfully
+time = 0.126
+Called python data collection function successfully
+time = 0.127
+Called python data collection function successfully
+time = 0.128
+Called python data collection function successfully
+time = 0.129
+Called python data collection function successfully
+time = 0.13
+Called python data collection function successfully
+time = 0.131
+Called python data collection function successfully
+time = 0.132
+Called python data collection function successfully
+time = 0.133
+Called python data collection function successfully
+time = 0.134
+Called python data collection function successfully
+time = 0.135
+Called python data collection function successfully
+time = 0.136
+Called python data collection function successfully
+time = 0.137
+Called python data collection function successfully
+time = 0.138
+Called python data collection function successfully
+time = 0.139
+Called python data collection function successfully
+time = 0.14
+Called python data collection function successfully
+time = 0.141
+Called python data collection function successfully
+time = 0.142
+Called python data collection function successfully
+time = 0.143
+Called python data collection function successfully
+time = 0.144
+Called python data collection function successfully
+time = 0.145
+Called python data collection function successfully
+time = 0.146
+Called python data collection function successfully
+time = 0.147
+Called python data collection function successfully
+time = 0.148
+Called python data collection function successfully
+time = 0.149
+Called python data collection function successfully
+time = 0.15
+Called python data collection function successfully
+time = 0.151
+Called python data collection function successfully
+time = 0.152
+Called python data collection function successfully
+time = 0.153
+Called python data collection function successfully
+time = 0.154
+Called python data collection function successfully
+time = 0.155
+Called python data collection function successfully
+time = 0.156
+Called python data collection function successfully
+time = 0.157
+Called python data collection function successfully
+time = 0.158
+Called python data collection function successfully
+time = 0.159
+Called python data collection function successfully
+time = 0.16
+Called python data collection function successfully
+time = 0.161
+Called python data collection function successfully
+time = 0.162
+Called python data collection function successfully
+time = 0.163
+Called python data collection function successfully
+time = 0.164
+Called python data collection function successfully
+time = 0.165
+Called python data collection function successfully
+time = 0.166
+Called python data collection function successfully
+time = 0.167
+Called python data collection function successfully
+time = 0.168
+Called python data collection function successfully
+time = 0.169
+Called python data collection function successfully
+time = 0.17
+Called python data collection function successfully
+time = 0.171
+Called python data collection function successfully
+time = 0.172
+Called python data collection function successfully
+time = 0.173
+Called python data collection function successfully
+time = 0.174
+Called python data collection function successfully
+time = 0.175
+Called python data collection function successfully
+time = 0.176
+Called python data collection function successfully
+time = 0.177
+Called python data collection function successfully
+time = 0.178
+Called python data collection function successfully
+time = 0.179
+Called python data collection function successfully
+time = 0.18
+Called python data collection function successfully
+time = 0.181
+Called python data collection function successfully
+time = 0.182
+Called python data collection function successfully
+time = 0.183
+Called python data collection function successfully
+time = 0.184
+Called python data collection function successfully
+time = 0.185
+Called python data collection function successfully
+time = 0.186
+Called python data collection function successfully
+time = 0.187
+Called python data collection function successfully
+time = 0.188
+Called python data collection function successfully
+time = 0.189
+Called python data collection function successfully
+time = 0.19
+Called python data collection function successfully
+time = 0.191
+Called python data collection function successfully
+time = 0.192
+Called python data collection function successfully
+time = 0.193
+Called python data collection function successfully
+time = 0.194
+Called python data collection function successfully
+time = 0.195
+Called python data collection function successfully
+time = 0.196
+Called python data collection function successfully
+time = 0.197
+Called python data collection function successfully
+time = 0.198
+Called python data collection function successfully
+time = 0.199
+Called python data collection function successfully
+time = 0.2
+Called python data collection function successfully
+time = 0.201
+Called python data collection function successfully
+time = 0.202
+Called python data collection function successfully
+time = 0.203
+Called python data collection function successfully
+time = 0.204
+Called python data collection function successfully
+time = 0.205
+Called python data collection function successfully
+time = 0.206
+Called python data collection function successfully
+time = 0.207
+Called python data collection function successfully
+time = 0.208
+Called python data collection function successfully
+time = 0.209
+Called python data collection function successfully
+time = 0.21
+Called python data collection function successfully
+time = 0.211
+Called python data collection function successfully
+time = 0.212
+Called python data collection function successfully
+time = 0.213
+Called python data collection function successfully
+time = 0.214
+Called python data collection function successfully
+time = 0.215
+Called python data collection function successfully
+time = 0.216
+Called python data collection function successfully
+time = 0.217
+Called python data collection function successfully
+time = 0.218
+Called python data collection function successfully
+time = 0.219
+Called python data collection function successfully
+time = 0.22
+Called python data collection function successfully
+time = 0.221
+Called python data collection function successfully
+time = 0.222
+Called python data collection function successfully
+time = 0.223
+Called python data collection function successfully
+time = 0.224
+Called python data collection function successfully
+time = 0.225
+Called python data collection function successfully
+time = 0.226
+Called python data collection function successfully
+time = 0.227
+Called python data collection function successfully
+time = 0.228
+Called python data collection function successfully
+time = 0.229
+Called python data collection function successfully
+time = 0.23
+Called python data collection function successfully
+time = 0.231
+Called python data collection function successfully
+time = 0.232
+Called python data collection function successfully
+time = 0.233
+Called python data collection function successfully
+time = 0.234
+Called python data collection function successfully
+time = 0.235
+Called python data collection function successfully
+time = 0.236
+Called python data collection function successfully
+time = 0.237
+Called python data collection function successfully
+time = 0.238
+Called python data collection function successfully
+time = 0.239
+Called python data collection function successfully
+time = 0.24
+Called python data collection function successfully
+time = 0.241
+Called python data collection function successfully
+time = 0.242
+Called python data collection function successfully
+time = 0.243
+Called python data collection function successfully
+time = 0.244
+Called python data collection function successfully
+time = 0.245
+Called python data collection function successfully
+time = 0.246
+Called python data collection function successfully
+time = 0.247
+Called python data collection function successfully
+time = 0.248
+Called python data collection function successfully
+time = 0.249
+Called python data collection function successfully
+time = 0.25
+Called python data collection function successfully
+time = 0.251
+Called python data collection function successfully
+time = 0.252
+Called python data collection function successfully
+time = 0.253
+Called python data collection function successfully
+time = 0.254
+Called python data collection function successfully
+time = 0.255
+Called python data collection function successfully
+time = 0.256
+Called python data collection function successfully
+time = 0.257
+Called python data collection function successfully
+time = 0.258
+Called python data collection function successfully
+time = 0.259
+Called python data collection function successfully
+time = 0.26
+Called python data collection function successfully
+time = 0.261
+Called python data collection function successfully
+time = 0.262
+Called python data collection function successfully
+time = 0.263
+Called python data collection function successfully
+time = 0.264
+Called python data collection function successfully
+time = 0.265
+Called python data collection function successfully
+time = 0.266
+Called python data collection function successfully
+time = 0.267
+Called python data collection function successfully
+time = 0.268
+Called python data collection function successfully
+time = 0.269
+Called python data collection function successfully
+time = 0.27
+Called python data collection function successfully
+time = 0.271
+Called python data collection function successfully
+time = 0.272
+Called python data collection function successfully
+time = 0.273
+Called python data collection function successfully
+time = 0.274
+Called python data collection function successfully
+time = 0.275
+Called python data collection function successfully
+time = 0.276
+Called python data collection function successfully
+time = 0.277
+Called python data collection function successfully
+time = 0.278
+Called python data collection function successfully
+time = 0.279
+Called python data collection function successfully
+time = 0.28
+Called python data collection function successfully
+time = 0.281
+Called python data collection function successfully
+time = 0.282
+Called python data collection function successfully
+time = 0.283
+Called python data collection function successfully
+time = 0.284
+Called python data collection function successfully
+time = 0.285
+Called python data collection function successfully
+time = 0.286
+Called python data collection function successfully
+time = 0.287
+Called python data collection function successfully
+time = 0.288
+Called python data collection function successfully
+time = 0.289
+Called python data collection function successfully
+time = 0.29
+Called python data collection function successfully
+time = 0.291
+Called python data collection function successfully
+time = 0.292
+Called python data collection function successfully
+time = 0.293
+Called python data collection function successfully
+time = 0.294
+Called python data collection function successfully
+time = 0.295
+Called python data collection function successfully
+time = 0.296
+Called python data collection function successfully
+time = 0.297
+Called python data collection function successfully
+time = 0.298
+Called python data collection function successfully
+time = 0.299
+Called python data collection function successfully
+time = 0.3
+Called python data collection function successfully
+time = 0.301
+Called python data collection function successfully
+time = 0.302
+Called python data collection function successfully
+time = 0.303
+Called python data collection function successfully
+time = 0.304
+Called python data collection function successfully
+time = 0.305
+Called python data collection function successfully
+time = 0.306
+Called python data collection function successfully
+time = 0.307
+Called python data collection function successfully
+time = 0.308
+Called python data collection function successfully
+time = 0.309
+Called python data collection function successfully
+time = 0.31
+Called python data collection function successfully
+time = 0.311
+Called python data collection function successfully
+time = 0.312
+Called python data collection function successfully
+time = 0.313
+Called python data collection function successfully
+time = 0.314
+Called python data collection function successfully
+time = 0.315
+Called python data collection function successfully
+time = 0.316
+Called python data collection function successfully
+time = 0.317
+Called python data collection function successfully
+time = 0.318
+Called python data collection function successfully
+time = 0.319
+Called python data collection function successfully
+time = 0.32
+Called python data collection function successfully
+time = 0.321
+Called python data collection function successfully
+time = 0.322
+Called python data collection function successfully
+time = 0.323
+Called python data collection function successfully
+time = 0.324
+Called python data collection function successfully
+time = 0.325
+Called python data collection function successfully
+time = 0.326
+Called python data collection function successfully
+time = 0.327
+Called python data collection function successfully
+time = 0.328
+Called python data collection function successfully
+time = 0.329
+Called python data collection function successfully
+time = 0.33
+Called python data collection function successfully
+time = 0.331
+Called python data collection function successfully
+time = 0.332
+Called python data collection function successfully
+time = 0.333
+Called python data collection function successfully
+time = 0.334
+Called python data collection function successfully
+time = 0.335
+Called python data collection function successfully
+time = 0.336
+Called python data collection function successfully
+time = 0.337
+Called python data collection function successfully
+time = 0.338
+Called python data collection function successfully
+time = 0.339
+Called python data collection function successfully
+time = 0.34
+Called python data collection function successfully
+time = 0.341
+Called python data collection function successfully
+time = 0.342
+Called python data collection function successfully
+time = 0.343
+Called python data collection function successfully
+time = 0.344
+Called python data collection function successfully
+time = 0.345
+Called python data collection function successfully
+time = 0.346
+Called python data collection function successfully
+time = 0.347
+Called python data collection function successfully
+time = 0.348
+Called python data collection function successfully
+time = 0.349
+Called python data collection function successfully
+time = 0.35
+Called python data collection function successfully
+time = 0.351
+Called python data collection function successfully
+time = 0.352
+Called python data collection function successfully
+time = 0.353
+Called python data collection function successfully
+time = 0.354
+Called python data collection function successfully
+time = 0.355
+Called python data collection function successfully
+time = 0.356
+Called python data collection function successfully
+time = 0.357
+Called python data collection function successfully
+time = 0.358
+Called python data collection function successfully
+time = 0.359
+Called python data collection function successfully
+time = 0.36
+Called python data collection function successfully
+time = 0.361
+Called python data collection function successfully
+time = 0.362
+Called python data collection function successfully
+time = 0.363
+Called python data collection function successfully
+time = 0.364
+Called python data collection function successfully
+time = 0.365
+Called python data collection function successfully
+time = 0.366
+Called python data collection function successfully
+time = 0.367
+Called python data collection function successfully
+time = 0.368
+Called python data collection function successfully
+time = 0.369
+Called python data collection function successfully
+time = 0.37
+Called python data collection function successfully
+time = 0.371
+Called python data collection function successfully
+time = 0.372
+Called python data collection function successfully
+time = 0.373
+Called python data collection function successfully
+time = 0.374
+Called python data collection function successfully
+time = 0.375
+Called python data collection function successfully
+time = 0.376
+Called python data collection function successfully
+time = 0.377
+Called python data collection function successfully
+time = 0.378
+Called python data collection function successfully
+time = 0.379
+Called python data collection function successfully
+time = 0.38
+Called python data collection function successfully
+time = 0.381
+Called python data collection function successfully
+time = 0.382
+Called python data collection function successfully
+time = 0.383
+Called python data collection function successfully
+time = 0.384
+Called python data collection function successfully
+time = 0.385
+Called python data collection function successfully
+time = 0.386
+Called python data collection function successfully
+time = 0.387
+Called python data collection function successfully
+time = 0.388
+Called python data collection function successfully
+time = 0.389
+Called python data collection function successfully
+time = 0.39
+Called python data collection function successfully
+time = 0.391
+Called python data collection function successfully
+time = 0.392
+Called python data collection function successfully
+time = 0.393
+Called python data collection function successfully
+time = 0.394
+Called python data collection function successfully
+time = 0.395
+Called python data collection function successfully
+time = 0.396
+Called python data collection function successfully
+time = 0.397
+Called python data collection function successfully
+time = 0.398
+Called python data collection function successfully
+time = 0.399
+Called python data collection function successfully
+time = 0.4
+Called python data collection function successfully
+time = 0.401
+Called python data collection function successfully
+time = 0.402
+Called python data collection function successfully
+time = 0.403
+Called python data collection function successfully
+time = 0.404
+Called python data collection function successfully
+time = 0.405
+Called python data collection function successfully
+time = 0.406
+Called python data collection function successfully
+time = 0.407
+Called python data collection function successfully
+time = 0.408
+Called python data collection function successfully
+time = 0.409
+Called python data collection function successfully
+time = 0.41
+Called python data collection function successfully
+time = 0.411
+Called python data collection function successfully
+time = 0.412
+Called python data collection function successfully
+time = 0.413
+Called python data collection function successfully
+time = 0.414
+Called python data collection function successfully
+time = 0.415
+Called python data collection function successfully
+time = 0.416
+Called python data collection function successfully
+time = 0.417
+Called python data collection function successfully
+time = 0.418
+Called python data collection function successfully
+time = 0.419
+Called python data collection function successfully
+time = 0.42
+Called python data collection function successfully
+time = 0.421
+Called python data collection function successfully
+time = 0.422
+Called python data collection function successfully
+time = 0.423
+Called python data collection function successfully
+time = 0.424
+Called python data collection function successfully
+time = 0.425
+Called python data collection function successfully
+time = 0.426
+Called python data collection function successfully
+time = 0.427
+Called python data collection function successfully
+time = 0.428
+Called python data collection function successfully
+time = 0.429
+Called python data collection function successfully
+time = 0.43
+Called python data collection function successfully
+time = 0.431
+Called python data collection function successfully
+time = 0.432
+Called python data collection function successfully
+time = 0.433
+Called python data collection function successfully
+time = 0.434
+Called python data collection function successfully
+time = 0.435
+Called python data collection function successfully
+time = 0.436
+Called python data collection function successfully
+time = 0.437
+Called python data collection function successfully
+time = 0.438
+Called python data collection function successfully
+time = 0.439
+Called python data collection function successfully
+time = 0.44
+Called python data collection function successfully
+time = 0.441
+Called python data collection function successfully
+time = 0.442
+Called python data collection function successfully
+time = 0.443
+Called python data collection function successfully
+time = 0.444
+Called python data collection function successfully
+time = 0.445
+Called python data collection function successfully
+time = 0.446
+Called python data collection function successfully
+time = 0.447
+Called python data collection function successfully
+time = 0.448
+Called python data collection function successfully
+time = 0.449
+Called python data collection function successfully
+time = 0.45
+Called python data collection function successfully
+time = 0.451
+Called python data collection function successfully
+time = 0.452
+Called python data collection function successfully
+time = 0.453
+Called python data collection function successfully
+time = 0.454
+Called python data collection function successfully
+time = 0.455
+Called python data collection function successfully
+time = 0.456
+Called python data collection function successfully
+time = 0.457
+Called python data collection function successfully
+time = 0.458
+Called python data collection function successfully
+time = 0.459
+Called python data collection function successfully
+time = 0.46
+Called python data collection function successfully
+time = 0.461
+Called python data collection function successfully
+time = 0.462
+Called python data collection function successfully
+time = 0.463
+Called python data collection function successfully
+time = 0.464
+Called python data collection function successfully
+time = 0.465
+Called python data collection function successfully
+time = 0.466
+Called python data collection function successfully
+time = 0.467
+Called python data collection function successfully
+time = 0.468
+Called python data collection function successfully
+time = 0.469
+Called python data collection function successfully
+time = 0.47
+Called python data collection function successfully
+time = 0.471
+Called python data collection function successfully
+time = 0.472
+Called python data collection function successfully
+time = 0.473
+Called python data collection function successfully
+time = 0.474
+Called python data collection function successfully
+time = 0.475
+Called python data collection function successfully
+time = 0.476
+Called python data collection function successfully
+time = 0.477
+Called python data collection function successfully
+time = 0.478
+Called python data collection function successfully
+time = 0.479
+Called python data collection function successfully
+time = 0.48
+Called python data collection function successfully
+time = 0.481
+Called python data collection function successfully
+time = 0.482
+Called python data collection function successfully
+time = 0.483
+Called python data collection function successfully
+time = 0.484
+Called python data collection function successfully
+time = 0.485
+Called python data collection function successfully
+time = 0.486
+Called python data collection function successfully
+time = 0.487
+Called python data collection function successfully
+time = 0.488
+Called python data collection function successfully
+time = 0.489
+Called python data collection function successfully
+time = 0.49
+Called python data collection function successfully
+time = 0.491
+Called python data collection function successfully
+time = 0.492
+Called python data collection function successfully
+time = 0.493
+Called python data collection function successfully
+time = 0.494
+Called python data collection function successfully
+time = 0.495
+Called python data collection function successfully
+time = 0.496
+Called python data collection function successfully
+time = 0.497
+Called python data collection function successfully
+time = 0.498
+Called python data collection function successfully
+time = 0.499
+Called python data collection function successfully
+time = 0.5
+Called python data collection function successfully
+time = 0.501
+Called python data collection function successfully
+time = 0.502
+Called python data collection function successfully
+time = 0.503
+Called python data collection function successfully
+time = 0.504
+Called python data collection function successfully
+time = 0.505
+Called python data collection function successfully
+time = 0.506
+Called python data collection function successfully
+time = 0.507
+Called python data collection function successfully
+time = 0.508
+Called python data collection function successfully
+time = 0.509
+Called python data collection function successfully
+time = 0.51
+Called python data collection function successfully
+time = 0.511
+Called python data collection function successfully
+time = 0.512
+Called python data collection function successfully
+time = 0.513
+Called python data collection function successfully
+time = 0.514
+Called python data collection function successfully
+time = 0.515
+Called python data collection function successfully
+time = 0.516
+Called python data collection function successfully
+time = 0.517
+Called python data collection function successfully
+time = 0.518
+Called python data collection function successfully
+time = 0.519
+Called python data collection function successfully
+time = 0.52
+Called python data collection function successfully
+time = 0.521
+Called python data collection function successfully
+time = 0.522
+Called python data collection function successfully
+time = 0.523
+Called python data collection function successfully
+time = 0.524
+Called python data collection function successfully
+time = 0.525
+Called python data collection function successfully
+time = 0.526
+Called python data collection function successfully
+time = 0.527
+Called python data collection function successfully
+time = 0.528
+Called python data collection function successfully
+time = 0.529
+Called python data collection function successfully
+time = 0.53
+Called python data collection function successfully
+time = 0.531
+Called python data collection function successfully
+time = 0.532
+Called python data collection function successfully
+time = 0.533
+Called python data collection function successfully
+time = 0.534
+Called python data collection function successfully
+time = 0.535
+Called python data collection function successfully
+time = 0.536
+Called python data collection function successfully
+time = 0.537
+Called python data collection function successfully
+time = 0.538
+Called python data collection function successfully
+time = 0.539
+Called python data collection function successfully
+time = 0.54
+Called python data collection function successfully
+time = 0.541
+Called python data collection function successfully
+time = 0.542
+Called python data collection function successfully
+time = 0.543
+Called python data collection function successfully
+time = 0.544
+Called python data collection function successfully
+time = 0.545
+Called python data collection function successfully
+time = 0.546
+Called python data collection function successfully
+time = 0.547
+Called python data collection function successfully
+time = 0.548
+Called python data collection function successfully
+time = 0.549
+Called python data collection function successfully
+time = 0.55
+Called python data collection function successfully
+time = 0.551
+Called python data collection function successfully
+time = 0.552
+Called python data collection function successfully
+time = 0.553
+Called python data collection function successfully
+time = 0.554
+Called python data collection function successfully
+time = 0.555
+Called python data collection function successfully
+time = 0.556
+Called python data collection function successfully
+time = 0.557
+Called python data collection function successfully
+time = 0.558
+Called python data collection function successfully
+time = 0.559
+Called python data collection function successfully
+time = 0.56
+Called python data collection function successfully
+time = 0.561
+Called python data collection function successfully
+time = 0.562
+Called python data collection function successfully
+time = 0.563
+Called python data collection function successfully
+time = 0.564
+Called python data collection function successfully
+time = 0.565
+Called python data collection function successfully
+time = 0.566
+Called python data collection function successfully
+time = 0.567
+Called python data collection function successfully
+time = 0.568
+Called python data collection function successfully
+time = 0.569
+Called python data collection function successfully
+time = 0.57
+Called python data collection function successfully
+time = 0.571
+Called python data collection function successfully
+time = 0.572
+Called python data collection function successfully
+time = 0.573
+Called python data collection function successfully
+time = 0.574
+Called python data collection function successfully
+time = 0.575
+Called python data collection function successfully
+time = 0.576
+Called python data collection function successfully
+time = 0.577
+Called python data collection function successfully
+time = 0.578
+Called python data collection function successfully
+time = 0.579
+Called python data collection function successfully
+time = 0.58
+Called python data collection function successfully
+time = 0.581
+Called python data collection function successfully
+time = 0.582
+Called python data collection function successfully
+time = 0.583
+Called python data collection function successfully
+time = 0.584
+Called python data collection function successfully
+time = 0.585
+Called python data collection function successfully
+time = 0.586
+Called python data collection function successfully
+time = 0.587
+Called python data collection function successfully
+time = 0.588
+Called python data collection function successfully
+time = 0.589
+Called python data collection function successfully
+time = 0.59
+Called python data collection function successfully
+time = 0.591
+Called python data collection function successfully
+time = 0.592
+Called python data collection function successfully
+time = 0.593
+Called python data collection function successfully
+time = 0.594
+Called python data collection function successfully
+time = 0.595
+Called python data collection function successfully
+time = 0.596
+Called python data collection function successfully
+time = 0.597
+Called python data collection function successfully
+time = 0.598
+Called python data collection function successfully
+time = 0.599
+Called python data collection function successfully
+time = 0.6
+Called python data collection function successfully
+time = 0.601
+Called python data collection function successfully
+time = 0.602
+Called python data collection function successfully
+time = 0.603
+Called python data collection function successfully
+time = 0.604
+Called python data collection function successfully
+time = 0.605
+Called python data collection function successfully
+time = 0.606
+Called python data collection function successfully
+time = 0.607
+Called python data collection function successfully
+time = 0.608
+Called python data collection function successfully
+time = 0.609
+Called python data collection function successfully
+time = 0.61
+Called python data collection function successfully
+time = 0.611
+Called python data collection function successfully
+time = 0.612
+Called python data collection function successfully
+time = 0.613
+Called python data collection function successfully
+time = 0.614
+Called python data collection function successfully
+time = 0.615
+Called python data collection function successfully
+time = 0.616
+Called python data collection function successfully
+time = 0.617
+Called python data collection function successfully
+time = 0.618
+Called python data collection function successfully
+time = 0.619
+Called python data collection function successfully
+time = 0.62
+Called python data collection function successfully
+time = 0.621
+Called python data collection function successfully
+time = 0.622
+Called python data collection function successfully
+time = 0.623
+Called python data collection function successfully
+time = 0.624
+Called python data collection function successfully
+time = 0.625
+Called python data collection function successfully
+time = 0.626
+Called python data collection function successfully
+time = 0.627
+Called python data collection function successfully
+time = 0.628
+Called python data collection function successfully
+time = 0.629
+Called python data collection function successfully
+time = 0.63
+Called python data collection function successfully
+time = 0.631
+Called python data collection function successfully
+time = 0.632
+Called python data collection function successfully
+time = 0.633
+Called python data collection function successfully
+time = 0.634
+Called python data collection function successfully
+time = 0.635
+Called python data collection function successfully
+time = 0.636
+Called python data collection function successfully
+time = 0.637
+Called python data collection function successfully
+time = 0.638
+Called python data collection function successfully
+time = 0.639
+Called python data collection function successfully
+time = 0.64
+Called python data collection function successfully
+time = 0.641
+Called python data collection function successfully
+time = 0.642
+Called python data collection function successfully
+time = 0.643
+Called python data collection function successfully
+time = 0.644
+Called python data collection function successfully
+time = 0.645
+Called python data collection function successfully
+time = 0.646
+Called python data collection function successfully
+time = 0.647
+Called python data collection function successfully
+time = 0.648
+Called python data collection function successfully
+time = 0.649
+Called python data collection function successfully
+time = 0.65
+Called python data collection function successfully
+time = 0.651
+Called python data collection function successfully
+time = 0.652
+Called python data collection function successfully
+time = 0.653
+Called python data collection function successfully
+time = 0.654
+Called python data collection function successfully
+time = 0.655
+Called python data collection function successfully
+time = 0.656
+Called python data collection function successfully
+time = 0.657
+Called python data collection function successfully
+time = 0.658
+Called python data collection function successfully
+time = 0.659
+Called python data collection function successfully
+time = 0.66
+Called python data collection function successfully
+time = 0.661
+Called python data collection function successfully
+time = 0.662
+Called python data collection function successfully
+time = 0.663
+Called python data collection function successfully
+time = 0.664
+Called python data collection function successfully
+time = 0.665
+Called python data collection function successfully
+time = 0.666
+Called python data collection function successfully
+time = 0.667
+Called python data collection function successfully
+time = 0.668
+Called python data collection function successfully
+time = 0.669
+Called python data collection function successfully
+time = 0.67
+Called python data collection function successfully
+time = 0.671
+Called python data collection function successfully
+time = 0.672
+Called python data collection function successfully
+time = 0.673
+Called python data collection function successfully
+time = 0.674
+Called python data collection function successfully
+time = 0.675
+Called python data collection function successfully
+time = 0.676
+Called python data collection function successfully
+time = 0.677
+Called python data collection function successfully
+time = 0.678
+Called python data collection function successfully
+time = 0.679
+Called python data collection function successfully
+time = 0.68
+Called python data collection function successfully
+time = 0.681
+Called python data collection function successfully
+time = 0.682
+Called python data collection function successfully
+time = 0.683
+Called python data collection function successfully
+time = 0.684
+Called python data collection function successfully
+time = 0.685
+Called python data collection function successfully
+time = 0.686
+Called python data collection function successfully
+time = 0.687
+Called python data collection function successfully
+time = 0.688
+Called python data collection function successfully
+time = 0.689
+Called python data collection function successfully
+time = 0.69
+Called python data collection function successfully
+time = 0.691
+Called python data collection function successfully
+time = 0.692
+Called python data collection function successfully
+time = 0.693
+Called python data collection function successfully
+time = 0.694
+Called python data collection function successfully
+time = 0.695
+Called python data collection function successfully
+time = 0.696
+Called python data collection function successfully
+time = 0.697
+Called python data collection function successfully
+time = 0.698
+Called python data collection function successfully
+time = 0.699
+Called python data collection function successfully
+time = 0.7
+Called python data collection function successfully
+time = 0.701
+Called python data collection function successfully
+time = 0.702
+Called python data collection function successfully
+time = 0.703
+Called python data collection function successfully
+time = 0.704
+Called python data collection function successfully
+time = 0.705
+Called python data collection function successfully
+time = 0.706
+Called python data collection function successfully
+time = 0.707
+Called python data collection function successfully
+time = 0.708
+Called python data collection function successfully
+time = 0.709
+Called python data collection function successfully
+time = 0.71
+Called python data collection function successfully
+time = 0.711
+Called python data collection function successfully
+time = 0.712
+Called python data collection function successfully
+time = 0.713
+Called python data collection function successfully
+time = 0.714
+Called python data collection function successfully
+time = 0.715
+Called python data collection function successfully
+time = 0.716
+Called python data collection function successfully
+time = 0.717
+Called python data collection function successfully
+time = 0.718
+Called python data collection function successfully
+time = 0.719
+Called python data collection function successfully
+time = 0.72
+Called python data collection function successfully
+time = 0.721
+Called python data collection function successfully
+time = 0.722
+Called python data collection function successfully
+time = 0.723
+Called python data collection function successfully
+time = 0.724
+Called python data collection function successfully
+time = 0.725
+Called python data collection function successfully
+time = 0.726
+Called python data collection function successfully
+time = 0.727
+Called python data collection function successfully
+time = 0.728
+Called python data collection function successfully
+time = 0.729
+Called python data collection function successfully
+time = 0.73
+Called python data collection function successfully
+time = 0.731
+Called python data collection function successfully
+time = 0.732
+Called python data collection function successfully
+time = 0.733
+Called python data collection function successfully
+time = 0.734
+Called python data collection function successfully
+time = 0.735
+Called python data collection function successfully
+time = 0.736
+Called python data collection function successfully
+time = 0.737
+Called python data collection function successfully
+time = 0.738
+Called python data collection function successfully
+time = 0.739
+Called python data collection function successfully
+time = 0.74
+Called python data collection function successfully
+time = 0.741
+Called python data collection function successfully
+time = 0.742
+Called python data collection function successfully
+time = 0.743
+Called python data collection function successfully
+time = 0.744
+Called python data collection function successfully
+time = 0.745
+Called python data collection function successfully
+time = 0.746
+Called python data collection function successfully
+time = 0.747
+Called python data collection function successfully
+time = 0.748
+Called python data collection function successfully
+time = 0.749
+Called python data collection function successfully
+time = 0.75
+Called python data collection function successfully
+time = 0.751
+Called python data collection function successfully
+time = 0.752
+Called python data collection function successfully
+time = 0.753
+Called python data collection function successfully
+time = 0.754
+Called python data collection function successfully
+time = 0.755
+Called python data collection function successfully
+time = 0.756
+Called python data collection function successfully
+time = 0.757
+Called python data collection function successfully
+time = 0.758
+Called python data collection function successfully
+time = 0.759
+Called python data collection function successfully
+time = 0.76
+Called python data collection function successfully
+time = 0.761
+Called python data collection function successfully
+time = 0.762
+Called python data collection function successfully
+time = 0.763
+Called python data collection function successfully
+time = 0.764
+Called python data collection function successfully
+time = 0.765
+Called python data collection function successfully
+time = 0.766
+Called python data collection function successfully
+time = 0.767
+Called python data collection function successfully
+time = 0.768
+Called python data collection function successfully
+time = 0.769
+Called python data collection function successfully
+time = 0.77
+Called python data collection function successfully
+time = 0.771
+Called python data collection function successfully
+time = 0.772
+Called python data collection function successfully
+time = 0.773
+Called python data collection function successfully
+time = 0.774
+Called python data collection function successfully
+time = 0.775
+Called python data collection function successfully
+time = 0.776
+Called python data collection function successfully
+time = 0.777
+Called python data collection function successfully
+time = 0.778
+Called python data collection function successfully
+time = 0.779
+Called python data collection function successfully
+time = 0.78
+Called python data collection function successfully
+time = 0.781
+Called python data collection function successfully
+time = 0.782
+Called python data collection function successfully
+time = 0.783
+Called python data collection function successfully
+time = 0.784
+Called python data collection function successfully
+time = 0.785
+Called python data collection function successfully
+time = 0.786
+Called python data collection function successfully
+time = 0.787
+Called python data collection function successfully
+time = 0.788
+Called python data collection function successfully
+time = 0.789
+Called python data collection function successfully
+time = 0.79
+Called python data collection function successfully
+time = 0.791
+Called python data collection function successfully
+time = 0.792
+Called python data collection function successfully
+time = 0.793
+Called python data collection function successfully
+time = 0.794
+Called python data collection function successfully
+time = 0.795
+Called python data collection function successfully
+time = 0.796
+Called python data collection function successfully
+time = 0.797
+Called python data collection function successfully
+time = 0.798
+Called python data collection function successfully
+time = 0.799
+Called python data collection function successfully
+time = 0.8
+Called python data collection function successfully
+time = 0.801
+Called python data collection function successfully
+time = 0.802
+Called python data collection function successfully
+time = 0.803
+Called python data collection function successfully
+time = 0.804
+Called python data collection function successfully
+time = 0.805
+Called python data collection function successfully
+time = 0.806
+Called python data collection function successfully
+time = 0.807
+Called python data collection function successfully
+time = 0.808
+Called python data collection function successfully
+time = 0.809
+Called python data collection function successfully
+time = 0.81
+Called python data collection function successfully
+time = 0.811
+Called python data collection function successfully
+time = 0.812
+Called python data collection function successfully
+time = 0.813
+Called python data collection function successfully
+time = 0.814
+Called python data collection function successfully
+time = 0.815
+Called python data collection function successfully
+time = 0.816
+Called python data collection function successfully
+time = 0.817
+Called python data collection function successfully
+time = 0.818
+Called python data collection function successfully
+time = 0.819
+Called python data collection function successfully
+time = 0.82
+Called python data collection function successfully
+time = 0.821
+Called python data collection function successfully
+time = 0.822
+Called python data collection function successfully
+time = 0.823
+Called python data collection function successfully
+time = 0.824
+Called python data collection function successfully
+time = 0.825
+Called python data collection function successfully
+time = 0.826
+Called python data collection function successfully
+time = 0.827
+Called python data collection function successfully
+time = 0.828
+Called python data collection function successfully
+time = 0.829
+Called python data collection function successfully
+time = 0.83
+Called python data collection function successfully
+time = 0.831
+Called python data collection function successfully
+time = 0.832
+Called python data collection function successfully
+time = 0.833
+Called python data collection function successfully
+time = 0.834
+Called python data collection function successfully
+time = 0.835
+Called python data collection function successfully
+time = 0.836
+Called python data collection function successfully
+time = 0.837
+Called python data collection function successfully
+time = 0.838
+Called python data collection function successfully
+time = 0.839
+Called python data collection function successfully
+time = 0.84
+Called python data collection function successfully
+time = 0.841
+Called python data collection function successfully
+time = 0.842
+Called python data collection function successfully
+time = 0.843
+Called python data collection function successfully
+time = 0.844
+Called python data collection function successfully
+time = 0.845
+Called python data collection function successfully
+time = 0.846
+Called python data collection function successfully
+time = 0.847
+Called python data collection function successfully
+time = 0.848
+Called python data collection function successfully
+time = 0.849
+Called python data collection function successfully
+time = 0.85
+Called python data collection function successfully
+time = 0.851
+Called python data collection function successfully
+time = 0.852
+Called python data collection function successfully
+time = 0.853
+Called python data collection function successfully
+time = 0.854
+Called python data collection function successfully
+time = 0.855
+Called python data collection function successfully
+time = 0.856
+Called python data collection function successfully
+time = 0.857
+Called python data collection function successfully
+time = 0.858
+Called python data collection function successfully
+time = 0.859
+Called python data collection function successfully
+time = 0.86
+Called python data collection function successfully
+time = 0.861
+Called python data collection function successfully
+time = 0.862
+Called python data collection function successfully
+time = 0.863
+Called python data collection function successfully
+time = 0.864
+Called python data collection function successfully
+time = 0.865
+Called python data collection function successfully
+time = 0.866
+Called python data collection function successfully
+time = 0.867
+Called python data collection function successfully
+time = 0.868
+Called python data collection function successfully
+time = 0.869
+Called python data collection function successfully
+time = 0.87
+Called python data collection function successfully
+time = 0.871
+Called python data collection function successfully
+time = 0.872
+Called python data collection function successfully
+time = 0.873
+Called python data collection function successfully
+time = 0.874
+Called python data collection function successfully
+time = 0.875
+Called python data collection function successfully
+time = 0.876
+Called python data collection function successfully
+time = 0.877
+Called python data collection function successfully
+time = 0.878
+Called python data collection function successfully
+time = 0.879
+Called python data collection function successfully
+time = 0.88
+Called python data collection function successfully
+time = 0.881
+Called python data collection function successfully
+time = 0.882
+Called python data collection function successfully
+time = 0.883
+Called python data collection function successfully
+time = 0.884
+Called python data collection function successfully
+time = 0.885
+Called python data collection function successfully
+time = 0.886
+Called python data collection function successfully
+time = 0.887
+Called python data collection function successfully
+time = 0.888
+Called python data collection function successfully
+time = 0.889
+Called python data collection function successfully
+time = 0.89
+Called python data collection function successfully
+time = 0.891
+Called python data collection function successfully
+time = 0.892
+Called python data collection function successfully
+time = 0.893
+Called python data collection function successfully
+time = 0.894
+Called python data collection function successfully
+time = 0.895
+Called python data collection function successfully
+time = 0.896
+Called python data collection function successfully
+time = 0.897
+Called python data collection function successfully
+time = 0.898
+Called python data collection function successfully
+time = 0.899
+Called python data collection function successfully
+time = 0.9
+Called python data collection function successfully
+time = 0.901
+Called python data collection function successfully
+time = 0.902
+Called python data collection function successfully
+time = 0.903
+Called python data collection function successfully
+time = 0.904
+Called python data collection function successfully
+time = 0.905
+Called python data collection function successfully
+time = 0.906
+Called python data collection function successfully
+time = 0.907
+Called python data collection function successfully
+time = 0.908
+Called python data collection function successfully
+time = 0.909
+Called python data collection function successfully
+time = 0.91
+Called python data collection function successfully
+time = 0.911
+Called python data collection function successfully
+time = 0.912
+Called python data collection function successfully
+time = 0.913
+Called python data collection function successfully
+time = 0.914
+Called python data collection function successfully
+time = 0.915
+Called python data collection function successfully
+time = 0.916
+Called python data collection function successfully
+time = 0.917
+Called python data collection function successfully
+time = 0.918
+Called python data collection function successfully
+time = 0.919
+Called python data collection function successfully
+time = 0.92
+Called python data collection function successfully
+time = 0.921
+Called python data collection function successfully
+time = 0.922
+Called python data collection function successfully
+time = 0.923
+Called python data collection function successfully
+time = 0.924
+Called python data collection function successfully
+time = 0.925
+Called python data collection function successfully
+time = 0.926
+Called python data collection function successfully
+time = 0.927
+Called python data collection function successfully
+time = 0.928
+Called python data collection function successfully
+time = 0.929
+Called python data collection function successfully
+time = 0.93
+Called python data collection function successfully
+time = 0.931
+Called python data collection function successfully
+time = 0.932
+Called python data collection function successfully
+time = 0.933
+Called python data collection function successfully
+time = 0.934
+Called python data collection function successfully
+time = 0.935
+Called python data collection function successfully
+time = 0.936
+Called python data collection function successfully
+time = 0.937
+Called python data collection function successfully
+time = 0.938
+Called python data collection function successfully
+time = 0.939
+Called python data collection function successfully
+time = 0.94
+Called python data collection function successfully
+time = 0.941
+Called python data collection function successfully
+time = 0.942
+Called python data collection function successfully
+time = 0.943
+Called python data collection function successfully
+time = 0.944
+Called python data collection function successfully
+time = 0.945
+Called python data collection function successfully
+time = 0.946
+Called python data collection function successfully
+time = 0.947
+Called python data collection function successfully
+time = 0.948
+Called python data collection function successfully
+time = 0.949
+Called python data collection function successfully
+time = 0.95
+Called python data collection function successfully
+time = 0.951
+Called python data collection function successfully
+time = 0.952
+Called python data collection function successfully
+time = 0.953
+Called python data collection function successfully
+time = 0.954
+Called python data collection function successfully
+time = 0.955
+Called python data collection function successfully
+time = 0.956
+Called python data collection function successfully
+time = 0.957
+Called python data collection function successfully
+time = 0.958
+Called python data collection function successfully
+time = 0.959
+Called python data collection function successfully
+time = 0.96
+Called python data collection function successfully
+time = 0.961
+Called python data collection function successfully
+time = 0.962
+Called python data collection function successfully
+time = 0.963
+Called python data collection function successfully
+time = 0.964
+Called python data collection function successfully
+time = 0.965
+Called python data collection function successfully
+time = 0.966
+Called python data collection function successfully
+time = 0.967
+Called python data collection function successfully
+time = 0.968
+Called python data collection function successfully
+time = 0.969
+Called python data collection function successfully
+time = 0.97
+Called python data collection function successfully
+time = 0.971
+Called python data collection function successfully
+time = 0.972
+Called python data collection function successfully
+time = 0.973
+Called python data collection function successfully
+time = 0.974
+Called python data collection function successfully
+time = 0.975
+Called python data collection function successfully
+time = 0.976
+Called python data collection function successfully
+time = 0.977
+Called python data collection function successfully
+time = 0.978
+Called python data collection function successfully
+time = 0.979
+Called python data collection function successfully
+time = 0.98
+Called python data collection function successfully
+time = 0.981
+Called python data collection function successfully
+time = 0.982
+Called python data collection function successfully
+time = 0.983
+Called python data collection function successfully
+time = 0.984
+Called python data collection function successfully
+time = 0.985
+Called python data collection function successfully
+time = 0.986
+Called python data collection function successfully
+time = 0.987
+Called python data collection function successfully
+time = 0.988
+Called python data collection function successfully
+time = 0.989
+Called python data collection function successfully
+time = 0.99
+Called python data collection function successfully
+time = 0.991
+Called python data collection function successfully
+time = 0.992
+Called python data collection function successfully
+time = 0.993
+Called python data collection function successfully
+time = 0.994
+Called python data collection function successfully
+time = 0.995
+Called python data collection function successfully
+time = 0.996
+Called python data collection function successfully
+time = 0.997
+Called python data collection function successfully
+time = 0.998
+Called python data collection function successfully
+time = 0.999
+Called python data collection function successfully
+time = 1
+Called python data collection function successfully
+time = 1.001
+Called python data collection function successfully
+time = 1.002
+Called python data collection function successfully
+time = 1.003
+Called python data collection function successfully
+time = 1.004
+Called python data collection function successfully
+time = 1.005
+Called python data collection function successfully
+time = 1.006
+Called python data collection function successfully
+time = 1.007
+Called python data collection function successfully
+time = 1.008
+Called python data collection function successfully
+time = 1.009
+Called python data collection function successfully
+time = 1.01
+Called python data collection function successfully
+time = 1.011
+Called python data collection function successfully
+time = 1.012
+Called python data collection function successfully
+time = 1.013
+Called python data collection function successfully
+time = 1.014
+Called python data collection function successfully
+time = 1.015
+Called python data collection function successfully
+time = 1.016
+Called python data collection function successfully
+time = 1.017
+Called python data collection function successfully
+time = 1.018
+Called python data collection function successfully
+time = 1.019
+Called python data collection function successfully
+time = 1.02
+Called python data collection function successfully
+time = 1.021
+Called python data collection function successfully
+time = 1.022
+Called python data collection function successfully
+time = 1.023
+Called python data collection function successfully
+time = 1.024
+Called python data collection function successfully
+time = 1.025
+Called python data collection function successfully
+time = 1.026
+Called python data collection function successfully
+time = 1.027
+Called python data collection function successfully
+time = 1.028
+Called python data collection function successfully
+time = 1.029
+Called python data collection function successfully
+time = 1.03
+Called python data collection function successfully
+time = 1.031
+Called python data collection function successfully
+time = 1.032
+Called python data collection function successfully
+time = 1.033
+Called python data collection function successfully
+time = 1.034
+Called python data collection function successfully
+time = 1.035
+Called python data collection function successfully
+time = 1.036
+Called python data collection function successfully
+time = 1.037
+Called python data collection function successfully
+time = 1.038
+Called python data collection function successfully
+time = 1.039
+Called python data collection function successfully
+time = 1.04
+Called python data collection function successfully
+time = 1.041
+Called python data collection function successfully
+time = 1.042
+Called python data collection function successfully
+time = 1.043
+Called python data collection function successfully
+time = 1.044
+Called python data collection function successfully
+time = 1.045
+Called python data collection function successfully
+time = 1.046
+Called python data collection function successfully
+time = 1.047
+Called python data collection function successfully
+time = 1.048
+Called python data collection function successfully
+time = 1.049
+Called python data collection function successfully
+time = 1.05
+Called python data collection function successfully
+time = 1.051
+Called python data collection function successfully
+time = 1.052
+Called python data collection function successfully
+time = 1.053
+Called python data collection function successfully
+time = 1.054
+Called python data collection function successfully
+time = 1.055
+Called python data collection function successfully
+time = 1.056
+Called python data collection function successfully
+time = 1.057
+Called python data collection function successfully
+time = 1.058
+Called python data collection function successfully
+time = 1.059
+Called python data collection function successfully
+time = 1.06
+Called python data collection function successfully
+time = 1.061
+Called python data collection function successfully
+time = 1.062
+Called python data collection function successfully
+time = 1.063
+Called python data collection function successfully
+time = 1.064
+Called python data collection function successfully
+time = 1.065
+Called python data collection function successfully
+time = 1.066
+Called python data collection function successfully
+time = 1.067
+Called python data collection function successfully
+time = 1.068
+Called python data collection function successfully
+time = 1.069
+Called python data collection function successfully
+time = 1.07
+Called python data collection function successfully
+time = 1.071
+Called python data collection function successfully
+time = 1.072
+Called python data collection function successfully
+time = 1.073
+Called python data collection function successfully
+time = 1.074
+Called python data collection function successfully
+time = 1.075
+Called python data collection function successfully
+time = 1.076
+Called python data collection function successfully
+time = 1.077
+Called python data collection function successfully
+time = 1.078
+Called python data collection function successfully
+time = 1.079
+Called python data collection function successfully
+time = 1.08
+Called python data collection function successfully
+time = 1.081
+Called python data collection function successfully
+time = 1.082
+Called python data collection function successfully
+time = 1.083
+Called python data collection function successfully
+time = 1.084
+Called python data collection function successfully
+time = 1.085
+Called python data collection function successfully
+time = 1.086
+Called python data collection function successfully
+time = 1.087
+Called python data collection function successfully
+time = 1.088
+Called python data collection function successfully
+time = 1.089
+Called python data collection function successfully
+time = 1.09
+Called python data collection function successfully
+time = 1.091
+Called python data collection function successfully
+time = 1.092
+Called python data collection function successfully
+time = 1.093
+Called python data collection function successfully
+time = 1.094
+Called python data collection function successfully
+time = 1.095
+Called python data collection function successfully
+time = 1.096
+Called python data collection function successfully
+time = 1.097
+Called python data collection function successfully
+time = 1.098
+Called python data collection function successfully
+time = 1.099
+Called python data collection function successfully
+time = 1.1
+Called python data collection function successfully
+time = 1.101
+Called python data collection function successfully
+time = 1.102
+Called python data collection function successfully
+time = 1.103
+Called python data collection function successfully
+time = 1.104
+Called python data collection function successfully
+time = 1.105
+Called python data collection function successfully
+time = 1.106
+Called python data collection function successfully
+time = 1.107
+Called python data collection function successfully
+time = 1.108
+Called python data collection function successfully
+time = 1.109
+Called python data collection function successfully
+time = 1.11
+Called python data collection function successfully
+time = 1.111
+Called python data collection function successfully
+time = 1.112
+Called python data collection function successfully
+time = 1.113
+Called python data collection function successfully
+time = 1.114
+Called python data collection function successfully
+time = 1.115
+Called python data collection function successfully
+time = 1.116
+Called python data collection function successfully
+time = 1.117
+Called python data collection function successfully
+time = 1.118
+Called python data collection function successfully
+time = 1.119
+Called python data collection function successfully
+time = 1.12
+Called python data collection function successfully
+time = 1.121
+Called python data collection function successfully
+time = 1.122
+Called python data collection function successfully
+time = 1.123
+Called python data collection function successfully
+time = 1.124
+Called python data collection function successfully
+time = 1.125
+Called python data collection function successfully
+time = 1.126
+Called python data collection function successfully
+time = 1.127
+Called python data collection function successfully
+time = 1.128
+Called python data collection function successfully
+time = 1.129
+Called python data collection function successfully
+time = 1.13
+Called python data collection function successfully
+time = 1.131
+Called python data collection function successfully
+time = 1.132
+Called python data collection function successfully
+time = 1.133
+Called python data collection function successfully
+time = 1.134
+Called python data collection function successfully
+time = 1.135
+Called python data collection function successfully
+time = 1.136
+Called python data collection function successfully
+time = 1.137
+Called python data collection function successfully
+time = 1.138
+Called python data collection function successfully
+time = 1.139
+Called python data collection function successfully
+time = 1.14
+Called python data collection function successfully
+time = 1.141
+Called python data collection function successfully
+time = 1.142
+Called python data collection function successfully
+time = 1.143
+Called python data collection function successfully
+time = 1.144
+Called python data collection function successfully
+time = 1.145
+Called python data collection function successfully
+time = 1.146
+Called python data collection function successfully
+time = 1.147
+Called python data collection function successfully
+time = 1.148
+Called python data collection function successfully
+time = 1.149
+Called python data collection function successfully
+time = 1.15
+Called python data collection function successfully
+time = 1.151
+Called python data collection function successfully
+time = 1.152
+Called python data collection function successfully
+time = 1.153
+Called python data collection function successfully
+time = 1.154
+Called python data collection function successfully
+time = 1.155
+Called python data collection function successfully
+time = 1.156
+Called python data collection function successfully
+time = 1.157
+Called python data collection function successfully
+time = 1.158
+Called python data collection function successfully
+time = 1.159
+Called python data collection function successfully
+time = 1.16
+Called python data collection function successfully
+time = 1.161
+Called python data collection function successfully
+time = 1.162
+Called python data collection function successfully
+time = 1.163
+Called python data collection function successfully
+time = 1.164
+Called python data collection function successfully
+time = 1.165
+Called python data collection function successfully
+time = 1.166
+Called python data collection function successfully
+time = 1.167
+Called python data collection function successfully
+time = 1.168
+Called python data collection function successfully
+time = 1.169
+Called python data collection function successfully
+time = 1.17
+Called python data collection function successfully
+time = 1.171
+Called python data collection function successfully
+time = 1.172
+Called python data collection function successfully
+time = 1.173
+Called python data collection function successfully
+time = 1.174
+Called python data collection function successfully
+time = 1.175
+Called python data collection function successfully
+time = 1.176
+Called python data collection function successfully
+time = 1.177
+Called python data collection function successfully
+time = 1.178
+Called python data collection function successfully
+time = 1.179
+Called python data collection function successfully
+time = 1.18
+Called python data collection function successfully
+time = 1.181
+Called python data collection function successfully
+time = 1.182
+Called python data collection function successfully
+time = 1.183
+Called python data collection function successfully
+time = 1.184
+Called python data collection function successfully
+time = 1.185
+Called python data collection function successfully
+time = 1.186
+Called python data collection function successfully
+time = 1.187
+Called python data collection function successfully
+time = 1.188
+Called python data collection function successfully
+time = 1.189
+Called python data collection function successfully
+time = 1.19
+Called python data collection function successfully
+time = 1.191
+Called python data collection function successfully
+time = 1.192
+Called python data collection function successfully
+time = 1.193
+Called python data collection function successfully
+time = 1.194
+Called python data collection function successfully
+time = 1.195
+Called python data collection function successfully
+time = 1.196
+Called python data collection function successfully
+time = 1.197
+Called python data collection function successfully
+time = 1.198
+Called python data collection function successfully
+time = 1.199
+Called python data collection function successfully
+time = 1.2
+Called python data collection function successfully
+time = 1.201
+Called python data collection function successfully
+time = 1.202
+Called python data collection function successfully
+time = 1.203
+Called python data collection function successfully
+time = 1.204
+Called python data collection function successfully
+time = 1.205
+Called python data collection function successfully
+time = 1.206
+Called python data collection function successfully
+time = 1.207
+Called python data collection function successfully
+time = 1.208
+Called python data collection function successfully
+time = 1.209
+Called python data collection function successfully
+time = 1.21
+Called python data collection function successfully
+time = 1.211
+Called python data collection function successfully
+time = 1.212
+Called python data collection function successfully
+time = 1.213
+Called python data collection function successfully
+time = 1.214
+Called python data collection function successfully
+time = 1.215
+Called python data collection function successfully
+time = 1.216
+Called python data collection function successfully
+time = 1.217
+Called python data collection function successfully
+time = 1.218
+Called python data collection function successfully
+time = 1.219
+Called python data collection function successfully
+time = 1.22
+Called python data collection function successfully
+time = 1.221
+Called python data collection function successfully
+time = 1.222
+Called python data collection function successfully
+time = 1.223
+Called python data collection function successfully
+time = 1.224
+Called python data collection function successfully
+time = 1.225
+Called python data collection function successfully
+time = 1.226
+Called python data collection function successfully
+time = 1.227
+Called python data collection function successfully
+time = 1.228
+Called python data collection function successfully
+time = 1.229
+Called python data collection function successfully
+time = 1.23
+Called python data collection function successfully
+time = 1.231
+Called python data collection function successfully
+time = 1.232
+Called python data collection function successfully
+time = 1.233
+Called python data collection function successfully
+time = 1.234
+Called python data collection function successfully
+time = 1.235
+Called python data collection function successfully
+time = 1.236
+Called python data collection function successfully
+time = 1.237
+Called python data collection function successfully
+time = 1.238
+Called python data collection function successfully
+time = 1.239
+Called python data collection function successfully
+time = 1.24
+Called python data collection function successfully
+time = 1.241
+Called python data collection function successfully
+time = 1.242
+Called python data collection function successfully
+time = 1.243
+Called python data collection function successfully
+time = 1.244
+Called python data collection function successfully
+time = 1.245
+Called python data collection function successfully
+time = 1.246
+Called python data collection function successfully
+time = 1.247
+Called python data collection function successfully
+time = 1.248
+Called python data collection function successfully
+time = 1.249
+Called python data collection function successfully
+time = 1.25
+Called python data collection function successfully
+time = 1.251
+Called python data collection function successfully
+time = 1.252
+Called python data collection function successfully
+time = 1.253
+Called python data collection function successfully
+time = 1.254
+Called python data collection function successfully
+time = 1.255
+Called python data collection function successfully
+time = 1.256
+Called python data collection function successfully
+time = 1.257
+Called python data collection function successfully
+time = 1.258
+Called python data collection function successfully
+time = 1.259
+Called python data collection function successfully
+time = 1.26
+Called python data collection function successfully
+time = 1.261
+Called python data collection function successfully
+time = 1.262
+Called python data collection function successfully
+time = 1.263
+Called python data collection function successfully
+time = 1.264
+Called python data collection function successfully
+time = 1.265
+Called python data collection function successfully
+time = 1.266
+Called python data collection function successfully
+time = 1.267
+Called python data collection function successfully
+time = 1.268
+Called python data collection function successfully
+time = 1.269
+Called python data collection function successfully
+time = 1.27
+Called python data collection function successfully
+time = 1.271
+Called python data collection function successfully
+time = 1.272
+Called python data collection function successfully
+time = 1.273
+Called python data collection function successfully
+time = 1.274
+Called python data collection function successfully
+time = 1.275
+Called python data collection function successfully
+time = 1.276
+Called python data collection function successfully
+time = 1.277
+Called python data collection function successfully
+time = 1.278
+Called python data collection function successfully
+time = 1.279
+Called python data collection function successfully
+time = 1.28
+Called python data collection function successfully
+time = 1.281
+Called python data collection function successfully
+time = 1.282
+Called python data collection function successfully
+time = 1.283
+Called python data collection function successfully
+time = 1.284
+Called python data collection function successfully
+time = 1.285
+Called python data collection function successfully
+time = 1.286
+Called python data collection function successfully
+time = 1.287
+Called python data collection function successfully
+time = 1.288
+Called python data collection function successfully
+time = 1.289
+Called python data collection function successfully
+time = 1.29
+Called python data collection function successfully
+time = 1.291
+Called python data collection function successfully
+time = 1.292
+Called python data collection function successfully
+time = 1.293
+Called python data collection function successfully
+time = 1.294
+Called python data collection function successfully
+time = 1.295
+Called python data collection function successfully
+time = 1.296
+Called python data collection function successfully
+time = 1.297
+Called python data collection function successfully
+time = 1.298
+Called python data collection function successfully
+time = 1.299
+Called python data collection function successfully
+time = 1.3
+Called python data collection function successfully
+time = 1.301
+Called python data collection function successfully
+time = 1.302
+Called python data collection function successfully
+time = 1.303
+Called python data collection function successfully
+time = 1.304
+Called python data collection function successfully
+time = 1.305
+Called python data collection function successfully
+time = 1.306
+Called python data collection function successfully
+time = 1.307
+Called python data collection function successfully
+time = 1.308
+Called python data collection function successfully
+time = 1.309
+Called python data collection function successfully
+time = 1.31
+Called python data collection function successfully
+time = 1.311
+Called python data collection function successfully
+time = 1.312
+Called python data collection function successfully
+time = 1.313
+Called python data collection function successfully
+time = 1.314
+Called python data collection function successfully
+time = 1.315
+Called python data collection function successfully
+time = 1.316
+Called python data collection function successfully
+time = 1.317
+Called python data collection function successfully
+time = 1.318
+Called python data collection function successfully
+time = 1.319
+Called python data collection function successfully
+time = 1.32
+Called python data collection function successfully
+time = 1.321
+Called python data collection function successfully
+time = 1.322
+Called python data collection function successfully
+time = 1.323
+Called python data collection function successfully
+time = 1.324
+Called python data collection function successfully
+time = 1.325
+Called python data collection function successfully
+time = 1.326
+Called python data collection function successfully
+time = 1.327
+Called python data collection function successfully
+time = 1.328
+Called python data collection function successfully
+time = 1.329
+Called python data collection function successfully
+time = 1.33
+Called python data collection function successfully
+time = 1.331
+Called python data collection function successfully
+time = 1.332
+Called python data collection function successfully
+time = 1.333
+Called python data collection function successfully
+time = 1.334
+Called python data collection function successfully
+time = 1.335
+Called python data collection function successfully
+time = 1.336
+Called python data collection function successfully
+time = 1.337
+Called python data collection function successfully
+time = 1.338
+Called python data collection function successfully
+time = 1.339
+Called python data collection function successfully
+time = 1.34
+Called python data collection function successfully
+time = 1.341
+Called python data collection function successfully
+time = 1.342
+Called python data collection function successfully
+time = 1.343
+Called python data collection function successfully
+time = 1.344
+Called python data collection function successfully
+time = 1.345
+Called python data collection function successfully
+time = 1.346
+Called python data collection function successfully
+time = 1.347
+Called python data collection function successfully
+time = 1.348
+Called python data collection function successfully
+time = 1.349
+Called python data collection function successfully
+time = 1.35
+Called python data collection function successfully
+time = 1.351
+Called python data collection function successfully
+time = 1.352
+Called python data collection function successfully
+time = 1.353
+Called python data collection function successfully
+time = 1.354
+Called python data collection function successfully
+time = 1.355
+Called python data collection function successfully
+time = 1.356
+Called python data collection function successfully
+time = 1.357
+Called python data collection function successfully
+time = 1.358
+Called python data collection function successfully
+time = 1.359
+Called python data collection function successfully
+time = 1.36
+Called python data collection function successfully
+time = 1.361
+Called python data collection function successfully
+time = 1.362
+Called python data collection function successfully
+time = 1.363
+Called python data collection function successfully
+time = 1.364
+Called python data collection function successfully
+time = 1.365
+Called python data collection function successfully
+time = 1.366
+Called python data collection function successfully
+time = 1.367
+Called python data collection function successfully
+time = 1.368
+Called python data collection function successfully
+time = 1.369
+Called python data collection function successfully
+time = 1.37
+Called python data collection function successfully
+time = 1.371
+Called python data collection function successfully
+time = 1.372
+Called python data collection function successfully
+time = 1.373
+Called python data collection function successfully
+time = 1.374
+Called python data collection function successfully
+time = 1.375
+Called python data collection function successfully
+time = 1.376
+Called python data collection function successfully
+time = 1.377
+Called python data collection function successfully
+time = 1.378
+Called python data collection function successfully
+time = 1.379
+Called python data collection function successfully
+time = 1.38
+Called python data collection function successfully
+time = 1.381
+Called python data collection function successfully
+time = 1.382
+Called python data collection function successfully
+time = 1.383
+Called python data collection function successfully
+time = 1.384
+Called python data collection function successfully
+time = 1.385
+Called python data collection function successfully
+time = 1.386
+Called python data collection function successfully
+time = 1.387
+Called python data collection function successfully
+time = 1.388
+Called python data collection function successfully
+time = 1.389
+Called python data collection function successfully
+time = 1.39
+Called python data collection function successfully
+time = 1.391
+Called python data collection function successfully
+time = 1.392
+Called python data collection function successfully
+time = 1.393
+Called python data collection function successfully
+time = 1.394
+Called python data collection function successfully
+time = 1.395
+Called python data collection function successfully
+time = 1.396
+Called python data collection function successfully
+time = 1.397
+Called python data collection function successfully
+time = 1.398
+Called python data collection function successfully
+time = 1.399
+Called python data collection function successfully
+time = 1.4
+Called python data collection function successfully
+time = 1.401
+Called python data collection function successfully
+time = 1.402
+Called python data collection function successfully
+time = 1.403
+Called python data collection function successfully
+time = 1.404
+Called python data collection function successfully
+time = 1.405
+Called python data collection function successfully
+time = 1.406
+Called python data collection function successfully
+time = 1.407
+Called python data collection function successfully
+time = 1.408
+Called python data collection function successfully
+time = 1.409
+Called python data collection function successfully
+time = 1.41
+Called python data collection function successfully
+time = 1.411
+Called python data collection function successfully
+time = 1.412
+Called python data collection function successfully
+time = 1.413
+Called python data collection function successfully
+time = 1.414
+Called python data collection function successfully
+time = 1.415
+Called python data collection function successfully
+time = 1.416
+Called python data collection function successfully
+time = 1.417
+Called python data collection function successfully
+time = 1.418
+Called python data collection function successfully
+time = 1.419
+Called python data collection function successfully
+time = 1.42
+Called python data collection function successfully
+time = 1.421
+Called python data collection function successfully
+time = 1.422
+Called python data collection function successfully
+time = 1.423
+Called python data collection function successfully
+time = 1.424
+Called python data collection function successfully
+time = 1.425
+Called python data collection function successfully
+time = 1.426
+Called python data collection function successfully
+time = 1.427
+Called python data collection function successfully
+time = 1.428
+Called python data collection function successfully
+time = 1.429
+Called python data collection function successfully
+time = 1.43
+Called python data collection function successfully
+time = 1.431
+Called python data collection function successfully
+time = 1.432
+Called python data collection function successfully
+time = 1.433
+Called python data collection function successfully
+time = 1.434
+Called python data collection function successfully
+time = 1.435
+Called python data collection function successfully
+time = 1.436
+Called python data collection function successfully
+time = 1.437
+Called python data collection function successfully
+time = 1.438
+Called python data collection function successfully
+time = 1.439
+Called python data collection function successfully
+time = 1.44
+Called python data collection function successfully
+time = 1.441
+Called python data collection function successfully
+time = 1.442
+Called python data collection function successfully
+time = 1.443
+Called python data collection function successfully
+time = 1.444
+Called python data collection function successfully
+time = 1.445
+Called python data collection function successfully
+time = 1.446
+Called python data collection function successfully
+time = 1.447
+Called python data collection function successfully
+time = 1.448
+Called python data collection function successfully
+time = 1.449
+Called python data collection function successfully
+time = 1.45
+Called python data collection function successfully
+time = 1.451
+Called python data collection function successfully
+time = 1.452
+Called python data collection function successfully
+time = 1.453
+Called python data collection function successfully
+time = 1.454
+Called python data collection function successfully
+time = 1.455
+Called python data collection function successfully
+time = 1.456
+Called python data collection function successfully
+time = 1.457
+Called python data collection function successfully
+time = 1.458
+Called python data collection function successfully
+time = 1.459
+Called python data collection function successfully
+time = 1.46
+Called python data collection function successfully
+time = 1.461
+Called python data collection function successfully
+time = 1.462
+Called python data collection function successfully
+time = 1.463
+Called python data collection function successfully
+time = 1.464
+Called python data collection function successfully
+time = 1.465
+Called python data collection function successfully
+time = 1.466
+Called python data collection function successfully
+time = 1.467
+Called python data collection function successfully
+time = 1.468
+Called python data collection function successfully
+time = 1.469
+Called python data collection function successfully
+time = 1.47
+Called python data collection function successfully
+time = 1.471
+Called python data collection function successfully
+time = 1.472
+Called python data collection function successfully
+time = 1.473
+Called python data collection function successfully
+time = 1.474
+Called python data collection function successfully
+time = 1.475
+Called python data collection function successfully
+time = 1.476
+Called python data collection function successfully
+time = 1.477
+Called python data collection function successfully
+time = 1.478
+Called python data collection function successfully
+time = 1.479
+Called python data collection function successfully
+time = 1.48
+Called python data collection function successfully
+time = 1.481
+Called python data collection function successfully
+time = 1.482
+Called python data collection function successfully
+time = 1.483
+Called python data collection function successfully
+time = 1.484
+Called python data collection function successfully
+time = 1.485
+Called python data collection function successfully
+time = 1.486
+Called python data collection function successfully
+time = 1.487
+Called python data collection function successfully
+time = 1.488
+Called python data collection function successfully
+time = 1.489
+Called python data collection function successfully
+time = 1.49
+Called python data collection function successfully
+time = 1.491
+Called python data collection function successfully
+time = 1.492
+Called python data collection function successfully
+time = 1.493
+Called python data collection function successfully
+time = 1.494
+Called python data collection function successfully
+time = 1.495
+Called python data collection function successfully
+time = 1.496
+Called python data collection function successfully
+time = 1.497
+Called python data collection function successfully
+time = 1.498
+Called python data collection function successfully
+time = 1.499
+Called python data collection function successfully
+time = 1.5
+Called python data collection function successfully
+time = 1.501
+Called python data collection function successfully
+time = 1.502
+Called python data collection function successfully
+time = 1.503
+Called python data collection function successfully
+time = 1.504
+Called python data collection function successfully
+time = 1.505
+Called python data collection function successfully
+time = 1.506
+Called python data collection function successfully
+time = 1.507
+Called python data collection function successfully
+time = 1.508
+Called python data collection function successfully
+time = 1.509
+Called python data collection function successfully
+time = 1.51
+Called python data collection function successfully
+time = 1.511
+Called python data collection function successfully
+time = 1.512
+Called python data collection function successfully
+time = 1.513
+Called python data collection function successfully
+time = 1.514
+Called python data collection function successfully
+time = 1.515
+Called python data collection function successfully
+time = 1.516
+Called python data collection function successfully
+time = 1.517
+Called python data collection function successfully
+time = 1.518
+Called python data collection function successfully
+time = 1.519
+Called python data collection function successfully
+time = 1.52
+Called python data collection function successfully
+time = 1.521
+Called python data collection function successfully
+time = 1.522
+Called python data collection function successfully
+time = 1.523
+Called python data collection function successfully
+time = 1.524
+Called python data collection function successfully
+time = 1.525
+Called python data collection function successfully
+time = 1.526
+Called python data collection function successfully
+time = 1.527
+Called python data collection function successfully
+time = 1.528
+Called python data collection function successfully
+time = 1.529
+Called python data collection function successfully
+time = 1.53
+Called python data collection function successfully
+time = 1.531
+Called python data collection function successfully
+time = 1.532
+Called python data collection function successfully
+time = 1.533
+Called python data collection function successfully
+time = 1.534
+Called python data collection function successfully
+time = 1.535
+Called python data collection function successfully
+time = 1.536
+Called python data collection function successfully
+time = 1.537
+Called python data collection function successfully
+time = 1.538
+Called python data collection function successfully
+time = 1.539
+Called python data collection function successfully
+time = 1.54
+Called python data collection function successfully
+time = 1.541
+Called python data collection function successfully
+time = 1.542
+Called python data collection function successfully
+time = 1.543
+Called python data collection function successfully
+time = 1.544
+Called python data collection function successfully
+time = 1.545
+Called python data collection function successfully
+time = 1.546
+Called python data collection function successfully
+time = 1.547
+Called python data collection function successfully
+time = 1.548
+Called python data collection function successfully
+time = 1.549
+Called python data collection function successfully
+time = 1.55
+Called python data collection function successfully
+time = 1.551
+Called python data collection function successfully
+time = 1.552
+Called python data collection function successfully
+time = 1.553
+Called python data collection function successfully
+time = 1.554
+Called python data collection function successfully
+time = 1.555
+Called python data collection function successfully
+time = 1.556
+Called python data collection function successfully
+time = 1.557
+Called python data collection function successfully
+time = 1.558
+Called python data collection function successfully
+time = 1.559
+Called python data collection function successfully
+time = 1.56
+Called python data collection function successfully
+time = 1.561
+Called python data collection function successfully
+time = 1.562
+Called python data collection function successfully
+time = 1.563
+Called python data collection function successfully
+time = 1.564
+Called python data collection function successfully
+time = 1.565
+Called python data collection function successfully
+time = 1.566
+Called python data collection function successfully
+time = 1.567
+Called python data collection function successfully
+time = 1.568
+Called python data collection function successfully
+time = 1.569
+Called python data collection function successfully
+time = 1.57
+Called python data collection function successfully
+time = 1.571
+Called python data collection function successfully
+time = 1.572
+Called python data collection function successfully
+time = 1.573
+Called python data collection function successfully
+time = 1.574
+Called python data collection function successfully
+time = 1.575
+Called python data collection function successfully
+time = 1.576
+Called python data collection function successfully
+time = 1.577
+Called python data collection function successfully
+time = 1.578
+Called python data collection function successfully
+time = 1.579
+Called python data collection function successfully
+time = 1.58
+Called python data collection function successfully
+time = 1.581
+Called python data collection function successfully
+time = 1.582
+Called python data collection function successfully
+time = 1.583
+Called python data collection function successfully
+time = 1.584
+Called python data collection function successfully
+time = 1.585
+Called python data collection function successfully
+time = 1.586
+Called python data collection function successfully
+time = 1.587
+Called python data collection function successfully
+time = 1.588
+Called python data collection function successfully
+time = 1.589
+Called python data collection function successfully
+time = 1.59
+Called python data collection function successfully
+time = 1.591
+Called python data collection function successfully
+time = 1.592
+Called python data collection function successfully
+time = 1.593
+Called python data collection function successfully
+time = 1.594
+Called python data collection function successfully
+time = 1.595
+Called python data collection function successfully
+time = 1.596
+Called python data collection function successfully
+time = 1.597
+Called python data collection function successfully
+time = 1.598
+Called python data collection function successfully
+time = 1.599
+Called python data collection function successfully
+time = 1.6
+Called python data collection function successfully
+time = 1.601
+Called python data collection function successfully
+time = 1.602
+Called python data collection function successfully
+time = 1.603
+Called python data collection function successfully
+time = 1.604
+Called python data collection function successfully
+time = 1.605
+Called python data collection function successfully
+time = 1.606
+Called python data collection function successfully
+time = 1.607
+Called python data collection function successfully
+time = 1.608
+Called python data collection function successfully
+time = 1.609
+Called python data collection function successfully
+time = 1.61
+Called python data collection function successfully
+time = 1.611
+Called python data collection function successfully
+time = 1.612
+Called python data collection function successfully
+time = 1.613
+Called python data collection function successfully
+time = 1.614
+Called python data collection function successfully
+time = 1.615
+Called python data collection function successfully
+time = 1.616
+Called python data collection function successfully
+time = 1.617
+Called python data collection function successfully
+time = 1.618
+Called python data collection function successfully
+time = 1.619
+Called python data collection function successfully
+time = 1.62
+Called python data collection function successfully
+time = 1.621
+Called python data collection function successfully
+time = 1.622
+Called python data collection function successfully
+time = 1.623
+Called python data collection function successfully
+time = 1.624
+Called python data collection function successfully
+time = 1.625
+Called python data collection function successfully
+time = 1.626
+Called python data collection function successfully
+time = 1.627
+Called python data collection function successfully
+time = 1.628
+Called python data collection function successfully
+time = 1.629
+Called python data collection function successfully
+time = 1.63
+Called python data collection function successfully
+time = 1.631
+Called python data collection function successfully
+time = 1.632
+Called python data collection function successfully
+time = 1.633
+Called python data collection function successfully
+time = 1.634
+Called python data collection function successfully
+time = 1.635
+Called python data collection function successfully
+time = 1.636
+Called python data collection function successfully
+time = 1.637
+Called python data collection function successfully
+time = 1.638
+Called python data collection function successfully
+time = 1.639
+Called python data collection function successfully
+time = 1.64
+Called python data collection function successfully
+time = 1.641
+Called python data collection function successfully
+time = 1.642
+Called python data collection function successfully
+time = 1.643
+Called python data collection function successfully
+time = 1.644
+Called python data collection function successfully
+time = 1.645
+Called python data collection function successfully
+time = 1.646
+Called python data collection function successfully
+time = 1.647
+Called python data collection function successfully
+time = 1.648
+Called python data collection function successfully
+time = 1.649
+Called python data collection function successfully
+time = 1.65
+Called python data collection function successfully
+time = 1.651
+Called python data collection function successfully
+time = 1.652
+Called python data collection function successfully
+time = 1.653
+Called python data collection function successfully
+time = 1.654
+Called python data collection function successfully
+time = 1.655
+Called python data collection function successfully
+time = 1.656
+Called python data collection function successfully
+time = 1.657
+Called python data collection function successfully
+time = 1.658
+Called python data collection function successfully
+time = 1.659
+Called python data collection function successfully
+time = 1.66
+Called python data collection function successfully
+time = 1.661
+Called python data collection function successfully
+time = 1.662
+Called python data collection function successfully
+time = 1.663
+Called python data collection function successfully
+time = 1.664
+Called python data collection function successfully
+time = 1.665
+Called python data collection function successfully
+time = 1.666
+Called python data collection function successfully
+time = 1.667
+Called python data collection function successfully
+time = 1.668
+Called python data collection function successfully
+time = 1.669
+Called python data collection function successfully
+time = 1.67
+Called python data collection function successfully
+time = 1.671
+Called python data collection function successfully
+time = 1.672
+Called python data collection function successfully
+time = 1.673
+Called python data collection function successfully
+time = 1.674
+Called python data collection function successfully
+time = 1.675
+Called python data collection function successfully
+time = 1.676
+Called python data collection function successfully
+time = 1.677
+Called python data collection function successfully
+time = 1.678
+Called python data collection function successfully
+time = 1.679
+Called python data collection function successfully
+time = 1.68
+Called python data collection function successfully
+time = 1.681
+Called python data collection function successfully
+time = 1.682
+Called python data collection function successfully
+time = 1.683
+Called python data collection function successfully
+time = 1.684
+Called python data collection function successfully
+time = 1.685
+Called python data collection function successfully
+time = 1.686
+Called python data collection function successfully
+time = 1.687
+Called python data collection function successfully
+time = 1.688
+Called python data collection function successfully
+time = 1.689
+Called python data collection function successfully
+time = 1.69
+Called python data collection function successfully
+time = 1.691
+Called python data collection function successfully
+time = 1.692
+Called python data collection function successfully
+time = 1.693
+Called python data collection function successfully
+time = 1.694
+Called python data collection function successfully
+time = 1.695
+Called python data collection function successfully
+time = 1.696
+Called python data collection function successfully
+time = 1.697
+Called python data collection function successfully
+time = 1.698
+Called python data collection function successfully
+time = 1.699
+Called python data collection function successfully
+time = 1.7
+Called python data collection function successfully
+time = 1.701
+Called python data collection function successfully
+time = 1.702
+Called python data collection function successfully
+time = 1.703
+Called python data collection function successfully
+time = 1.704
+Called python data collection function successfully
+time = 1.705
+Called python data collection function successfully
+time = 1.706
+Called python data collection function successfully
+time = 1.707
+Called python data collection function successfully
+time = 1.708
+Called python data collection function successfully
+time = 1.709
+Called python data collection function successfully
+time = 1.71
+Called python data collection function successfully
+time = 1.711
+Called python data collection function successfully
+time = 1.712
+Called python data collection function successfully
+time = 1.713
+Called python data collection function successfully
+time = 1.714
+Called python data collection function successfully
+time = 1.715
+Called python data collection function successfully
+time = 1.716
+Called python data collection function successfully
+time = 1.717
+Called python data collection function successfully
+time = 1.718
+Called python data collection function successfully
+time = 1.719
+Called python data collection function successfully
+time = 1.72
+Called python data collection function successfully
+time = 1.721
+Called python data collection function successfully
+time = 1.722
+Called python data collection function successfully
+time = 1.723
+Called python data collection function successfully
+time = 1.724
+Called python data collection function successfully
+time = 1.725
+Called python data collection function successfully
+time = 1.726
+Called python data collection function successfully
+time = 1.727
+Called python data collection function successfully
+time = 1.728
+Called python data collection function successfully
+time = 1.729
+Called python data collection function successfully
+time = 1.73
+Called python data collection function successfully
+time = 1.731
+Called python data collection function successfully
+time = 1.732
+Called python data collection function successfully
+time = 1.733
+Called python data collection function successfully
+time = 1.734
+Called python data collection function successfully
+time = 1.735
+Called python data collection function successfully
+time = 1.736
+Called python data collection function successfully
+time = 1.737
+Called python data collection function successfully
+time = 1.738
+Called python data collection function successfully
+time = 1.739
+Called python data collection function successfully
+time = 1.74
+Called python data collection function successfully
+time = 1.741
+Called python data collection function successfully
+time = 1.742
+Called python data collection function successfully
+time = 1.743
+Called python data collection function successfully
+time = 1.744
+Called python data collection function successfully
+time = 1.745
+Called python data collection function successfully
+time = 1.746
+Called python data collection function successfully
+time = 1.747
+Called python data collection function successfully
+time = 1.748
+Called python data collection function successfully
+time = 1.749
+Called python data collection function successfully
+time = 1.75
+Called python data collection function successfully
+time = 1.751
+Called python data collection function successfully
+time = 1.752
+Called python data collection function successfully
+time = 1.753
+Called python data collection function successfully
+time = 1.754
+Called python data collection function successfully
+time = 1.755
+Called python data collection function successfully
+time = 1.756
+Called python data collection function successfully
+time = 1.757
+Called python data collection function successfully
+time = 1.758
+Called python data collection function successfully
+time = 1.759
+Called python data collection function successfully
+time = 1.76
+Called python data collection function successfully
+time = 1.761
+Called python data collection function successfully
+time = 1.762
+Called python data collection function successfully
+time = 1.763
+Called python data collection function successfully
+time = 1.764
+Called python data collection function successfully
+time = 1.765
+Called python data collection function successfully
+time = 1.766
+Called python data collection function successfully
+time = 1.767
+Called python data collection function successfully
+time = 1.768
+Called python data collection function successfully
+time = 1.769
+Called python data collection function successfully
+time = 1.77
+Called python data collection function successfully
+time = 1.771
+Called python data collection function successfully
+time = 1.772
+Called python data collection function successfully
+time = 1.773
+Called python data collection function successfully
+time = 1.774
+Called python data collection function successfully
+time = 1.775
+Called python data collection function successfully
+time = 1.776
+Called python data collection function successfully
+time = 1.777
+Called python data collection function successfully
+time = 1.778
+Called python data collection function successfully
+time = 1.779
+Called python data collection function successfully
+time = 1.78
+Called python data collection function successfully
+time = 1.781
+Called python data collection function successfully
+time = 1.782
+Called python data collection function successfully
+time = 1.783
+Called python data collection function successfully
+time = 1.784
+Called python data collection function successfully
+time = 1.785
+Called python data collection function successfully
+time = 1.786
+Called python data collection function successfully
+time = 1.787
+Called python data collection function successfully
+time = 1.788
+Called python data collection function successfully
+time = 1.789
+Called python data collection function successfully
+time = 1.79
+Called python data collection function successfully
+time = 1.791
+Called python data collection function successfully
+time = 1.792
+Called python data collection function successfully
+time = 1.793
+Called python data collection function successfully
+time = 1.794
+Called python data collection function successfully
+time = 1.795
+Called python data collection function successfully
+time = 1.796
+Called python data collection function successfully
+time = 1.797
+Called python data collection function successfully
+time = 1.798
+Called python data collection function successfully
+time = 1.799
+Called python data collection function successfully
+time = 1.8
+Called python data collection function successfully
+time = 1.801
+Called python data collection function successfully
+time = 1.802
+Called python data collection function successfully
+time = 1.803
+Called python data collection function successfully
+time = 1.804
+Called python data collection function successfully
+time = 1.805
+Called python data collection function successfully
+time = 1.806
+Called python data collection function successfully
+time = 1.807
+Called python data collection function successfully
+time = 1.808
+Called python data collection function successfully
+time = 1.809
+Called python data collection function successfully
+time = 1.81
+Called python data collection function successfully
+time = 1.811
+Called python data collection function successfully
+time = 1.812
+Called python data collection function successfully
+time = 1.813
+Called python data collection function successfully
+time = 1.814
+Called python data collection function successfully
+time = 1.815
+Called python data collection function successfully
+time = 1.816
+Called python data collection function successfully
+time = 1.817
+Called python data collection function successfully
+time = 1.818
+Called python data collection function successfully
+time = 1.819
+Called python data collection function successfully
+time = 1.82
+Called python data collection function successfully
+time = 1.821
+Called python data collection function successfully
+time = 1.822
+Called python data collection function successfully
+time = 1.823
+Called python data collection function successfully
+time = 1.824
+Called python data collection function successfully
+time = 1.825
+Called python data collection function successfully
+time = 1.826
+Called python data collection function successfully
+time = 1.827
+Called python data collection function successfully
+time = 1.828
+Called python data collection function successfully
+time = 1.829
+Called python data collection function successfully
+time = 1.83
+Called python data collection function successfully
+time = 1.831
+Called python data collection function successfully
+time = 1.832
+Called python data collection function successfully
+time = 1.833
+Called python data collection function successfully
+time = 1.834
+Called python data collection function successfully
+time = 1.835
+Called python data collection function successfully
+time = 1.836
+Called python data collection function successfully
+time = 1.837
+Called python data collection function successfully
+time = 1.838
+Called python data collection function successfully
+time = 1.839
+Called python data collection function successfully
+time = 1.84
+Called python data collection function successfully
+time = 1.841
+Called python data collection function successfully
+time = 1.842
+Called python data collection function successfully
+time = 1.843
+Called python data collection function successfully
+time = 1.844
+Called python data collection function successfully
+time = 1.845
+Called python data collection function successfully
+time = 1.846
+Called python data collection function successfully
+time = 1.847
+Called python data collection function successfully
+time = 1.848
+Called python data collection function successfully
+time = 1.849
+Called python data collection function successfully
+time = 1.85
+Called python data collection function successfully
+time = 1.851
+Called python data collection function successfully
+time = 1.852
+Called python data collection function successfully
+time = 1.853
+Called python data collection function successfully
+time = 1.854
+Called python data collection function successfully
+time = 1.855
+Called python data collection function successfully
+time = 1.856
+Called python data collection function successfully
+time = 1.857
+Called python data collection function successfully
+time = 1.858
+Called python data collection function successfully
+time = 1.859
+Called python data collection function successfully
+time = 1.86
+Called python data collection function successfully
+time = 1.861
+Called python data collection function successfully
+time = 1.862
+Called python data collection function successfully
+time = 1.863
+Called python data collection function successfully
+time = 1.864
+Called python data collection function successfully
+time = 1.865
+Called python data collection function successfully
+time = 1.866
+Called python data collection function successfully
+time = 1.867
+Called python data collection function successfully
+time = 1.868
+Called python data collection function successfully
+time = 1.869
+Called python data collection function successfully
+time = 1.87
+Called python data collection function successfully
+time = 1.871
+Called python data collection function successfully
+time = 1.872
+Called python data collection function successfully
+time = 1.873
+Called python data collection function successfully
+time = 1.874
+Called python data collection function successfully
+time = 1.875
+Called python data collection function successfully
+time = 1.876
+Called python data collection function successfully
+time = 1.877
+Called python data collection function successfully
+time = 1.878
+Called python data collection function successfully
+time = 1.879
+Called python data collection function successfully
+time = 1.88
+Called python data collection function successfully
+time = 1.881
+Called python data collection function successfully
+time = 1.882
+Called python data collection function successfully
+time = 1.883
+Called python data collection function successfully
+time = 1.884
+Called python data collection function successfully
+time = 1.885
+Called python data collection function successfully
+time = 1.886
+Called python data collection function successfully
+time = 1.887
+Called python data collection function successfully
+time = 1.888
+Called python data collection function successfully
+time = 1.889
+Called python data collection function successfully
+time = 1.89
+Called python data collection function successfully
+time = 1.891
+Called python data collection function successfully
+time = 1.892
+Called python data collection function successfully
+time = 1.893
+Called python data collection function successfully
+time = 1.894
+Called python data collection function successfully
+time = 1.895
+Called python data collection function successfully
+time = 1.896
+Called python data collection function successfully
+time = 1.897
+Called python data collection function successfully
+time = 1.898
+Called python data collection function successfully
+time = 1.899
+Called python data collection function successfully
+time = 1.9
+Called python data collection function successfully
+time = 1.901
+Called python data collection function successfully
+time = 1.902
+Called python data collection function successfully
+time = 1.903
+Called python data collection function successfully
+time = 1.904
+Called python data collection function successfully
+time = 1.905
+Called python data collection function successfully
+time = 1.906
+Called python data collection function successfully
+time = 1.907
+Called python data collection function successfully
+time = 1.908
+Called python data collection function successfully
+time = 1.909
+Called python data collection function successfully
+time = 1.91
+Called python data collection function successfully
+time = 1.911
+Called python data collection function successfully
+time = 1.912
+Called python data collection function successfully
+time = 1.913
+Called python data collection function successfully
+time = 1.914
+Called python data collection function successfully
+time = 1.915
+Called python data collection function successfully
+time = 1.916
+Called python data collection function successfully
+time = 1.917
+Called python data collection function successfully
+time = 1.918
+Called python data collection function successfully
+time = 1.919
+Called python data collection function successfully
+time = 1.92
+Called python data collection function successfully
+time = 1.921
+Called python data collection function successfully
+time = 1.922
+Called python data collection function successfully
+time = 1.923
+Called python data collection function successfully
+time = 1.924
+Called python data collection function successfully
+time = 1.925
+Called python data collection function successfully
+time = 1.926
+Called python data collection function successfully
+time = 1.927
+Called python data collection function successfully
+time = 1.928
+Called python data collection function successfully
+time = 1.929
+Called python data collection function successfully
+time = 1.93
+Called python data collection function successfully
+time = 1.931
+Called python data collection function successfully
+time = 1.932
+Called python data collection function successfully
+time = 1.933
+Called python data collection function successfully
+time = 1.934
+Called python data collection function successfully
+time = 1.935
+Called python data collection function successfully
+time = 1.936
+Called python data collection function successfully
+time = 1.937
+Called python data collection function successfully
+time = 1.938
+Called python data collection function successfully
+time = 1.939
+Called python data collection function successfully
+time = 1.94
+Called python data collection function successfully
+time = 1.941
+Called python data collection function successfully
+time = 1.942
+Called python data collection function successfully
+time = 1.943
+Called python data collection function successfully
+time = 1.944
+Called python data collection function successfully
+time = 1.945
+Called python data collection function successfully
+time = 1.946
+Called python data collection function successfully
+time = 1.947
+Called python data collection function successfully
+time = 1.948
+Called python data collection function successfully
+time = 1.949
+Called python data collection function successfully
+time = 1.95
+Called python data collection function successfully
+time = 1.951
+Called python data collection function successfully
+time = 1.952
+Called python data collection function successfully
+time = 1.953
+Called python data collection function successfully
+time = 1.954
+Called python data collection function successfully
+time = 1.955
+Called python data collection function successfully
+time = 1.956
+Called python data collection function successfully
+time = 1.957
+Called python data collection function successfully
+time = 1.958
+Called python data collection function successfully
+time = 1.959
+Called python data collection function successfully
+time = 1.96
+Called python data collection function successfully
+time = 1.961
+Called python data collection function successfully
+time = 1.962
+Called python data collection function successfully
+time = 1.963
+Called python data collection function successfully
+time = 1.964
+Called python data collection function successfully
+time = 1.965
+Called python data collection function successfully
+time = 1.966
+Called python data collection function successfully
+time = 1.967
+Called python data collection function successfully
+time = 1.968
+Called python data collection function successfully
+time = 1.969
+Called python data collection function successfully
+time = 1.97
+Called python data collection function successfully
+time = 1.971
+Called python data collection function successfully
+time = 1.972
+Called python data collection function successfully
+time = 1.973
+Called python data collection function successfully
+time = 1.974
+Called python data collection function successfully
+time = 1.975
+Called python data collection function successfully
+time = 1.976
+Called python data collection function successfully
+time = 1.977
+Called python data collection function successfully
+time = 1.978
+Called python data collection function successfully
+time = 1.979
+Called python data collection function successfully
+time = 1.98
+Called python data collection function successfully
+time = 1.981
+Called python data collection function successfully
+time = 1.982
+Called python data collection function successfully
+time = 1.983
+Called python data collection function successfully
+time = 1.984
+Called python data collection function successfully
+time = 1.985
+Called python data collection function successfully
+time = 1.986
+Called python data collection function successfully
+time = 1.987
+Called python data collection function successfully
+time = 1.988
+Called python data collection function successfully
+time = 1.989
+Called python data collection function successfully
+time = 1.99
+Called python data collection function successfully
+time = 1.991
+Called python data collection function successfully
+time = 1.992
+Called python data collection function successfully
+time = 1.993
+Called python data collection function successfully
+time = 1.994
+Called python data collection function successfully
+time = 1.995
+Called python data collection function successfully
+time = 1.996
+Called python data collection function successfully
+time = 1.997
+Called python data collection function successfully
+time = 1.998
+Called python data collection function successfully
+time = 1.999
+Called python data collection function successfully
+time = 2
+CPU time = 0.00698
+Python based data analysis starting:
+Performing SVD
+/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: divide by zero encountered in matmul
+  time_series = np.matmul(v[0:3,:],data_array.T).T
+/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: overflow encountered in matmul
+  time_series = np.matmul(v[0:3,:],data_array.T).T
+/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/build/./python_module.py:56: RuntimeWarning: invalid value encountered in matmul
+  time_series = np.matmul(v[0:3,:],data_array.T).T
+/Users/rmaulik/Desktop/Codex_Stuff/CBurgers_Codex/.venv/lib/python3.9/site-packages/keras/src/layers/rnn/rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+Training iteration: 0
+Improved validation loss from: 999999.0  to: 1.9493028
+Validation R2: 0.7909084230642178
+Training iteration: 1
+Improved validation loss from: 1.9493028  to: 0.30272794
+Validation R2: 0.9675080366273077
+Training iteration: 2
+Improved validation loss from: 0.30272794  to: 0.103279956
+Validation R2: 0.9887898565882246
+Training iteration: 3
+Improved validation loss from: 0.103279956  to: 0.050800182
+Validation R2: 0.9945438399454858
+Training iteration: 4
+Improved validation loss from: 0.050800182  to: 0.03002232
+Validation R2: 0.9966953416809406
+Training iteration: 5
+Improved validation loss from: 0.03002232  to: 0.020202404
+Validation R2: 0.9978487535620303
+Training iteration: 6
+Improved validation loss from: 0.020202404  to: 0.01425508
+Validation R2: 0.9984964868757101
+Training iteration: 7
+Improved validation loss from: 0.01425508  to: 0.011229501
+Validation R2: 0.9988201012456484
+Training iteration: 8
+Improved validation loss from: 0.011229501  to: 0.009479656
+Validation R2: 0.9990055854660371
+Training iteration: 9
+Improved validation loss from: 0.009479656  to: 0.008223273
+Validation R2: 0.9991378839346071
+Test loss: 0.0003802304
+Test R2: 0.999240932816212
+Performing inference on testing data
+Model restored successfully!
+Making predictions on testing data
+Called python analyses function successfully
+Unexpected output array shape from analyses_func

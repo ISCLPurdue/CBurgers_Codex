@@ -41,11 +41,34 @@ int main(int argc, char *argv[])
     PyObject *pName = PyUnicode_DecodeFSDefault("python_module"); // Python filename
     PyObject *pModule = PyImport_Import(pName);
     Py_DECREF(pName); // finished with this string so release reference
+    if (!pModule)
+    {
+      PyErr_Print();
+      std::cerr << "Failed to import python_module" << std::endl;
+      return 1;
+    }
     std::cout << "Loaded python module" << std::endl; 
 
     std::cout << "Loading functions from module" << std::endl;
     PyObject *pcollection_func = PyObject_GetAttrString(pModule, "collection_func");
     PyObject *panalyses_func = PyObject_GetAttrString(pModule, "analyses_func");
+    if (!pcollection_func || !PyCallable_Check(pcollection_func))
+    {
+      PyErr_Print();
+      std::cerr << "collection_func is missing or not callable" << std::endl;
+      Py_XDECREF(pcollection_func);
+      Py_DECREF(pModule);
+      return 1;
+    }
+    if (!panalyses_func || !PyCallable_Check(panalyses_func))
+    {
+      PyErr_Print();
+      std::cerr << "analyses_func is missing or not callable" << std::endl;
+      Py_DECREF(pcollection_func);
+      Py_XDECREF(panalyses_func);
+      Py_DECREF(pModule);
+      return 1;
+    }
     Py_DECREF(pModule); // finished with this string so release reference
     std::cout << "Loaded functions" << std::endl;
 
@@ -143,10 +166,15 @@ void collect_data(PyObject *pcollection_func, double *u)
   PyObject *array_1d = PyArray_SimpleNewFromData(1, dim, NPY_FLOAT64, u);
   PyTuple_SetItem(pArgs, 0, array_1d);
   PyArrayObject *pValue = (PyArrayObject*)PyObject_CallObject(pcollection_func, pArgs); //Casting to PyArrayObject
+  if (!pValue && PyErr_Occurred())
+  {
+    PyErr_Print();
+    std::cerr << "collection_func call failed" << std::endl;
+  }
   std::cout << "Called python data collection function successfully"<<std::endl;
 
   Py_DECREF(pArgs);
-  Py_DECREF(pValue);
+  Py_XDECREF(pValue);
   // We don't need to decref array_1d because PyTuple_SetItem steals a reference
 }
 
@@ -155,7 +183,20 @@ void analyse_data(PyObject *panalyses_func)
 
   // panalsyses_func doesn't require an argument so pass nullptr 
   PyArrayObject* pValue = (PyArrayObject*)PyObject_CallObject(panalyses_func, nullptr);
+  if (!pValue)
+  {
+    PyErr_Print();
+    std::cerr << "analyses_func call failed" << std::endl;
+    return;
+  }
   std::cout << "Called python analyses function successfully"<<std::endl;
+
+  if (PyArray_NDIM(pValue) != 2 || PyArray_DIM(pValue, 0) < 2 || PyArray_DIM(pValue, 1) < 10)
+  {
+    std::cerr << "Unexpected output array shape from analyses_func" << std::endl;
+    Py_DECREF(pValue);
+    return;
+  }
 
   // Printing out values of the SVD eigenvectors of the first and second modes for each field DOF
   for (int i = 0; i < 10; ++i) 
